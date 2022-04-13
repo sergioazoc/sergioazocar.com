@@ -1,4 +1,3 @@
 <template>
-  <p class="text-green-600">Index</p>
-  <h1 class="text-green-600">asdasdsadsad</h1>
+  <h1 class="text-lime-300 text-3xl">Hola! 👋 Soy Sergio Azócar, un Vue Frontend Developer en el multiverso</h1>
 </template>
