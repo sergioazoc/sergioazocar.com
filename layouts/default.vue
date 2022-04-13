@@ -1,15 +1,17 @@
 <template>
-  <div class="min-h-screen bg-slate-900 p-4">
-    <TheHeader />
-    <div class="main my-3">
-      <slot />
+  <div class="min-h-screen flex justify-center bg-slate-900 py-4 px-8">
+    <div class="max-w-7xl w-full">
+      <TheHeader />
+      <div class="main my-10 flex justify-center">
+        <slot />
+      </div>
+      <TheFooter />
     </div>
-    <TheFooter />
   </div>
 </template>
 
 <style scoped>
 .main {
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 14rem);
 }
 </style>
