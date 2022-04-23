@@ -1,5 +1,5 @@
 <template>
-  <footer class="sticky bottom-0">
+  <footer>
     <p class="text-lime-300 text-center">Hecho con 💚 vue & nuxt</p>
   </footer>
 </template>
