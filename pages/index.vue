@@ -6,7 +6,7 @@
     <h1 class="text-lime-300 text-center font-bold text-2xl md:text-5xl mb-10 md:mb-20">Hola! <span
         class="wave">👋</span> Soy
       Sergio Azócar,
-      <br>un Vue Frontend Developer
+      <br>un <span class="tagline">Vue Frontend Developer</span>
       en el
       multiverso...
     </h1>
@@ -57,5 +57,12 @@
   100% {
     transform: rotateZ(0);
   }
+}
+
+.tagline {
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>

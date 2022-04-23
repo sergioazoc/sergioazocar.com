@@ -2,7 +2,8 @@ import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
-  faBars
+  faBars,
+  faTerminal
 } from "@fortawesome/free-solid-svg-icons"
 
 // import {
@@ -27,7 +28,8 @@ library.add(
   faInstagram,
   faVuejs,
   faGithub,
-  faLinkedin
+  faLinkedin,
+  faTerminal
 )
 
 // This is important, we are going to let Nuxt.js worry about the CSS
