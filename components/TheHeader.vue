@@ -6,9 +6,7 @@
     </NuxtLink>
 
     <div class="flex gap-3 items-center text-lime-300 font-bold">
-      <p>Blog</p>
       <NuxtLink to="/about">Sobre mi</NuxtLink>
-      <p>Contacto</p>
       <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank">
         <fa :icon="['fab', 'linkedin']" class="fa-lg text-violet-600" />
       </NuxtLink>
