@@ -1,15 +1,20 @@
+<script setup>
+</script>
+
 <template>
   <div class="max-w-3xl flex justify-center flex-col">
-    <h1 class="text-lime-300 font-bold text-2xl md:text-5xl mb-20">Hola! <span class="wave">👋</span> Soy Sergio Azócar,
+    <h1 class="text-lime-300 text-center font-bold text-2xl md:text-5xl mb-10 md:mb-20">Hola! <span
+        class="wave">👋</span> Soy
+      Sergio Azócar,
       <br>un Vue Frontend Developer
       en el
       multiverso...
     </h1>
-    <fa :icon="['fab', 'vuejs']" class="animate-ping text-9xl text-lime-300" />
+    <fa :icon="['fab', 'vuejs']" class="fa-beat-fade block text-6xl md:text-9xl text-lime-300" />
   </div>
 </template>
 
-<style>
+<style scoped>
 .wave {
   -webkit-animation-name: hi-animation;
   animation-name: hi-animation;

@@ -14,7 +14,9 @@ import {
   faTwitch,
   faTwitter,
   faYoutube,
-  faVuejs
+  faVuejs,
+  faGithub,
+  faLinkedin
 } from "@fortawesome/free-brands-svg-icons"
 
 library.add(
@@ -23,7 +25,9 @@ library.add(
   faTwitch,
   faTwitter,
   faInstagram,
-  faVuejs
+  faVuejs,
+  faGithub,
+  faLinkedin
 )
 
 // This is important, we are going to let Nuxt.js worry about the CSS
