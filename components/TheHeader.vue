@@ -8,6 +8,7 @@
     <div class="flex gap-3 items-center text-lime-300 font-bold">
       <NuxtLink to="/about">Sobre mi</NuxtLink>
       <NuxtLink to="/setup">Setup</NuxtLink>
+      <NuxtLink to="/talks">Talks</NuxtLink>
       <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank">
         <fa :icon="['fab', 'linkedin']" class="fa-lg text-violet-600" />
       </NuxtLink>

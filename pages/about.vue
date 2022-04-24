@@ -5,10 +5,10 @@
       <span class="animate-ping">|</span> Sobre mi
     </h1>
 
-    <h2 class="text-slate-200 mb-8 text-xl md:text-2xl">Siempre me gustó pertenecer a comunidades, desde chico partí en
+    <p class="text-slate-200 mb-8 text-xl md:text-2xl">Siempre me gustó pertenecer a comunidades, desde chico partí en
       un foro de
       Modding (hardmodding) dónde aprendí a amar la tecnología, desde entonces ayudo a fomentar y potenciar
-      comunidades entorno a la tecnología, programación y emprendimiento 🙌</h2>
+      comunidades entorno a la tecnología, programación y emprendimiento 🙌</p>
 
     <div class="flex flex-wrap md:flex-nowrap flex-row gap-5">
 
