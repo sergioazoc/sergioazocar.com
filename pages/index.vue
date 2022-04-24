@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="w-full flex justify-center flex-col">
+  <div class="w-full flex justify-center items-center flex-col">
     <h1 class="text-lime-300 text-center font-bold text-2xl md:text-5xl mb-10 md:mb-20">Hola! <span
         class="wave">👋</span> Soy
       Sergio Azócar,
@@ -10,7 +10,7 @@
       en<br> el
       multiverso...
     </h1>
-    <fa :icon="['fab', 'vuejs']" class="fa-beat-fade block text-6xl md:text-9xl text-lime-300" />
+    <fa :icon="['fab', 'vuejs']" class="fa-beat-fade block text-6xl md:text-9xl text-lime-300 w-max" />
   </div>
 </template>
 
