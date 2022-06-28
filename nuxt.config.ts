@@ -11,6 +11,11 @@ export default defineNuxtConfig({
     '@/assets/styles/app.scss'
   ],
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID || ''
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   }
 })
