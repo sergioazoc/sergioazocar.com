@@ -8,14 +8,14 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.2",
     "nuxt": "npm:nuxt3@latest",
-    "sass": "^1.50.1"
+    "sass": "^1.50.1",
+    "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
-    "@nuxtjs/google-analytics": "^2.4.0"
+    "@fortawesome/vue-fontawesome": "^3.0.1"
   }
 }
