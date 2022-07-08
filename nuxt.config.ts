@@ -5,8 +5,13 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/tailwindcss'
   ],
+  
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css',
     '@/assets/styles/app.scss'
-  ]
+  ],
+
+  runtimeConfig: {
+    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+  }
 })
