@@ -4,7 +4,7 @@ const config = useRuntimeConfig()
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(VueGtag, {
     property: {
-      id: config.googleAnalyticsId
+      id: config.public.googleAnalyticsId
     }
   })
 })

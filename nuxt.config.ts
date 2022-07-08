@@ -12,6 +12,8 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
-    googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+    public: {
+      googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
+    }
   }
 })
