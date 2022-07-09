@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  buildModules: [
+  modules: [
     '@nuxtjs/tailwindcss'
   ],
   
@@ -15,5 +15,9 @@ export default defineNuxtConfig({
     public: {
       googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
     }
+  },
+
+  tailwindcss: {
+    viewer: true
   }
 })

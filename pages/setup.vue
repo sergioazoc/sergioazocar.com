@@ -1,3 +1,14 @@
+<script setup>
+const description = ref('Vue Frontend Developer')
+
+useHead({
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
+</script>
+
 <template>
   <section>
     <h1 class="text-lime-300 text-4xl font-bold mb-11">

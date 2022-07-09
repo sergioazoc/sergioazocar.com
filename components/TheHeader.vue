@@ -5,6 +5,10 @@
         alt="Sergio Azócar" />
     </NuxtLink>
 
+    <div class="sm:hidden">
+      <fa :icon="['fas', 'bars']" class="text-lime-300" />
+    </div>
+
     <div class="flex gap-3 items-center text-lime-300 font-bold">
       <NuxtLink to="/about">Sobre mi</NuxtLink>
       <NuxtLink to="/setup">Setup</NuxtLink>

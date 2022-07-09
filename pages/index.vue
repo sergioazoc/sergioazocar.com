@@ -1,4 +1,12 @@
 <script setup>
+const description = ref('Vue Frontend Developer')
+
+useHead({
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+})
 </script>
 
 <template>
