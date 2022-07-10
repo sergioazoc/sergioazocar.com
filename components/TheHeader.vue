@@ -13,7 +13,7 @@
       <NuxtLink to="/about">Sobre mi</NuxtLink>
       <NuxtLink to="/setup">Setup</NuxtLink>
       <NuxtLink to="/talks">Talks</NuxtLink>
-      <NuxtLink to="https://sergioazocar-frontend-tools.netlify.app/">Tools</NuxtLink>
+      <NuxtLink to="/tools">Tools</NuxtLink>
       <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank">
         <fa :icon="['fab', 'linkedin']" class="fa-lg text-violet-600" />
       </NuxtLink>
