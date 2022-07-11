@@ -10,8 +10,8 @@ const isOpen = ref(false)
     </NuxtLink>
 
     <div @click="isOpen = !isOpen" class="sm:hidden cursor-pointer border border-lime-300 px-2">
-      <fa v-if="!isOpen" :icon="['fas', 'bars']" class="text-lime-300" />
-      <fa v-else :icon="['fas', 'close']" class="text-lime-300" />
+      <fa v-show="!isOpen" :icon="['fas', 'bars']" class="text-lime-300" />
+      <fa v-show="isOpen" :icon="['fas', 'close']" class="text-lime-300" />
     </div>
 
     <div :class="{ hidden: !isOpen }"
