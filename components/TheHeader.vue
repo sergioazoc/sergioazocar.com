@@ -16,10 +16,18 @@ const isOpen = ref(false)
 
     <div :class="{ hidden: !isOpen }"
       class="flex sm:flex gap-3 items-center text-lime-300 font-bold w-full sm:w-auto flex-col sm:flex-row">
-      <NuxtLink to="/about">Sobre mi</NuxtLink>
-      <NuxtLink to="/setup">Setup</NuxtLink>
-      <NuxtLink to="/talks">Talks</NuxtLink>
-      <NuxtLink to="/tools">Tools</NuxtLink>
+      <NuxtLink to="/about" v-slot="{ isActive }"><span :class="{
+        'border-b-2 border-lime-300': isActive
+      }">Sobre mi</span></NuxtLink>
+      <NuxtLink to="/setup" v-slot="{ isActive }"><span :class="{
+        'border-b-2 border-lime-300': isActive
+      }">Setup</span></NuxtLink>
+      <NuxtLink to="/talks" v-slot="{ isActive }"><span :class="{
+        'border-b-2 border-lime-300': isActive
+      }">Talks</span></NuxtLink>
+      <NuxtLink to="/tools" v-slot="{ isActive }"><span :class="{
+        'border-b-2 border-lime-300': isActive
+      }">Tools</span></NuxtLink>
       <div class="flex gap-3">
         <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank">
           <fa :icon="['fab', 'linkedin']" class="fa-lg text-violet-600" />

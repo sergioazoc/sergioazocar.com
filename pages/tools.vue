@@ -7,14 +7,20 @@
 
     <div class="flex flex-col md:flex-row justify-between gap-6">
       <div class="w-2/6 flex flex-row md:flex-col gap-3">
-        <NuxtLink to="/tools/character-counter">
-          <div class="inline-block text-lime-300 border border-lime-300 px-3 py-2">
+        <NuxtLink to="/tools/character-counter" v-slot="{ isActive }">
+          <div :class="{
+            'text-violet-600 border-violet-600': isActive,
+            'text-lime-300 border-lime-300': !isActive,
+          }" class="inline-block border px-3 py-2">
             Character Counter
           </div>
         </NuxtLink>
 
-        <NuxtLink to="/tools/word-counter">
-          <div class="inline-block text-lime-300 border border-lime-300 px-3 py-2">
+        <NuxtLink to="/tools/word-counter" v-slot="{ isActive }">
+          <div :class="{
+            'text-violet-600 border-violet-600': isActive,
+            'text-lime-300 border-lime-300': !isActive,
+          }" class="inline-block border px-3 py-2">
             Word Counter
           </div>
         </NuxtLink>
