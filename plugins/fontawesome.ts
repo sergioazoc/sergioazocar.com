@@ -6,6 +6,7 @@ config.autoAddCss = false
 
 import {
   faBars,
+  faClose,
   faTerminal
 } from "@fortawesome/free-solid-svg-icons"
 
@@ -25,6 +26,7 @@ import {
 
 library.add(
   faBars,
+  faClose,
   faYoutube,
   faTwitch,
   faTwitter,
