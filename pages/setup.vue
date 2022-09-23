@@ -1,26 +1,27 @@
-<script setup>
-const description = ref('Vue Frontend Developer')
+<script lang="ts" setup>
+  const description = ref('Vue Frontend Developer')
 
-useHead({
-  meta: [{
-    name: 'description',
-    content: description
-  }]
-})
+  useHead({
+    meta: [{
+      name: 'description',
+      content: description.value
+    }]
+  })
 </script>
 
 <template>
   <section>
-    <h1 class="text-lime-300 text-4xl font-bold mb-11">
-      <fa :icon="['fas', 'terminal']" class="block text-lime-300 mr-3" />
-      <span class="animate-ping">|</span> Setup
+    <h1>
+      Setup
     </h1>
 
     <p class="text-slate-200 mb-8 text-xl md:text-2xl">
       Actualmente estoy desarrollando con el siguiente entorno.
     </p>
 
-    <h2 class="text-lime-300 text-2xl font-bold mb-3">Desktop PC:</h2>
+    <h2 class="text-lime-300 text-2xl font-bold mb-3">
+      Desktop PC:
+    </h2>
 
     <ul class="text-slate-200 text-xl mb-10 border-l-4 border-yellow-300 pl-3">
       <li>CPU · <span class="text-yellow-300">Intel Core i9 12900k</span></li>
@@ -31,7 +32,9 @@ useHead({
       <li>WC · <span class="text-yellow-300">Asus ROG STRIX LC II 360 ARGB</span></li>
     </ul>
 
-    <h2 class="text-lime-300 text-2xl font-bold mb-3">Periféricos:</h2>
+    <h2 class="text-lime-300 text-2xl font-bold mb-3">
+      Periféricos:
+    </h2>
 
     <ul class="text-slate-200 text-xl mb-10 border-l-4 border-yellow-300 pl-3">
       <li>Monitor · <span class="text-yellow-300">Ozone DSP27 IPS</span></li>
@@ -43,7 +46,9 @@ useHead({
       <li>Silla · <span class="text-yellow-300">Cougar Armor One Skyblue</span></li>
     </ul>
 
-    <h2 class="text-lime-300 text-2xl font-bold mb-3">Software:</h2>
+    <h2 class="text-lime-300 text-2xl font-bold mb-3">
+      Software:
+    </h2>
 
     <ul class="text-slate-200 text-xl border-l-4 border-yellow-300 pl-3">
       <li>S.O. · <span class="text-yellow-300">Windows 11</span></li>
@@ -53,6 +58,5 @@ useHead({
       <li>Terminal · <span class="text-yellow-300">Windows Terminal</span></li>
       <li>Terminal Theme · <span class="text-yellow-300">Blue Matrix</span></li>
     </ul>
-
   </section>
 </template>

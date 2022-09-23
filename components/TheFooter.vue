@@ -1,5 +1,7 @@
 <template>
-  <footer>
-    <p class="text-lime-300 text-center">Hecho con 💚 Vue · Nuxt & Tailwind</p>
+  <footer class="p-1">
+    <p class="text-center">
+      Hecho con 💚 Vue · Nuxt & Bootstrap
+    </p>
   </footer>
 </template>

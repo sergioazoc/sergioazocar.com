@@ -1,25 +1,26 @@
-<script setup>
-const title = ref('Sergio Azócar | @sergioazoc')
+<script lang="ts" setup>
+  const title = ref('Sergio Azócar | @sergioazoc')
 
-useHead({
-  title
-})
+  useHead({
+    title: title.value
+  })
 </script>
 
 <template>
-  <div class="min-h-screen flex justify-center bg-slate-900 py-4 px-8">
-    <div class="max-w-7xl w-full">
+  <main>
+    <NuxtLoadingIndicator />
+    <main class="min-vh-100 bg-dark">
       <TheHeader />
-      <div class="main my-10 flex">
+      <div class="main-container container">
         <slot />
       </div>
       <TheFooter />
-    </div>
-  </div>
+    </main>
+  </main>
 </template>
 
-<style scoped>
-.main {
-  min-height: calc(100vh - 14rem);
+<style lang="scss">
+.main-container {
+  min-height: calc(100vh - 132px);
 }
 </style>
