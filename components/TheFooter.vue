@@ -1,6 +1,6 @@
 <template>
-  <footer class="p-1 mt-5 text-muted">
-    <p class="text-center">
+  <footer class="p-2 text-muted">
+    <p class="text-center mb-0">
       Hecho con 💚 Vue · Nuxt & Bootstrap
     </p>
   </footer>

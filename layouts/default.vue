@@ -11,7 +11,7 @@
     <NuxtLoadingIndicator />
     <div class="min-vh-100 bg-dark">
       <TheHeader />
-      <div class="main-container container bg rounded-bottom rounded-5 pt-5 px-5">
+      <div class="main-container container d-flex flex-column justify-content-between rounded-bottom rounded-5 pt-5 px-5">
         <slot />
         <TheFooter />
       </div>
@@ -19,11 +19,9 @@
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main-container {
-  min-height: calc(100vh - 132px);
-}
-.bg {
-  background-color: #1c1132;
+  min-height: calc(100vh - 108px);
+  background-color: #182542;
 }
 </style>

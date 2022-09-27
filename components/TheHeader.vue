@@ -40,18 +40,18 @@
       <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <NuxtLink v-slot="{ isActive }" to="/about" class="nav-link">
-              <span :class="{ 'active': isActive }">Sobre mi</span>
+            <NuxtLink active-class="active" to="/about" class="nav-link">
+              Sobre mi
             </NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink v-slot="{ isActive }" to="/setup" class="nav-link">
-              <span :class="{ 'active': isActive }">Equipo</span>
+            <NuxtLink active-class="active" to="/setup" class="nav-link">
+              Equipo
             </NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink v-slot="{ isActive }" to="/talks" class="nav-link">
-              <span :class="{ 'active': isActive }">Charlas</span>
+            <NuxtLink active-class="active" to="/talks" class="nav-link">
+              Charlas
             </NuxtLink>
           </li>
         </ul>

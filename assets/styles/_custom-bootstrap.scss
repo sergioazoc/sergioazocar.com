@@ -3,16 +3,18 @@
 
 // 2. Include any default variable overrides here
 
-$primary: #42b883;
-$secondary: #2222BF;
+$primary: #bef264;
+$secondary: #7c3aed;
 $success: #00AF7D;
 $info: #0081FC;
 $warning: #FFD000;
 $danger: #E90019;
 $light: #ECECF8;
-//$dark: $purple-900;
+$dark: #0f172a;
 
 $body-color: $light;
+
+$navbar-dark-active-color: $primary;
 
 $font-family-sans-serif: "Signika",
   sans-serif;
@@ -32,7 +34,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $purple-900
+  "dark": $dark
 );
 
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");

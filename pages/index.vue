@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <section class="main-container d-flex align-items-center">
+  <section class="home-container d-flex align-items-center">
     <div class="text-container mx-auto">
       <h1 class="text-center">
         Hola! <span class="wave">👋</span> Soy
@@ -23,6 +23,10 @@
 </template>
 
 <style lang="scss" scoped>
+.home-container {
+  height: 100vh;
+  max-height: calc(100vh - 196px);
+}
 .wave {
   -webkit-animation-name: hi-animation;
   animation-name: hi-animation;
