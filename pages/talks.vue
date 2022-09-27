@@ -11,8 +11,8 @@
 
 <template>
   <section>
-    <h1>
-      Talks
+    <h1 class="text-primary mb-3">
+      Charlas
     </h1>
 
     <p class="text-slate-200 mb-8 text-xl md:text-2xl">

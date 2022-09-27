@@ -11,7 +11,7 @@
 
 <template>
   <section>
-    <h1>
+    <h1 class="text-primary">
       Sobre mi
     </h1>
 
@@ -24,8 +24,8 @@
 
     <div class="row">
       <div class="col">
-        <div class="card bg-transparent border-success">
-          <img class="card-img-top border-bottom border-success" src="/assets/images/startupweekend.jpg" alt="Sergio Azócar">
+        <div class="card bg-transparent border-primary">
+          <img class="card-img-top border-bottom border-primary" src="/assets/images/startupweekend.jpg" alt="Sergio Azócar">
           <div class="card-body">
             <p class="card-text">
               Coorganizador de <a

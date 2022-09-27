@@ -1,15 +1,32 @@
+<script lang="ts" setup>
+  import { onClickOutside } from '@vueuse/core'
+
+  const nuxtApp = useNuxtApp()
+  const bootstrap = nuxtApp.$bootstrap
+  const btnToggle = ref(null)
+  const navMenu = ref(null)
+
+  onMounted(() => {
+    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navMenu.value)
+    onClickOutside(btnToggle, () => {
+      navCollapse.hide()
+    })
+  })
+</script>
+
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
     <div class="container">
       <NuxtLink to="/" class="navbar-brand">
         <img
-          class="img-fluid rounded-circle border border-3 border-success"
+          class="img-fluid rounded-circle border border-3 border-primary mb-4"
           src="/assets/images/sergio-azocar.jpg"
           alt="Sergio Azócar"
         >
       </NuxtLink>
 
       <button
+        ref="btnToggle"
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -20,7 +37,7 @@
       >
         <span class="navbar-toggler-icon" />
       </button>
-      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <NuxtLink v-slot="{ isActive }" to="/about" class="nav-link">
@@ -29,12 +46,12 @@
           </li>
           <li class="nav-item">
             <NuxtLink v-slot="{ isActive }" to="/setup" class="nav-link">
-              <span :class="{ 'active': isActive }">Setup</span>
+              <span :class="{ 'active': isActive }">Equipo</span>
             </NuxtLink>
           </li>
           <li class="nav-item">
             <NuxtLink v-slot="{ isActive }" to="/talks" class="nav-link">
-              <span :class="{ 'active': isActive }">Talks</span>
+              <span :class="{ 'active': isActive }">Charlas</span>
             </NuxtLink>
           </li>
         </ul>

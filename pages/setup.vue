@@ -11,8 +11,8 @@
 
 <template>
   <section>
-    <h1>
-      Setup
+    <h1 class="text-primary mb-3">
+      Equipo
     </h1>
 
     <p class="text-slate-200 mb-8 text-xl md:text-2xl">

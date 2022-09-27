@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     shim: false
   },
 
-  modules: [],
+  modules: [
+    '@vueuse/nuxt'
+  ],
 
   css: [
     '@/assets/styles/app.scss'
