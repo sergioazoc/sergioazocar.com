@@ -1,44 +1,78 @@
 <script lang="ts" setup>
-const isOpen = ref(false)
+  import { onClickOutside } from '@vueuse/core'
+
+  const nuxtApp = useNuxtApp()
+  const bootstrap = nuxtApp.$bootstrap
+  const btnToggle = ref(null)
+  const navMenu = ref(null)
+
+  onMounted(() => {
+    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navMenu.value)
+    onClickOutside(btnToggle, () => {
+      navCollapse.hide()
+    })
+  })
 </script>
 
 <template>
-  <div class="flex flex-wrap justify-between items-center">
-    <NuxtLink to="/">
-      <img class="w-full h-full max-w-[4rem] max-h-[4rem] rounded-full border-[3px] border-lime-300"
-        src="/assets/images/sergio-azocar.jpg" alt="Sergio Azócar" />
-    </NuxtLink>
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+    <div class="container">
+      <NuxtLink to="/" class="navbar-brand">
+        <img
+          class="img-fluid rounded-circle border border-3 border-primary mb-4"
+          src="/assets/images/sergio-azocar.jpg"
+          alt="Sergio Azócar"
+        >
+      </NuxtLink>
 
-    <div @click="isOpen = !isOpen" class="sm:hidden cursor-pointer border border-lime-300 px-2">
-      <fa v-show="!isOpen" :icon="['fas', 'bars']" class="text-lime-300" />
-      <fa v-show="isOpen" :icon="['fas', 'close']" class="text-lime-300" />
-    </div>
-
-    <div :class="{ hidden: !isOpen }"
-      class="flex sm:flex gap-3 items-center text-lime-300 font-bold w-full sm:w-auto flex-col sm:flex-row">
-      <NuxtLink to="/about" v-slot="{ isActive }"><span :class="{
-        'border-b-2 border-lime-300': isActive
-      }">Sobre mi</span></NuxtLink>
-      <NuxtLink to="/setup" v-slot="{ isActive }"><span :class="{
-        'border-b-2 border-lime-300': isActive
-      }">Setup</span></NuxtLink>
-      <NuxtLink to="/talks" v-slot="{ isActive }"><span :class="{
-        'border-b-2 border-lime-300': isActive
-      }">Talks</span></NuxtLink>
-      <NuxtLink to="/tools" v-slot="{ isActive }"><span :class="{
-        'border-b-2 border-lime-300': isActive
-      }">Tools</span></NuxtLink>
-      <div class="flex gap-3">
-        <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank">
-          <fa :icon="['fab', 'linkedin']" class="fa-lg text-violet-600" />
-        </NuxtLink>
-        <NuxtLink to="https://twitter.com/sergioazoc/" target="_blank">
-          <fa :icon="['fab', 'twitter']" class="fa-lg text-violet-600" />
-        </NuxtLink>
-        <NuxtLink to="https://github.com/sergioazoc/" target="_blank">
-          <fa :icon="['fab', 'github']" class="fa-lg text-violet-600" />
-        </NuxtLink>
+      <button
+        ref="btnToggle"
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon" />
+      </button>
+      <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <NuxtLink active-class="active" to="/about" class="nav-link">
+              Sobre mi
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink active-class="active" to="/setup" class="nav-link">
+              Equipo
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink active-class="active" to="/talks" class="nav-link">
+              Charlas
+            </NuxtLink>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank" class="nav-link">
+            LinkedIn
+          </NuxtLink>
+          <NuxtLink to="https://twitter.com/sergioazoc/" target="_blank" class="nav-link">
+            Twitter
+          </NuxtLink>
+          <NuxtLink to="https://github.com/sergioazoc/" target="_blank" class="nav-link">
+            Github
+          </NuxtLink>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
+
+<style lang="scss" scoped>
+  .img-fluid {
+    width: 58px;
+  }
+</style>

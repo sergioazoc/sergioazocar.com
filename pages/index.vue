@@ -1,28 +1,32 @@
-<script setup>
-const description = ref('Vue Frontend Developer')
+<script lang="ts" setup>
+  const description = ref('Vue Frontend Developer')
 
-useHead({
-  meta: [{
-    name: 'description',
-    content: description
-  }]
-})
+  useHead({
+    meta: [{
+      name: 'description',
+      content: description.value
+    }]
+  })
 </script>
 
 <template>
-  <div class="w-full flex justify-center items-center flex-col">
-    <h1 class="text-lime-300 text-center font-bold text-2xl md:text-5xl mb-10 md:mb-20">Hola! <span
-        class="wave">👋</span> Soy
-      Sergio Azócar,
-      <br>un <span class="tagline">Vue Frontend Developer</span>
-      en<br> el
-      multiverso...
-    </h1>
-    <fa :icon="['fab', 'vuejs']" class="fa-beat-fade block text-6xl md:text-9xl text-lime-300 w-max" />
-  </div>
+  <section class="home-container d-flex align-items-center">
+    <div class="text-container mx-auto">
+      <h1 class="text-center">
+        Hola! <span class="wave">👋</span> Soy
+        Sergio Azócar, un <span class="tagline">Vue Frontend Developer</span>
+        en el
+        multiverso...
+      </h1>
+    </div>
+  </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.home-container {
+  height: 100vh;
+  max-height: calc(100vh - 196px);
+}
 .wave {
   -webkit-animation-name: hi-animation;
   animation-name: hi-animation;
@@ -72,5 +76,9 @@ useHead({
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-container {
+  max-width: 600px;
 }
 </style>

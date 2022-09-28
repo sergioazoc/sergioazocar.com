@@ -1,13 +1,15 @@
-import { defineNuxtConfig } from 'nuxt'
-
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+
+  typescript: {
+    shim: false
+  },
+
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@vueuse/nuxt'
   ],
-  
+
   css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
     '@/assets/styles/app.scss'
   ],
 
@@ -17,7 +19,12 @@ export default defineNuxtConfig({
     }
   },
 
-  tailwindcss: {
-    viewer: true
-  }
+  alias: {
+    '~bootstrap': 'bootstrap'
+  },
+
+  buildModules: [
+    '@nuxtjs/eslint-module'
+  ]
+
 })
