@@ -5,11 +5,15 @@
   const bootstrap = nuxtApp.$bootstrap
   const btnToggle = ref(null)
   const navMenu = ref(null)
+  const navCollapse = ref(null)
 
   onMounted(() => {
-    const navCollapse = bootstrap.Collapse.getOrCreateInstance(navMenu.value)
+    navCollapse.value = bootstrap.Collapse.getOrCreateInstance(navMenu.value, {
+      toggle: false
+    })
+
     onClickOutside(btnToggle, () => {
-      navCollapse.hide()
+      navCollapse.value.hide()
     })
   })
 </script>
