@@ -24,7 +24,7 @@
       <NuxtLink to="/" class="navbar-brand">
         <img
           class="img-fluid rounded-circle border border-3 border-primary mb-4"
-          src="images/sergio-azocar.jpg"
+          src="/images/sergio-azocar.jpg"
           alt="Sergio Azócar"
         >
       </NuxtLink>
