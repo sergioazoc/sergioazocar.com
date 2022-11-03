@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
 
-  // target: 'static',
+  target: 'static',
 
   typescript: {
     shim: false
@@ -31,7 +31,8 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    dir: 'assets/images'
+    // dir: 'assets/images'
+    staticFilename: '[publicPath]/images/[name]-[hash][ext]'
   }
 
 })
