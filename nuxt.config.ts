@@ -28,11 +28,5 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxt/image-edge',
     '@nuxtjs/eslint-module'
-  ],
-
-  image: {
-    // dir: 'assets/images'
-    staticFilename: '[publicPath]/images/[name]-[hash][ext]'
-  }
-
+  ]
 })
