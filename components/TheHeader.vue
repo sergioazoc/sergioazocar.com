@@ -22,11 +22,11 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
     <div class="container">
       <NuxtLink to="/" class="navbar-brand">
-        <nuxt-img
+        <img
           class="img-fluid rounded-circle border border-3 border-primary mb-4"
           src="images/sergio-azocar.jpg"
           alt="Sergio Azócar"
-        />
+        >
       </NuxtLink>
 
       <button
