@@ -24,6 +24,7 @@ export default defineNuxtConfig({
   },
 
   buildModules: [
+    '@nuxt/image-edge',
     '@nuxtjs/eslint-module'
   ]
 

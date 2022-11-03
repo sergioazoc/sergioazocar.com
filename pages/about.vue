@@ -25,7 +25,7 @@
     <div class="row g-3">
       <div class="col-12 col-lg-6">
         <div class="card bg-transparent border-secondary">
-          <img class="card-img-top" src="/assets/images/startupweekend.jpg" alt="Sergio Azócar">
+          <nuxt-img class="card-img-top" src="/assets/images/startupweekend.jpg" alt="Sergio Azócar" />
           <div class="card-body bg-dark rounded-bottom">
             <p class="card-text">
               Coorganizador de <a
@@ -43,7 +43,7 @@
 
       <div class="col-12 col-lg-6">
         <div class="card bg-transparent border-secondary">
-          <img class="card-img-top" src="/assets/images/devs&ops.jpg" alt="Sergio Azócar">
+          <nuxt-img class="card-img-top" src="/assets/images/devs&ops.jpg" alt="Sergio Azócar" />
           <div class="card-body bg-dark rounded-bottom">
             <p class="card-text">
               Staff de la comunidad de <a
