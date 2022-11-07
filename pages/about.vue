@@ -47,11 +47,11 @@
           <div class="card-body bg-dark rounded-bottom">
             <p class="card-text">
               Staff de la comunidad de <a
-                href="https://www.facebook.com/devsopsLosLagos"
+                href="https://www.linkedin.com/company/techs-los-lagos"
                 class=""
                 target="_blank"
                 rel="noopener noreferrer"
-              >Devs&Ops
+              >Tech's
                 Los Lagos</a>, dónde
               organizamos eventos, meetups y networking para
               programadores de la región.
