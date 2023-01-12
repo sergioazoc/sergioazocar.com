@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+  import LiteYouTubeEmbed from 'vue-lite-youtube-embed'
+  import 'vue-lite-youtube-embed/style.css'
+
   const description = ref('Vue Frontend Developer')
 
   useHead({
@@ -22,23 +25,19 @@
 
     <div class="row g-3">
       <div class="col-12 col-lg-6">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/nlEHJXhqtQM" title="The Vueniverse" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
-        </div>
+        <LiteYouTubeEmbed
+          id="nlEHJXhqtQM"
+          title="The Vueniverse"
+        />
         <h3 class="text-primary text-center mt-2">
           The Vueniverse
         </h3>
       </div>
       <div class="col-12 col-lg-6">
-        <div class="ratio ratio-16x9">
-          <iframe
-            src="https://www.youtube.com/embed/2-mueX2lm6s"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-        </div>
+        <LiteYouTubeEmbed
+          id="2-mueX2lm6s"
+          title="Innovadores al fin del mundo"
+        />
         <h3 class="text-primary text-center mt-2">
           Innovadores al Fin del Mundo
         </h3>
