@@ -3,9 +3,9 @@
 
   const nuxtApp = useNuxtApp()
   const bootstrap = nuxtApp.$bootstrap
-  const btnToggle = ref(null)
-  const navMenu = ref(null)
-  const navCollapse = ref(null)
+  const btnToggle = ref()
+  const navMenu = ref()
+  const navCollapse = ref()
 
   onMounted(() => {
     navCollapse.value = bootstrap.Collapse.getOrCreateInstance(navMenu.value, {
@@ -61,13 +61,13 @@
         </ul>
         <ul class="navbar-nav">
           <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank" class="nav-link">
-            LinkedIn
+            <FaIcon :icon="['fab', 'linkedin']" />
           </NuxtLink>
           <NuxtLink to="https://twitter.com/sergioazoc/" target="_blank" class="nav-link">
-            Twitter
+            <FaIcon :icon="['fab', 'twitter']" />
           </NuxtLink>
           <NuxtLink to="https://github.com/sergioazoc/" target="_blank" class="nav-link">
-            Github
+            <FaIcon :icon="['fab', 'github']" />
           </NuxtLink>
         </ul>
       </div>

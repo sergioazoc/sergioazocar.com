@@ -8,11 +8,13 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxt/content'
   ],
 
   css: [
-    '@/assets/styles/app.scss'
+    '@/assets/styles/app.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   runtimeConfig: {
