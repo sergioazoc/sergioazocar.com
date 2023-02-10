@@ -10,7 +10,7 @@
   <main>
     <NuxtLoadingIndicator />
     <div class="min-vh-100 bg-dark">
-      <TheHeader />
+      <TheNavbar />
       <div class="main-container container d-flex flex-column justify-content-between rounded-bottom rounded-5 pt-5 px-5">
         <slot />
         <TheFooter />

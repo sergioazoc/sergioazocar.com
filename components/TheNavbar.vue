@@ -16,6 +16,40 @@
       navCollapse.value.hide()
     })
   })
+
+  const menuLinks = [
+    {
+      path: '/blog',
+      text: 'Blog'
+    },
+    {
+      path: '/about',
+      text: 'Sobre mi'
+    },
+    {
+      path: '/setup',
+      text: 'Equipo'
+    },
+    {
+      path: '/talks',
+      text: 'Charlas'
+    }
+  ]
+
+  const socialLinks = [
+    {
+      path: 'https://www.linkedin.com/in/sergio-azocar/',
+      icon: ['fab', 'linkedin']
+    },
+    {
+      path: 'https://twitter.com/sergioazoc/',
+      icon: ['fab', 'twitter']
+    },
+    {
+      path: 'https://github.com/sergioazoc/',
+      icon: ['fab', 'github']
+    }
+  ]
 </script>
 
 <template>
@@ -43,31 +77,25 @@
       </button>
       <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <NuxtLink active-class="active" to="/about" class="nav-link">
-              Sobre mi
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink active-class="active" to="/setup" class="nav-link">
-              Equipo
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink active-class="active" to="/talks" class="nav-link">
-              Charlas
+          <li
+            v-for="link in menuLinks"
+            :key="link.path"
+            class="nav-item"
+          >
+            <NuxtLink active-class="active" :to="link.path" class="nav-link">
+              {{ link.text }}
             </NuxtLink>
           </li>
         </ul>
         <ul class="navbar-nav">
-          <NuxtLink to="https://www.linkedin.com/in/sergio-azocar/" target="_blank" class="nav-link">
-            <FaIcon :icon="['fab', 'linkedin']" />
-          </NuxtLink>
-          <NuxtLink to="https://twitter.com/sergioazoc/" target="_blank" class="nav-link">
-            <FaIcon :icon="['fab', 'twitter']" />
-          </NuxtLink>
-          <NuxtLink to="https://github.com/sergioazoc/" target="_blank" class="nav-link">
-            <FaIcon :icon="['fab', 'github']" />
+          <NuxtLink
+            v-for="link in socialLinks"
+            :key="link.path"
+            :to="link.path"
+            target="_blank"
+            class="nav-link"
+          >
+            <FaIcon :icon="link.icon" />
           </NuxtLink>
         </ul>
       </div>
