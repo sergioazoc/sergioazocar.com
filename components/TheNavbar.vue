@@ -18,10 +18,10 @@
   })
 
   const menuLinks = [
-    {
-      path: '/blog',
-      text: 'Blog'
-    },
+    // {
+    //   path: '/blog',
+    //   text: 'Blog'
+    // },
     {
       path: '/about',
       text: 'Sobre mi'
@@ -75,6 +75,7 @@
       >
         <span class="navbar-toggler-icon" />
       </button>
+
       <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li
@@ -87,6 +88,7 @@
             </NuxtLink>
           </li>
         </ul>
+
         <ul class="navbar-nav">
           <NuxtLink
             v-for="link in socialLinks"

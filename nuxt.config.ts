@@ -3,6 +3,11 @@ export default defineNuxtConfig({
 
   target: 'static',
 
+  buildModules: [
+    '@nuxt/image-edge',
+    '@nuxtjs/eslint-module'
+  ],
+
   typescript: {
     shim: false
   },
@@ -25,10 +30,6 @@ export default defineNuxtConfig({
 
   alias: {
     '~bootstrap': 'bootstrap'
-  },
+  }
 
-  buildModules: [
-    '@nuxt/image-edge',
-    '@nuxtjs/eslint-module'
-  ]
 })
