@@ -53,11 +53,11 @@
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
       <NuxtLink to="/" class="navbar-brand">
         <img
-          class="img-fluid rounded-circle border border-3 border-primary mb-4"
+          class="img-fluid rounded-circle border border-3 border-secondary mb-4"
           src="/images/sergio-azocar.jpg"
           alt="Sergio Azócar"
         >

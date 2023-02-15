@@ -3,7 +3,7 @@
 
 // 2. Include any default variable overrides here
 
-$primary: #bef264;
+$primary: #42b883;
 $secondary: #7c3aed;
 $success: #00AF7D;
 $info: #0081FC;
@@ -12,9 +12,9 @@ $danger: #E90019;
 $light: #ECECF8;
 $dark: #0f172a;
 
-$body-color: $light;
+$body-color: $dark;
 
-$navbar-dark-active-color: $primary;
+$navbar-light-active-color: $secondary;
 
 $font-family-sans-serif: "Signika",
   sans-serif;

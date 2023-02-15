@@ -29,7 +29,7 @@
           id="nlEHJXhqtQM"
           title="The Vueniverse"
         />
-        <h3 class="text-primary text-center mt-2">
+        <h3 class="text-secondary text-center mt-2">
           The Vueniverse
         </h3>
       </div>
@@ -38,7 +38,7 @@
           id="2-mueX2lm6s"
           title="Innovadores al fin del mundo"
         />
-        <h3 class="text-primary text-center mt-2">
+        <h3 class="text-secondary text-center mt-2">
           Innovadores al Fin del Mundo
         </h3>
       </div>
