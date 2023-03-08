@@ -1,4 +1,4 @@
-import * as bootstrap from 'bootstrap/dist/js/bootstrap.esm'
+import * as bootstrap from 'bootstrap'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.provide('bootstrap', bootstrap)

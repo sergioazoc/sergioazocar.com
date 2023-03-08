@@ -100,6 +100,9 @@
             <FaIcon :icon="link.icon" />
           </NuxtLink>
         </ul>
+        <!-- <div class="form-check form-switch">
+          <input id="flexSwitchCheckChecked" class="form-check-input" type="checkbox" role="switch" checked>
+        </div> -->
       </div>
     </div>
   </nav>

@@ -7,5 +7,5 @@ library.add(faTwitter, faGithub, faLinkedin)
 config.autoAddCss = false
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.component('FaIcon', FontAwesomeIcon)
+  nuxtApp.vueApp.component('FaIcon', FontAwesomeIcon, {})
 })

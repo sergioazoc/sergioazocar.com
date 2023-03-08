@@ -1,12 +1,4 @@
-// https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-
-  target: 'static',
-
-  buildModules: [
-    '@nuxt/image-edge',
-    '@nuxtjs/eslint-module'
-  ],
 
   typescript: {
     shim: false
@@ -14,7 +6,8 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/nuxt',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxt/image-edge'
   ],
 
   css: [
@@ -26,10 +19,6 @@ export default defineNuxtConfig({
     public: {
       googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
     }
-  },
-
-  alias: {
-    '~bootstrap': 'bootstrap'
   }
 
 })
