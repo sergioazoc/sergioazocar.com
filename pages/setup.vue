@@ -12,7 +12,7 @@
 <template>
   <section>
     <h1 class="text-primary mb-3">
-      Equipo
+      Setup
     </h1>
 
     <p class="lead">
@@ -20,6 +20,21 @@
     </p>
 
     <div class="d-flex flex-column gap-3">
+      <div>
+        <h2 class="mb-3">
+          Coding:
+        </h2>
+
+        <ul class="border-start border-4 border-secondary list-unstyled ps-3">
+          <li>Code Editor · <span class="text-secondary">VSCode</span></li>
+          <li>Editor Theme · <span class="text-secondary">HackTheBox / Halcyon</span></li>
+          <li>Editor Font · <span class="text-secondary">JetBrains Mono</span></li>
+          <li>Terminal · <span class="text-secondary">Windows Terminal</span></li>
+          <li>Terminal Theme · <span class="text-secondary">Blue Matrix</span></li>
+          <li>S.O. · <span class="text-secondary">Windows 11</span></li>
+        </ul>
+      </div>
+
       <div>
         <h2 class="mb-3">
           Desktop PC:
@@ -48,21 +63,6 @@
           <li>Webcam · <span class="text-secondary">Razer Kiyo Pro</span></li>
           <li>Mousepad · <span class="text-secondary">Razer Gigantus v2 XXL</span></li>
           <li>Silla · <span class="text-secondary">Cougar Armor One Skyblue</span></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2 class="mb-3">
-          Software:
-        </h2>
-
-        <ul class="border-start border-4 border-secondary list-unstyled ps-3">
-          <li>S.O. · <span class="text-secondary">Windows 11</span></li>
-          <li>Code Editor · <span class="text-secondary">VSCode</span></li>
-          <li>Editor Theme · <span class="text-secondary">HackTheBox / Halcyon</span></li>
-          <li>Editor Font · <span class="text-secondary">JetBrains Mono</span></li>
-          <li>Terminal · <span class="text-secondary">Windows Terminal</span></li>
-          <li>Terminal Theme · <span class="text-secondary">Blue Matrix</span></li>
         </ul>
       </div>
     </div>

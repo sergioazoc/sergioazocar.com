@@ -28,36 +28,21 @@
     },
     {
       path: '/setup',
-      text: 'Equipo'
+      text: 'Setup'
     },
     {
       path: '/talks',
       text: 'Charlas'
     }
   ]
-
-  const socialLinks = [
-    {
-      path: 'https://www.linkedin.com/in/sergio-azocar/',
-      icon: ['fab', 'linkedin']
-    },
-    {
-      path: 'https://twitter.com/sergioazoc/',
-      icon: ['fab', 'twitter']
-    },
-    {
-      path: 'https://github.com/sergioazoc/',
-      icon: ['fab', 'github']
-    }
-  ]
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <div class="container">
+  <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
+    <div class="container align-items-center">
       <NuxtLink to="/" class="navbar-brand">
         <img
-          class="img-fluid rounded-circle border border-3 border-secondary mb-4"
+          class="img-fluid rounded-circle border border-3 border-secondary"
           src="/images/sergio-azocar.jpg"
           alt="Sergio Azócar"
         >
@@ -68,16 +53,16 @@
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#principalNavbar"
+        aria-controls="principalNavbar"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon" />
       </button>
 
-      <div id="navbarSupportedContent" ref="navMenu" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
+      <div id="principalNavbar" ref="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto me-sm-2">
           <li
             v-for="link in menuLinks"
             :key="link.path"
@@ -89,20 +74,7 @@
           </li>
         </ul>
 
-        <ul class="navbar-nav">
-          <NuxtLink
-            v-for="link in socialLinks"
-            :key="link.path"
-            :to="link.path"
-            target="_blank"
-            class="nav-link"
-          >
-            <FaIcon :icon="link.icon" />
-          </NuxtLink>
-        </ul>
-        <!-- <div class="form-check form-switch">
-          <input id="flexSwitchCheckChecked" class="form-check-input" type="checkbox" role="switch" checked>
-        </div> -->
+        <TheDarkMode />
       </div>
     </div>
   </nav>

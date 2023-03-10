@@ -7,9 +7,9 @@
 </script>
 
 <template>
-  <main>
+  <main class="bg-body">
     <NuxtLoadingIndicator />
-    <div class="min-vh-100 bg-light">
+    <div class="min-vh-100">
       <TheNavbar />
       <div class="main-container container d-flex flex-column justify-content-between">
         <slot />
