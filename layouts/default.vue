@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <main class="bg-body">
+  <main class="bg-body bg-gradient">
     <NuxtLoadingIndicator />
     <div class="min-vh-100">
       <TheNavbar />
@@ -21,6 +21,6 @@
 
 <style lang="scss" scoped>
 .main-container {
-  min-height: calc(100vh - 108px);
+  min-height: calc(100vh - 84px);
 }
 </style>

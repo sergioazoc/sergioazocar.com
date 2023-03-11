@@ -24,13 +24,13 @@
 
     <div class="row g-3">
       <div class="col-12 col-lg-6">
-        <div class="card bg-transparent border-secondary">
+        <div class="card bg-transparent border-primary">
           <img class="card-img-top" src="/images/startupweekend.jpg" alt="Sergio Azócar">
-          <div class="card-body bg-light rounded-bottom">
+          <div class="card-body bg-body rounded-bottom">
             <p class="card-text">
               Coorganizador de <a
                 href="https://www.facebook.com/swloslagos"
-                class="text-secondary"
+                class="text-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >Startup Weekend Los
@@ -42,13 +42,13 @@
       </div>
 
       <div class="col-12 col-lg-6">
-        <div class="card bg-transparent border-secondary">
+        <div class="card bg-transparent border-primary">
           <img class="card-img-top" src="/images/devs&ops.jpg" alt="Sergio Azócar">
-          <div class="card-body bg-light rounded-bottom">
+          <div class="card-body bg-body rounded-bottom">
             <p class="card-text">
               Staff de la comunidad de <a
                 href="https://www.linkedin.com/company/techs-los-lagos"
-                class="text-secondary"
+                class="text-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >Tech's

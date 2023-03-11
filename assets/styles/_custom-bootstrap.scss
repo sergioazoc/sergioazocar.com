@@ -3,18 +3,24 @@
 
 // 2. Include any default variable overrides here
 
-$primary: #42b883;
+$primary: #00C897;
 $secondary: #7c3aed;
 $success: #00AF7D;
 $info: #0081FC;
 $warning: #FFD000;
 $danger: #E90019;
-$light: #ECECF8;
+$light: #ECF9FF;
 $dark: #0f172a;
 
 $body-color: $dark;
+$body-bg: $light;
+$border-color: $dark;
 
-$navbar-light-active-color: $secondary;
+$body-color-dark: $light;
+$body-bg-dark: $dark;
+$border-color-dark: $light;
+
+$navbar-light-active-color: $primary;
 
 $font-family-sans-serif: "Signika",
   sans-serif;

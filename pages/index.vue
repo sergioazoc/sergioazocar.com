@@ -14,9 +14,8 @@
     <div class="text-container mx-auto">
       <h1 class="text-center">
         Hola! <span class="wave">👋</span> Soy
-        Sergio Azócar, un <span class="tagline">Vue Frontend Developer</span>
-        en el
-        multiverso...
+        Sergio Azócar, un <span class="tagline">Frontend Developer</span>
+        en el multiverso...
       </h1>
     </div>
   </section>
