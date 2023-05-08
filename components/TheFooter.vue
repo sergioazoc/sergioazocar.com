@@ -2,15 +2,15 @@
   const socialLinks = [
     {
       path: 'https://www.linkedin.com/in/sergio-azocar/',
-      icon: ['fab', 'linkedin']
+      icon: 'fa:linkedin'
     },
     {
       path: 'https://twitter.com/sergioazoc/',
-      icon: ['fab', 'twitter']
+      icon: 'fa:twitter'
     },
     {
       path: 'https://github.com/sergioazoc/',
-      icon: ['fab', 'github']
+      icon: 'fa:github'
     }
   ]
 </script>
@@ -25,7 +25,7 @@
         target="_blank"
         class="text-reset fs-5"
       >
-        <FaIcon :icon="link.icon" />
+        <Icon :name="link.icon" />
       </NuxtLink>
     </div>
     <p class="text-center mb-2">

@@ -5,14 +5,14 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@vueuse/nuxt',
     '@nuxt/content',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    '@vueuse/nuxt',
+    'nuxt-icon'
   ],
 
   css: [
-    '@/assets/styles/app.scss',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@/assets/styles/app.scss'
   ],
 
   runtimeConfig: {
