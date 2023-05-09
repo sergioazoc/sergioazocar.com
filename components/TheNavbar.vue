@@ -42,7 +42,7 @@
     <div class="container align-items-center">
       <NuxtLink to="/" class="navbar-brand">
         <img
-          class="img-fluid rounded-circle border border-3"
+          class="img-fluid rounded-circle border-primary border border-3"
           src="/images/sergio-azocar.jpg"
           alt="Sergio Azócar"
         >

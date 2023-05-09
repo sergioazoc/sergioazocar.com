@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <main class="bg-body bg-gradient">
+  <main class="bg-body">
     <NuxtLoadingIndicator />
     <div class="min-vh-100">
       <TheNavbar />
