@@ -16,14 +16,14 @@
 </script>
 
 <template>
-  <footer class="text-muted mt-3">
-    <div class="d-flex justify-content-center align-items-center gap-3 mb-1">
+  <footer class="h-20 flex flex-col items-center justify-center">
+    <div class="flex justify-center items-center gap-3 mb-1">
       <NuxtLink
         v-for="link in socialLinks"
         :key="link.path"
         :to="link.path"
         target="_blank"
-        class="text-reset fs-5"
+        class="text-zinc-600 dark:text-zinc-400 text-lg"
       >
         <Icon :name="link.icon" />
       </NuxtLink>

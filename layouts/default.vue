@@ -7,20 +7,19 @@
 </script>
 
 <template>
-  <main class="bg-body">
-    <NuxtLoadingIndicator />
-    <div class="min-vh-100">
+  <NuxtLoadingIndicator />
+  <main class="bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">
+    <div class="h-content">
       <TheNavbar />
-      <div class="main-container container d-flex flex-column justify-content-between">
-        <slot />
-        <TheFooter />
-      </div>
+      <slot />
     </div>
+    <TheFooter />
   </main>
 </template>
 
-<style lang="scss" scoped>
-.main-container {
-  min-height: calc(100vh - 84px);
-}
+<style>
+  .h-content {
+    height: 100%;
+    min-height: calc(100vh - 5rem);
+  }
 </style>

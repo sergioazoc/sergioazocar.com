@@ -24,7 +24,8 @@ module.exports = {
       }
     ],
     'arrow-body-style': ['error', 'as-needed'],
-    'function-paren-newline': ['error', 'multiline']
+    'function-paren-newline': ['error', 'multiline'],
+    'vue/no-multiple-template-root': 'off'
   },
   overrides: [
     {

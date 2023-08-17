@@ -1,24 +1,28 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
-  typescript: {
-    shim: false
-  },
+  devtools: { enabled: true },
 
   modules: [
-    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
     '@nuxt/image-edge',
-    '@vueuse/nuxt',
+    '@nuxtjs/color-mode',
     'nuxt-icon'
   ],
 
-  css: [
-    '@/assets/styles/app.scss'
-  ],
+  colorMode: {
+    classSuffix: ''
+  },
 
   runtimeConfig: {
     public: {
       googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
     }
-  }
+  },
 
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  }
 })
