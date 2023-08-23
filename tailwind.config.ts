@@ -12,6 +12,10 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
+      colors: {
+        'vue-green': '#42d392',
+        'vue-purple': '#647eff'
+      },
       keyframes: {
         hello: {
           '0%, 7%': {
