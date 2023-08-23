@@ -22,6 +22,6 @@
 <style>
   .h-content {
     height: 100%;
-    min-height: calc(100vh - 9rem);
+    min-height: calc(100vh - 9.5rem);
   }
 </style>

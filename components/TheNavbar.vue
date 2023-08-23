@@ -39,13 +39,16 @@
 
 <template>
   <nav ref="menu" class="flex flex-wrap justify-between items-center gap-5">
-    <NuxtLink to="/" @click="closeMenu">
-      <img
-        class="rounded-full h-14 w-14 border-vue-purple dark:border-vue-green border-[3px]"
-        src="/images/sergio-azocar.jpg"
-        alt="Sergio Azócar"
-      >
-    </NuxtLink>
+    <div class="flex items-center gap-5">
+      <NuxtLink to="/" @click="closeMenu">
+        <img
+          class="rounded-full h-16 w-16 border-vue-purple dark:border-vue-green border-[3px]"
+          src="/images/sergio-azocar.jpg"
+          alt="Sergio Azócar"
+        >
+      </NuxtLink>
+      <span class="text-2xl font-semibold">Sergio Azócar</span>
+    </div>
 
     <button
       data-collapse-toggle="navbar-default"
