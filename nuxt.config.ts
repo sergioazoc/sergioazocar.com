@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@vueuse/nuxt'
@@ -25,5 +25,10 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {}
     }
+  },
+
+  image: {
+    densities: [1, 2],
+    format: ['webp', 'jpg', 'jpeg', 'png']
   }
 })

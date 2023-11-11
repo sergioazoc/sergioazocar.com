@@ -41,11 +41,11 @@
   <nav ref="menu" class="flex flex-wrap justify-between items-center gap-5">
     <div class="flex items-center gap-5">
       <NuxtLink to="/" @click="closeMenu">
-        <img
-          class="rounded-full h-16 w-16 border-vue-purple dark:border-vue-green border-[3px]"
-          src="/images/sergio-azocar.jpg"
+        <NuxtImg
+          class="rounded-full max-h-16 max-w-16 border-vue-purple dark:border-vue-green border-[3px]"
+          src="/images/sergio-azocar-perfil.jpg"
           alt="Sergio Azócar"
-        >
+        />
       </NuxtLink>
       <span class="text-2xl font-semibold">Sergio Azócar</span>
     </div>

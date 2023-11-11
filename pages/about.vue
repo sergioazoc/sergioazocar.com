@@ -24,7 +24,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
-        <img class="hover:scale-110 object-cover transition duration-500" src="/images/startupweekend.jpg" alt="Sergio Azócar">
+        <NuxtImg class="hover:scale-110 object-cover transition duration-500" src="/images/startupweekend.jpg" alt="Sergio Azócar" placeholder sizes="600px" />
         <p class="text-base p-3">
           Coorganizador de <a
             href="https://www.facebook.com/swloslagos"
@@ -38,7 +38,7 @@
       </div>
 
       <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
-        <img class="hover:scale-110 object-cover transition duration-500" src="/images/devs&ops.jpg" alt="Sergio Azócar">
+        <NuxtImg class="hover:scale-110 object-cover transition duration-500" src="/images/devs&ops.jpg" alt="Sergio Azócar" placeholder sizes="600px" />
         <p class="text-base p-3">
           Staff de la comunidad de <a
             href="https://www.linkedin.com/company/techs-los-lagos"

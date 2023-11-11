@@ -9,19 +9,12 @@
 <template>
   <NuxtLoadingIndicator />
   <main class="bg-slate-50 dark:text-slate-100 text-slate-900 dark:bg-slate-900">
-    <div class="max-w-[1200px] mx-auto py-4 px-4 sm:px-8 md:px-12 lg:px-16">
+    <div class="max-w-[1248px] mx-auto py-4 px-6">
       <TheNavbar />
-      <div class="h-content flex py-5">
+      <div class="h-full min-h-[calc(100vh-9.5rem)] py-5">
         <slot />
       </div>
       <TheFooter />
     </div>
   </main>
 </template>
-
-<style>
-  .h-content {
-    height: 100%;
-    min-height: calc(100vh - 9.5rem);
-  }
-</style>
