@@ -43,7 +43,7 @@
       <NuxtLink to="/" @click="closeMenu">
         <img
           class="rounded-full h-16 w-16 border-vue-purple dark:border-vue-green border-[3px]"
-          src="/images/sergio-azocar.jpg"
+          src="/images/sergio-azocar.jpeg"
           alt="Sergio Azócar"
         >
       </NuxtLink>
