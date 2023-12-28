@@ -16,10 +16,8 @@
     </BaseTitle>
 
     <p class="text-lg mb-5">
-      Siempre me gustó pertenecer a comunidades, desde chico partí en
-      un foro de
-      Modding (hardmodding) dónde aprendí a amar la tecnología, desde entonces ayudo a fomentar y potenciar
-      comunidades entorno a la tecnología, programación y emprendimiento 🙌
+      Siempre me gustó pertenecer a comunidades, desde chico partí en un foro de
+      Modding (hardmodding) dónde aprendí a amar la tecnología, desde entonces ayudo a fomentar y potenciar comunidades entorno a la tecnología, programación y emprendimiento 🙌
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -28,12 +26,10 @@
         <p class="text-base p-3">
           Coorganizador de <a
             href="https://www.facebook.com/swloslagos"
-            class="text-primary"
+            class="text-vue-purple dark:text-vue-green"
             target="_blank"
             rel="noopener noreferrer"
-          >Startup Weekend Los
-            Lagos</a>, dónde
-          enseñamos a crear una startup en 54 horas.
+          >Startup Weekend Los Lagos</a>, dónde enseñamos a crear una startup en 54 horas.
         </p>
       </div>
 
@@ -42,12 +38,10 @@
         <p class="text-base p-3">
           Staff de la comunidad de <a
             href="https://www.linkedin.com/company/techs-los-lagos"
-            class="text-primary"
+            class="text-vue-purple dark:text-vue-green"
             target="_blank"
             rel="noopener noreferrer"
-          >Tech's
-            Los Lagos</a>, dónde
-          organizamos eventos, meetups y networking para
+          >Tech's Los Lagos</a>, dónde organizamos eventos, meetups y networking para
           programadores de la región.
         </p>
       </div>
