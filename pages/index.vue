@@ -10,34 +10,34 @@
 </script>
 
 <template>
-  <header class="mt-10 grid grid-cols-1 md:grid-cols-2 place-items-center gap-10 mb-12">
-    <div>
-      <NuxtImg
-        class="max-w-sm md:max-w-full w-full aspect-square md:aspect-video h-auto hover:scale-110 object-cover transition duration-500"
-        src="/images/sergio-azocar.jpg"
-        alt="Sergio Azócar"
-      />
+  <header class="mt-10 mb-12">
+    <div class="mb-5">
+      <p class="text-xl">
+        Hola <span class="animate-hello origin-[70%_70%] inline-block">👋</span>, soy
+      </p>
+      <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple leading-normal">
+        Sergio Azócar
+      </h1>
+      <p class="text-[clamp(2.2rem,5vw,4.2rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple leading-normal opacity-20">
+        Contruyo experiencias en la web
+      </p>
     </div>
 
-    <section class="flex flex-col gap-5">
-      <h1 class="text-4xl font-bold">
-        Hola <span class="animate-hello origin-[70%_70%] inline-block">👋</span>, soy
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple"
-        >
-          Sergio
-        </span><br>
-        Bienvenido a mi página
-      </h1>
-      <p class="text-lg text-slate-600 dark:text-slate-400">
-        Actualmente como <strong>Frontend Lead</strong> en Talana.
-      </p>
+    <p class="text-xl text-slate-600 dark:text-slate-400 mb-5">
+      Actualmente como <strong>Frontend Lead</strong> en Talana.
+    </p>
+
+    <div class="flex gap-5">
       <ul class="text-xl">
-        <li>💛 Javascript Lover</li>
-        <li>👾 Gamer / Geek</li>
-        <li>🐶 Team</li>
+        <li>💚 Vue Lover</li>
+        <li>👾 Gamer</li>
+        <li>💻 Geek</li>
       </ul>
-    </section>
+      <ul class="text-xl">
+        <li>📢 Speaker</li>
+        <li>🧙‍♂ Mentor</li>
+      </ul>
+    </div>
   </header>
 
   <section>

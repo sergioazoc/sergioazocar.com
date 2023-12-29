@@ -43,11 +43,11 @@
       <NuxtLink to="/" @click="closeMenu">
         <NuxtImg
           class="rounded-full max-h-16 max-w-16 border-vue-purple dark:border-vue-green border-[3px]"
-          src="/images/sergio-azocar-perfil.jpg"
+          src="/images/sergio-azocar.jpeg"
           alt="Sergio Azócar"
         />
       </NuxtLink>
-      <span class="text-2xl font-semibold">Sergio Azócar</span>
+      <!-- <span class="text-2xl font-semibold">Sergio Azócar</span> -->
     </div>
 
     <button
