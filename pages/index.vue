@@ -15,16 +15,13 @@
       <p class="text-xl">
         Hola <span class="animate-hello origin-[70%_70%] inline-block">👋</span>, soy
       </p>
-      <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple leading-normal">
+      <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
         Sergio Azócar
       </h1>
-      <p class="text-[clamp(2.2rem,5vw,4.2rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple leading-normal opacity-20">
-        Contruyo experiencias en la web
-      </p>
     </div>
 
     <p class="text-xl text-slate-600 dark:text-slate-400 mb-5">
-      Actualmente como <strong>Frontend Lead</strong> en Talana.
+      Sr. Frontend Developer, trabajando como <strong>Frontend Lead</strong> en Talana.
     </p>
 
     <div class="flex gap-5">
@@ -41,35 +38,38 @@
   </header>
 
   <section>
-    <h2 class="text-center text-3xl mb-6">
-      Algunas de mis aventuras
-    </h2>
-
-    <div class="flex flex-wrap justify-center gap-5">
+    <div class="flex flex-wrap justify-center md:justify-end gap-5">
       <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 max-w-[300px] w-full"
+        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
         src="/images/index/jschile.jpeg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
       />
       <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 max-w-[300px] w-full"
+        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
         src="/images/index/jsconf.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
       />
       <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 max-w-[300px] w-full"
+        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
         src="/images/index/techs-talk01.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
       />
       <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 max-w-[300px] w-full"
+        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
         src="/images/index/techs-talk02.jpeg"
+        alt="Sergio Azócar"
+        placeholder
+        loading="lazy"
+      />
+      <NuxtImg
+        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
+        src="/images/index/techschoolv2.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
