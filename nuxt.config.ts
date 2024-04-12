@@ -7,17 +7,16 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    'nuxt-gtag'
   ],
 
   colorMode: {
     classSuffix: ''
   },
 
-  runtimeConfig: {
-    public: {
-      googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
-    }
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   },
 
   postcss: {

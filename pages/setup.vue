@@ -56,7 +56,7 @@
         </BaseTitle>
 
         <ul class="border-s-4 border-vue-purple dark:border-vue-green ps-5 text-base">
-          <li>Monitor · <span class="text-vue-purple dark:text-vue-green font-semibold">Ozone DSP27 IPS</span></li>
+          <li>Monitor · <span class="text-vue-purple dark:text-vue-green font-semibold">Samsung Odyssey G9</span></li>
           <li>Keyboard · <span class="text-vue-purple dark:text-vue-green font-semibold">Razer Huntsman Elite</span></li>
           <li>Mouse · <span class="text-vue-purple dark:text-vue-green font-semibold">Razer Naga Pro</span></li>
           <li>Headsets · <span class="text-vue-purple dark:text-vue-green font-semibold">Razer Nari Ultimate</span></li>
