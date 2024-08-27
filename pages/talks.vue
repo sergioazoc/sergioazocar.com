@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-  import LiteYouTubeEmbed from 'vue-lite-youtube-embed'
-  import 'vue-lite-youtube-embed/style.css'
+import LiteYouTubeEmbed from 'vue-lite-youtube-embed'
+import 'vue-lite-youtube-embed/style.css'
 
-  const description = ref('Vue Frontend Developer')
+const description = ref('Vue Frontend Developer')
 
-  useHead({
-    meta: [{
-      name: 'description',
-      content: description.value
-    }]
-  })
+useHead({
+  meta: [{
+    name: 'description',
+    content: description.value
+  }]
+})
 </script>
 
 <template>
@@ -25,21 +25,23 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div class="overflow-hidden">
-        <LiteYouTubeEmbed
-          id="nlEHJXhqtQM"
-          title="The Vueniverse"
-        />
+        <LiteYouTubeEmbed id="nlEHJXhqtQM" title="The Vueniverse" />
         <h3 class="text-xl text-vue-purple dark:text-vue-green text-center font-bold p-3">
           The Vueniverse
         </h3>
       </div>
+
       <div class="overflow-hidden">
-        <LiteYouTubeEmbed
-          id="2-mueX2lm6s"
-          title="Innovadores al fin del mundo"
-        />
+        <LiteYouTubeEmbed id="2-mueX2lm6s" title="Innovadores al fin del mundo" />
         <h3 class="text-xl text-vue-purple dark:text-vue-green text-center font-bold p-3">
           Innovadores al Fin del Mundo
+        </h3>
+      </div>
+
+      <div class="overflow-hidden">
+        <LiteYouTubeEmbed id="pS3Sevsxw_A" title="Deconstruyendo el Frontend, de la teoría a la práctica" />
+        <h3 class="text-xl text-vue-purple dark:text-vue-green text-center font-bold p-3">
+          Deconstruyendo el Frontend, de la teoría a la práctica
         </h3>
       </div>
     </div>

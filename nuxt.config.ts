@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
 
-  gtag: {
-    id: process.env.GOOGLE_ANALYTICS_ID
-  },
+  // gtag: {
+  //   id: process.env.GOOGLE_ANALYTICS_ID
+  // },
 
   postcss: {
     plugins: {
