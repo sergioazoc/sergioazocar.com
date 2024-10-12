@@ -22,7 +22,13 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
-        <NuxtImg class="hover:scale-110 object-cover transition duration-500 min-h-64" src="/images/startupweekend.jpg" alt="Sergio Azócar" placeholder sizes="600px" />
+        <NuxtImg
+          class="hover:scale-110 object-cover transition duration-500 min-h-64"
+          src="/images/startupweekend.jpg"
+          alt="Sergio Azócar"
+          placeholder
+          sizes="600px"
+        />
         <p class="text-base p-3">
           Coorganizador de <a
             href="https://www.facebook.com/swloslagos"
@@ -34,7 +40,13 @@
       </div>
 
       <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
-        <NuxtImg class="hover:scale-110 object-cover transition duration-500 min-h-64" src="/images/devs&ops.jpg" alt="Sergio Azócar" placeholder sizes="600px" />
+        <NuxtImg
+          class="hover:scale-110 object-cover transition duration-500 min-h-64"
+          src="/images/devs&ops.jpg"
+          alt="Sergio Azócar"
+          placeholder
+          sizes="600px"
+        />
         <p class="text-base p-3">
           Staff de la comunidad de <a
             href="https://www.linkedin.com/company/techs-los-lagos"
@@ -48,7 +60,13 @@
     </div>
 
     <div class="mx-auto block max-w-[600px] mt-4 border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
-      <NuxtImg class="hover:scale-110 object-cover transition duration-500" src="/images/techschool.jpg" alt="Sergio Azócar" placeholder sizes="600px" />
+      <NuxtImg
+        class="hover:scale-110 object-cover transition duration-500"
+        src="/images/techschool.jpg"
+        alt="Sergio Azócar"
+        placeholder
+        sizes="600px"
+      />
       <p class="text-base p-3">
         Voluntario en <a
           href="https://jschile.org"

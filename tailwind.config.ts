@@ -16,6 +16,10 @@ export default <Partial<Config>>{
         'vue-green': '#42d392',
         'vue-purple': '#647eff'
       },
+      fontFamily: {
+        sans: ['Work Sans'],
+        serif: ['Merriweather']
+      },
       keyframes: {
         hello: {
           '0%, 7%': {

@@ -16,5 +16,6 @@
     "javascript",
     "typescript",
     "vue",
-  ]
+  ],
+  "eslint.experimental.useFlatConfig": true
 }

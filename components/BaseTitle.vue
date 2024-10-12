@@ -6,19 +6,23 @@
     tag: 'h1'
   })
 
-  const classes = computed(() => ({
-    h1: 'text-4xl leading-10 font-bold text-vue-purple dark:text-vue-green',
-    h2: 'text-2xl leading-9 font-semibold',
-    h3: 'text-xl leading-8 font-semibold',
-    h4: 'text-lg leading-7 font-semibold',
-    h5: 'text-base leading-6 font-semibold',
-    h6: 'text-sm leading-5 font-semibold'
-  }))
+  const classes = {
+    h1: 'text-5xl leading-10 text-vue-purple dark:text-vue-green',
+    h2: 'text-4xl leading-9',
+    h3: 'text-3xl leading-8',
+    h4: 'text-2xl leading-7',
+    h5: 'text-xl leading-6',
+    h6: 'text-lg leading-5'
+  }
 
 </script>
 
 <template>
-  <h1 :class="classes[props.tag]" class="mb-5 text-">
+  <component
+    :is="props.tag"
+    :class="classes[props.tag]"
+    class="font-sans font-bold mb-5"
+  >
     <slot />
-  </h1>
+  </component>
 </template>
