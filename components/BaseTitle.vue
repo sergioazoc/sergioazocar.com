@@ -7,7 +7,7 @@
   })
 
   const classes = {
-    h1: 'text-5xl leading-10 text-vue-purple dark:text-vue-green',
+    h1: 'text-5xl leading-10 text-vue-green',
     h2: 'text-4xl leading-9',
     h3: 'text-3xl leading-8',
     h4: 'text-2xl leading-7',

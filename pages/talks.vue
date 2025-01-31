@@ -48,7 +48,7 @@
           :id="video.id"
           :title="video.title"
         />
-        <h3 class="text-xl text-vue-purple dark:text-vue-green text-center font-bold p-3">
+        <h3 class="text-xl text-vue-green text-center font-bold p-3">
           {{ video.title }}
         </h3>
       </div>

@@ -21,7 +21,7 @@
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
+      <div class="border-2 rounded-sm border-vue-green overflow-hidden">
         <NuxtImg
           class="hover:scale-110 object-cover transition duration-500 min-h-64"
           src="/images/startupweekend.jpg"
@@ -32,14 +32,14 @@
         <p class="text-base p-3">
           Coorganizador de <a
             href="https://www.facebook.com/swloslagos"
-            class="text-vue-purple dark:text-vue-green"
+            class="text-vue-green"
             target="_blank"
             rel="noopener noreferrer"
           >Startup Weekend Los Lagos</a>, dónde enseñamos a crear una startup en 54 horas.
         </p>
       </div>
 
-      <div class="border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
+      <div class="border-2 rounded-sm border-vue-green overflow-hidden">
         <NuxtImg
           class="hover:scale-110 object-cover transition duration-500 min-h-64"
           src="/images/devs&ops.jpg"
@@ -50,7 +50,7 @@
         <p class="text-base p-3">
           Staff de la comunidad de <a
             href="https://www.linkedin.com/company/techs-los-lagos"
-            class="text-vue-purple dark:text-vue-green"
+            class="text-vue-green"
             target="_blank"
             rel="noopener noreferrer"
           >Tech's Los Lagos</a>, dónde organizamos eventos, meetups y networking para
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="mx-auto block max-w-[600px] mt-4 border-2 rounded-sm border-vue-purple dark:border-vue-green overflow-hidden">
+    <div class="mx-auto block max-w-[600px] mt-4 border-2 rounded-sm border-vue-green overflow-hidden">
       <NuxtImg
         class="hover:scale-110 object-cover transition duration-500"
         src="/images/techschool.jpg"
@@ -70,7 +70,7 @@
       <p class="text-base p-3">
         Voluntario en <a
           href="https://jschile.org"
-          class="text-vue-purple dark:text-vue-green"
+          class="text-vue-green"
           target="_blank"
           rel="noopener noreferrer"
         >JavaScript Chile</a>, comunidad sobre JavaScript en Chile, dónde organizamos eventos, meetups y networking.

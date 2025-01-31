@@ -40,7 +40,7 @@
         @click="closeMenu"
       >
         <NuxtImg
-          class="rounded-full max-h-16 max-w-16 border-vue-purple dark:border-vue-green border-[3px]"
+          class="rounded-full max-h-16 max-w-16 border-vue-green border-[3px]"
           src="/images/sergio-azocar.jpeg"
           alt="Sergio Azócar"
         />
@@ -51,7 +51,7 @@
     <button
       data-collapse-toggle="navbar-default"
       type="button"
-      class="flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg sm:hidden hover:bg-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-300 dark:text-slate-400 dark:hover:bg-slate-700 dark:focus:ring-slate-600"
+      class="flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg sm:hidden focus:outline-none focus:ring-2 text-slate-400 hover:bg-slate-700 focus:ring-slate-600"
       aria-controls="navbar-default"
       aria-expanded="false"
       @click="toggleMenu"
@@ -69,7 +69,7 @@
       :class="{ hidden: !showMenu }"
     >
       <ul
-        class="font-medium flex items-center flex-col mx-3 p-4 gap-2 sm:p-0 border border-slate-100 rounded-lg bg-slate-300 sm:flex-row sm:space-x-8 sm:mt-0 sm:border-0 sm:bg-transparent dark:bg-slate-800 sm:dark:bg-transparent dark:border-slate-700"
+        class="font-medium flex items-center flex-col mx-3 p-4 gap-2 sm:p-0 border rounded-lg sm:flex-row sm:space-x-8 sm:mt-0 sm:border-0 bg-slate-800 sm:bg-transparent border-slate-700"
       >
         <li
           v-for="link in menuLinks"
@@ -78,15 +78,12 @@
           @click="closeMenu"
         >
           <NuxtLink
-            active-class="!text-vue-purple dark:!text-vue-green"
+            active-class="!text-vue-green"
             :to="link.path"
-            class="block text-slate-800 sm:border-0 hover:text-vue-purple sm:p-0 dark:text-slate-50 dark:hover:text-vue-green hover:bg-slate-800 dark:hover:bg-slate-600 sm:hover:bg-transparent dark:sm:hover:bg-transparent w-full text-center rounded-md p-1 sm:whitespace-nowrap"
+            class="block sm:border-0 sm:p-0 text-slate-50 hover:text-vue-green hover:bg-slate-600 sm:hover:bg-transparent w-full text-center rounded-md p-1 sm:whitespace-nowrap"
           >
             {{ link.text }}
           </NuxtLink>
-        </li>
-        <li>
-          <TheDarkMode />
         </li>
       </ul>
     </div>

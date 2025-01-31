@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2025-01-31',
   devtools: { enabled: true },
 
   modules: [
@@ -38,15 +39,21 @@ export default defineNuxtConfig({
     id: import.meta.env.GOOGLE_ANALYTICS_ID
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
+  icon: {
+    serverBundle: {
+      collections: ['mdi']
     }
   },
 
   image: {
     densities: [1, 2],
     format: ['webp', 'jpg', 'jpeg', 'png']
-  }
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
 })

@@ -18,15 +18,15 @@
         </h1>
       </div>
 
-      <p class="text-xl text-slate-600 dark:text-slate-400">
+      <p class="text-xl text-slate-400">
         Sr. Frontend Developer, con más de 8 años de experiencia.
       </p>
-      <p class="text-xl text-slate-600 dark:text-slate-400 mb-5">
+      <p class="text-xl text-slate-400 mb-5">
         Líder de comunidades, speaker y mentor.
       </p>
 
       <div
-        v-if="flase"
+        v-if="false"
         class="flex gap-4"
       >
         <BaseButton>Agendar Mentoría</BaseButton>

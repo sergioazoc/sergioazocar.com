@@ -2,15 +2,15 @@
   const socialLinks = [
     {
       path: 'https://www.linkedin.com/in/sergio-azocar/',
-      icon: 'fa:linkedin'
+      icon: 'mdi:linkedin'
     },
     {
       path: 'https://twitter.com/sergioazoc/',
-      icon: 'fa:twitter'
+      icon: 'mdi:twitter'
     },
     {
       path: 'https://github.com/sergioazoc/',
-      icon: 'fa:github'
+      icon: 'mdi:github'
     }
   ]
 </script>
@@ -23,7 +23,7 @@
         :key="link.path"
         :to="link.path"
         target="_blank"
-        class="text-slate-600 dark:text-slate-400 text-lg"
+        class="text-slate-400 text-lg"
       >
         <Icon :name="link.icon" />
       </NuxtLink>
