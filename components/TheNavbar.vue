@@ -6,6 +6,10 @@
 
   const menuLinks = [
     {
+      path: '/',
+      text: 'Inicio'
+    },
+    {
       path: '/about',
       text: 'Sobre mi'
     },
@@ -30,11 +34,11 @@
 </script>
 
 <template>
-  <nav
+  <div
     ref="menu"
     class="flex flex-wrap justify-between items-center gap-5"
   >
-    <div class="flex items-center gap-5">
+    <div class="flex items-center gap-5 sm:hidden">
       <NuxtLink
         to="/"
         @click="closeMenu"
@@ -45,7 +49,6 @@
           alt="Sergio Azócar"
         />
       </NuxtLink>
-      <!-- <span class="text-2xl font-semibold">Sergio Azócar</span> -->
     </div>
 
     <button
@@ -63,29 +66,50 @@
       />
     </button>
 
-    <div
+    <nav
       id="navbar-default"
-      class="w-full sm:block sm:w-auto"
+      class="w-full sm:block sm:w-auto sm:mx-auto"
       :class="{ hidden: !showMenu }"
     >
       <ul
-        class="font-medium flex items-center flex-col mx-3 p-4 gap-2 sm:p-0 border rounded-lg sm:flex-row sm:space-x-8 sm:mt-0 sm:border-0 bg-slate-800 sm:bg-transparent border-slate-700"
+        class="font-medium flex items-center flex-col mx-3 p-4 gap-2 sm:py-2 sm:px-8 border rounded-xl sm:rounded-full sm:flex-row sm:space-x-8 bg-slate-900 border-slate-700"
       >
-        <li
-          v-for="link in menuLinks"
-          :key="link.path"
-          class="w-full"
-          @click="closeMenu"
-        >
+        <li class="hidden sm:block">
           <NuxtLink
-            active-class="!text-vue-green"
-            :to="link.path"
-            class="block sm:border-0 sm:p-0 text-slate-50 hover:text-vue-green hover:bg-slate-600 sm:hover:bg-transparent w-full text-center rounded-md p-1 sm:whitespace-nowrap"
+            to="/"
+            @click="closeMenu"
           >
-            {{ link.text }}
+            <NuxtImg
+              class="rounded-full max-h-10 max-w-10 border-vue-green border-[2px]"
+              src="/images/sergio-azocar.jpeg"
+              alt="Sergio Azócar"
+            />
           </NuxtLink>
         </li>
+        <template
+          v-for="(link, index) in menuLinks"
+          :key="link.path"
+        >
+          <li
+            class="w-full"
+            @click="closeMenu"
+          >
+            <NuxtLink
+              active-class="!text-vue-green"
+              :to="link.path"
+              class="block sm:border-0 sm:p-0 text-slate-50 hover:text-vue-green hover:bg-slate-600 sm:hover:bg-transparent w-full text-center rounded-md p-1 sm:whitespace-nowrap"
+            >
+              {{ link.text }}
+            </NuxtLink>
+          </li>
+          <li
+            v-if="index !== menuLinks.length - 1"
+            class="hidden sm:block font-black text-xl"
+          >
+            ·
+          </li>
+        </template>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
