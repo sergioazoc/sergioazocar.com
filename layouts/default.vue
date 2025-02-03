@@ -8,13 +8,11 @@
 
 <template>
   <NuxtLoadingIndicator />
-  <main class="text-slate-300 bg-slate-950">
-    <div class="max-w-[1248px] mx-auto py-4 px-6">
-      <TheNavbar />
-      <div class="h-full min-h-[calc(100vh-9.5rem)] py-5">
-        <slot />
-      </div>
-      <TheFooter />
+  <main class="grid gap-4 text-slate-300 bg-slate-950">
+    <TheNavbar />
+    <div class="max-w-[1248px] mx-auto h-full min-h-[calc(100vh-9.5rem)] py-5">
+      <slot />
     </div>
+    <TheFooter />
   </main>
 </template>

@@ -36,7 +36,7 @@
 <template>
   <div
     ref="menu"
-    class="flex flex-wrap justify-between items-center gap-5"
+    class="flex flex-wrap justify-between items-center gap-5 mt-6"
   >
     <div class="flex items-center gap-5 sm:hidden">
       <NuxtLink

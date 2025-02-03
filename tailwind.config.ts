@@ -16,8 +16,7 @@ export default <Partial<Config>>{
         'vue-purple': '#647eff'
       },
       fontFamily: {
-        sans: ['Work Sans'],
-        serif: ['Merriweather']
+        sans: ['Inter'],
       },
       keyframes: {
         hello: {

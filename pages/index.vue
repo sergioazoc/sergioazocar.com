@@ -10,40 +10,49 @@
 </script>
 
 <template>
-  <header class="flex flex-wrap lg:flex-nowrap items-center gap-8 py-16 md:py-36">
-    <div class="">
-      <div class="mb-5">
-        <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
-          Sergio Azócar
-        </h1>
-      </div>
+  <header class="grid gap-4 py-16 md:py-36 text-center">
+    <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
+      ¡Hola! soy Sergio
+    </h1>
 
-      <p class="text-xl text-slate-400">
-        Sr. Frontend Developer, con más de 8 años de experiencia.
-      </p>
-      <p class="text-xl text-slate-400 mb-5">
-        Líder de comunidades, speaker y mentor.
-      </p>
+    <p class="text-xl text-slate-400">
+      Senior Frontend Developer, con más de 8 años trabajando en tecnología.
+    </p>
+    <p class="text-xl text-slate-400 mb-5">
+      Líder de comunidades, speaker y mentor.
+    </p>
 
-      <div
-        v-if="false"
-        class="flex gap-4"
-      >
-        <BaseButton>Agendar Mentoría</BaseButton>
-        <BaseButton variant="secondary">
-          Contactar
-        </BaseButton>
-      </div>
+    <div
+      class="flex gap-4 mx-auto"
+    >
+      <BaseButton>Agendar Mentoría</BaseButton>
+      <BaseButton variant="secondary">
+        Contactar
+      </BaseButton>
     </div>
-
-    <NuxtImg
-      class="hover:scale-110 object-cover transition duration-500 w-full max-w-2xl"
-      src="/images/index/jsconf.jpg"
-      alt="Sergio Azócar"
-      placeholder
-      loading="lazy"
-    />
   </header>
+
+  <div class="grid grid-cols-3 gap-4">
+    <BaseCard class="col-span-2">
+      <NuxtImg
+        class="object-cover"
+        src="/images/index/jsconf.jpg"
+        alt="Sergio Azócar"
+        placeholder
+        loading="lazy"
+      />
+    </BaseCard>
+    <BaseCard class="place-self-stretch place-content-center p-8">
+      <BaseTitle
+        tag="h2"
+      >
+        Comunidad
+      </basetitle>
+      <p>
+        La tecnología mueve al mundo y conectar con las personas que lo están haciendo posible es parte de mi aprendizaje constante.
+      </p>
+    </BaseCard>
+  </div>
 
   <section>
     <BaseTitle
