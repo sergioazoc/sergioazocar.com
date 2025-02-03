@@ -7,16 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-gtag',
     '@nuxt/eslint'
   ],
-
-  colorMode: {
-    classSuffix: ''
-  },
 
   fonts: {
     families: [
@@ -32,11 +27,9 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-    initMode: 'manual',
-    // enabled: process.env.NODE_ENV === 'production',
-    // id: process.env.GOOGLE_ANALYTICS_ID
-    enabled: import.meta.env.PROD,
-    id: import.meta.env.GOOGLE_ANALYTICS_ID
+
+    enabled: import.meta.env.NODE_ENV === 'production',
+    id: import.meta.env.GTAG_ID
   },
 
   icon: {
@@ -57,3 +50,5 @@ export default defineNuxtConfig({
     }
   },
 })
+
+console.log(import.meta.env.NODE_ENV === 'production')
