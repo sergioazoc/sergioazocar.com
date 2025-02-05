@@ -33,7 +33,7 @@
       Charlas
     </BaseTitle>
 
-    <p class="text-lg mb-5">
+    <p class="mb-5">
       A lo largo de mi carrera he tenido la oportunidad de participar
       en diversas instancias para compartir mi conocimiento, aquí iré recopilando algunas de ellas.
     </p>
@@ -48,9 +48,9 @@
           :id="video.id"
           :title="video.title"
         />
-        <h3 class="text-xl text-vue-green text-center font-bold p-3">
+        <h2 class="text-vue-green text-center font-bold p-3">
           {{ video.title }}
-        </h3>
+        </h2>
       </div>
     </div>
   </section>

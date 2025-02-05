@@ -10,42 +10,40 @@
 </script>
 
 <template>
-  <header class="flex flex-wrap lg:flex-nowrap items-center gap-8 py-16 md:py-36">
-    <div class="">
-      <div class="mb-5">
-        <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
-          Sergio Azócar
-        </h1>
-      </div>
+  <header class="grid gap-4 py-16 md:py-24 text-center">
+    <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
+      ¡Hola! soy Sergio
+    </h1>
 
-      <p class="text-xl text-slate-400">
-        Sr. Frontend Developer, con más de 8 años de experiencia.
-      </p>
-      <p class="text-xl text-slate-400 mb-5">
-        Líder de comunidades, speaker y mentor.
-      </p>
+    <p class="text-slate-400">
+      Senior Frontend Developer, con más de 8 años trabajando en tecnología.
+    </p>
+    <p class="text-slate-400 mb-5">
+      Líder de comunidades, speaker y mentor.
+    </p>
 
-      <div
-        v-if="false"
-        class="flex gap-4"
-      >
-        <BaseButton>Agendar Mentoría</BaseButton>
-        <BaseButton variant="secondary">
-          Contactar
-        </BaseButton>
-      </div>
+    <div
+      v-if="false"
+      class="flex gap-4 mx-auto"
+    >
+      <BaseButton>Agendar Mentoría</BaseButton>
+      <BaseButton variant="secondary">
+        Contactar
+      </BaseButton>
     </div>
+  </header>
 
+  <div class="">
     <NuxtImg
-      class="hover:scale-110 object-cover transition duration-500 w-full max-w-2xl"
+      class="object-cover mx-auto"
       src="/images/index/jsconf.jpg"
       alt="Sergio Azócar"
       placeholder
       loading="lazy"
     />
-  </header>
+  </div>
 
-  <section>
+  <section class="my-16">
     <BaseTitle
       tag="h2"
       class="text-center"
@@ -53,22 +51,15 @@
       Experiencia
     </BaseTitle>
     <p class="text-center max-w-2xl block mx-auto mb-5">
-      He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentorando a los miembros del equipo.
+      He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentoreando a los miembros del equipo.
     </p>
   </section>
 
-  <section class="mb-8">
-    <div class="flex flex-wrap justify-center gap-5">
+  <section class="mb-16">
+    <div class="grid grid-cols-2 sm:grid-cols-4 items-stretch gap-5">
       <NuxtImg
         class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
         src="/images/index/jschile.jpeg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-      <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/jsconf.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"

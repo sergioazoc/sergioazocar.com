@@ -15,7 +15,7 @@
       Sobre mi
     </BaseTitle>
 
-    <p class="text-lg mb-5">
+    <p class="mb-5">
       Siempre me gustó pertenecer a comunidades, desde chico partí en un foro de
       Modding (hardmodding) dónde aprendí a amar la tecnología, desde entonces ayudo a fomentar y potenciar comunidades entorno a la tecnología, programación y emprendimiento 🙌
     </p>
@@ -29,7 +29,7 @@
           placeholder
           sizes="600px"
         />
-        <p class="text-base p-3">
+        <p class="p-3">
           Coorganizador de <a
             href="https://www.facebook.com/swloslagos"
             class="text-vue-green"
@@ -47,7 +47,7 @@
           placeholder
           sizes="600px"
         />
-        <p class="text-base p-3">
+        <p class="p-3">
           Staff de la comunidad de <a
             href="https://www.linkedin.com/company/techs-los-lagos"
             class="text-vue-green"
@@ -67,7 +67,7 @@
         placeholder
         sizes="600px"
       />
-      <p class="text-base p-3">
+      <p class="p-3">
         Voluntario en <a
           href="https://jschile.org"
           class="text-vue-green"
