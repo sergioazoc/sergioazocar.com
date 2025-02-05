@@ -8,7 +8,7 @@
 
 <template>
   <NuxtLoadingIndicator />
-  <main class="grid gap-4 text-slate-300 bg-slate-950">
+  <main class="grid gap-4 text-slate-300 bg-slate-950 px-4">
     <TheNavbar />
     <div class="max-w-[1248px] mx-auto h-full min-h-[calc(100vh-9.5rem)] py-5">
       <slot />

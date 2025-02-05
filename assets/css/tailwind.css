@@ -4,6 +4,6 @@
 
 @layer components {
   p {
-    
+    @apply text-xl;
   }
 }

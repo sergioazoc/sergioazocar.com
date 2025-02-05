@@ -6,12 +6,12 @@
   })
 
   const tagClasses = {
-    h1: 'text-5xl leading-10 text-vue-green',
-    h2: 'text-4xl leading-9',
-    h3: 'text-3xl leading-8',
-    h4: 'text-2xl leading-7',
-    h5: 'text-xl leading-6',
-    h6: 'text-lg leading-5'
+    h1: 'text-6xl leading-10 text-vue-green',
+    h2: 'text-5xl leading-9',
+    h3: 'text-4xl leading-8',
+    h4: 'text-3xl leading-7',
+    h5: 'text-2xl leading-6',
+    h6: 'text-xl leading-5'
   }
 
 </script>
