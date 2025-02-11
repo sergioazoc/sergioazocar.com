@@ -3,6 +3,7 @@
   import 'vue-lite-youtube-embed/style.css'
 
   const description = ref('Vue Frontend Developer')
+  const { t } = useI18n()
 
   useHead({
     meta: [{
@@ -14,15 +15,15 @@
   const videos = [
     {
       id: 'nlEHJXhqtQM',
-      title: 'The Vueniverse'
+      translationKey: 'vueniverse'
     },
     {
       id: '2-mueX2lm6s',
-      title: 'Innovadores al fin del mundo'
+      translationKey: 'innovadores'
     },
     {
       id: 'pS3Sevsxw_A',
-      title: 'Deconstruyendo el Frontend, de la teoría a la práctica'
+      translationKey: 'frontend'
     }
   ]
 </script>
@@ -30,12 +31,11 @@
 <template>
   <section>
     <BaseTitle>
-      Charlas
+      {{ t('title') }}
     </BaseTitle>
 
     <p class="mb-5">
-      A lo largo de mi carrera he tenido la oportunidad de participar
-      en diversas instancias para compartir mi conocimiento, aquí iré recopilando algunas de ellas.
+      {{ t('description') }}
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -46,12 +46,35 @@
       >
         <LiteYouTubeEmbed
           :id="video.id"
-          :title="video.title"
+          :title="t(`videos.${video.translationKey}.title`)"
         />
         <h2 class="text-vue-green text-center font-bold p-3">
-          {{ video.title }}
+          {{ t(`videos.${video.translationKey}.title`) }}
         </h2>
       </div>
     </div>
   </section>
 </template>
+
+<i18n lang="yaml">
+es:
+  title: Charlas
+  description: A lo largo de mi carrera he tenido la oportunidad de participar en diversas instancias para compartir mi conocimiento, aquí iré recopilando algunas de ellas.
+  videos:
+    vueniverse:
+      title: The Vueniverse
+    innovadores:
+      title: Innovadores al fin del mundo
+    frontend:
+      title: Deconstruyendo el Frontend, de la teoría a la práctica
+en:
+  title: Talks
+  description: Throughout my career I have had the opportunity to participate in various instances to share my knowledge, here I will be collecting some of them.
+  videos:
+    vueniverse:
+      title: The Vueniverse
+    innovadores:
+      title: Innovators at the end of the world
+    frontend:
+      title: Deconstructing Frontend, from theory to practice
+</i18n>

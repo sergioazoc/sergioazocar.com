@@ -4,13 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/icon',
+    '@nuxt/eslint',
     '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/image',
+    '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    'nuxt-gtag',
-    '@nuxt/eslint'
+    'nuxt-gtag'
   ],
 
   fonts: {
@@ -23,9 +24,27 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-
     enabled: import.meta.env.NODE_ENV === 'production',
     id: import.meta.env.GTAG_ID
+  },
+
+  i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'es',
+    locales: [
+      {
+        code: 'es',
+        name: 'Español'
+      },
+      {
+        code: 'en',
+        name: 'English'
+      }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      fallbackLocale: 'en'
+    }
   },
 
   icon: {
@@ -46,5 +65,3 @@ export default defineNuxtConfig({
     }
   },
 })
-
-console.log(import.meta.env.NODE_ENV === 'production')

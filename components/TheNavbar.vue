@@ -3,21 +3,22 @@
 
   const menu = ref()
   const showMenu = ref(false)
+  const { t } = useI18n()
 
-  const menuLinks = [
+  const menuLinks = computed(() => [
     {
       path: '/',
-      text: 'Inicio'
+      text: t('home')
     },
     {
       path: '/about',
-      text: 'Sobre mi'
+      text: t('about')
     },
     {
       path: '/talks',
-      text: 'Charlas'
+      text: t('talks')
     }
-  ]
+  ])
 
   const toggleMenu = () => {
     showMenu.value = !showMenu.value
@@ -109,7 +110,21 @@
             ·
           </li>
         </template>
+        <li>
+          <TheLanguageSwitch />
+        </li>
       </ul>
     </nav>
   </div>
 </template>
+
+<i18n lang="yaml">
+es:
+  home: Inicio
+  about: Sobre mi
+  talks: Charlas
+en:
+  home: Home
+  about: About
+  talks: Talks
+</i18n>
