@@ -1,5 +1,6 @@
 <script lang="ts" setup>
   const description = ref('Vue Frontend Developer')
+  const { t } = useI18n()
 
   useHead({
     meta: [{
@@ -12,23 +13,23 @@
 <template>
   <header class="grid gap-4 py-16 md:py-24 text-center">
     <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
-      ¡Hola! soy Sergio
+      {{ t('title') }}
     </h1>
 
     <p class="text-slate-400">
-      Senior Frontend Developer, con más de 8 años trabajando en tecnología.
+      {{ t('subTitle') }}
     </p>
     <p class="text-slate-400 mb-5">
-      Líder de comunidades, speaker y mentor.
+      {{ t('about') }}
     </p>
 
     <div
       v-if="false"
       class="flex gap-4 mx-auto"
     >
-      <BaseButton>Agendar Mentoría</BaseButton>
+      <BaseButton>{{ t('scheduleMentoring') }}</BaseButton>
       <BaseButton variant="secondary">
-        Contactar
+        {{ t('contact') }}
       </BaseButton>
     </div>
   </header>
@@ -48,10 +49,10 @@
       tag="h2"
       class="text-center"
     >
-      Experiencia
+      {{ t('experience') }}
     </BaseTitle>
     <p class="text-center max-w-2xl block mx-auto mb-5">
-      He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentoreando a los miembros del equipo.
+      {{ t('work') }}
     </p>
   </section>
 
@@ -88,3 +89,22 @@
     </div>
   </section>
 </template>
+
+<i18n lang="yaml">
+  es:
+    title: ¡Hola! soy Sergio
+    subTitle: Senior Frontend Developer, con más de 8 años trabajando en tecnología.
+    about: Líder de comunidades, speaker y mentor.
+    scheduleMentoring: Agendar Mentoría
+    contact: Contactar
+    experience: Experiencia
+    work: He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentoreando a los miembros del equipo.
+  en:
+    title: Hi! I'm Sergio
+    subTitle: Senior Frontend Developer, with more than 8 years working in technology.
+    about: Community leader, speaker and mentor.
+    scheduleMentoring: Schedule a Mentoring
+    contact: Contact
+    experience: Experience
+    work: I have worked on large-scale projects for leading companies in different industries, leading frontend development teams and mentoring team members.
+  </i18n>
