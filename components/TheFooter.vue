@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+  const { t } = useI18n()
+
   const socialLinks = [
     {
       path: 'https://www.linkedin.com/in/sergio-azocar/',
@@ -29,7 +31,14 @@
       </NuxtLink>
     </div>
     <p class="text-center text-xs text-slate-500">
-      Powered by Vue · Nuxt & Tailwind
+      {{ t('footer') }}
     </p>
   </footer>
 </template>
+
+<i18n lang="yaml">
+  es:
+    footer: "Hecho con Vue · Nuxt & Tailwind"
+  en:
+    footer: "Powered by Vue · Nuxt & Tailwind"
+</i18n>

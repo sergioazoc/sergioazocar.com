@@ -9,9 +9,10 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/i18n',
+    '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    'nuxt-gtag'
+    'nuxt-gtag',
   ],
 
   fonts: {
@@ -55,7 +56,7 @@ export default defineNuxtConfig({
 
   image: {
     densities: [1, 2],
-    format: ['webp', 'jpg', 'jpeg', 'png']
+    format: ['webp']
   },
 
   postcss: {
