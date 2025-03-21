@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-01-31',
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
   modules: [
@@ -51,7 +51,18 @@ export default defineNuxtConfig({
   icon: {
     serverBundle: {
       collections: ['mdi']
-    }
+    },
+    customCollections: [
+      {
+        prefix: 'logos',
+        dir: './assets/logos'
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true, 
+      sizeLimitKb: 256,
+    },
   },
 
   image: {

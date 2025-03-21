@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   const description = ref('Vue Frontend Developer')
   const { t } = useI18n()
+  const { logos } = useLogos()
 
   useHead({
     meta: [{
@@ -88,6 +89,22 @@
       />
     </div>
   </section>
+
+  <section>
+    <BaseTitle
+      tag="h3"
+      class="text-center"
+    >
+      {{ t('tools') }}
+    </BaseTitle>
+    <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+      <BaseLogo
+        v-for="logo in logos"
+        :key="logo.name" 
+        :icon="logo.img"
+      />
+    </div>
+  </section>
 </template>
 
 <i18n lang="yaml">
@@ -99,6 +116,7 @@
     contact: Contactar
     experience: Experiencia
     work: He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentoreando a los miembros del equipo.
+    tools: Herramientas que utilizo
   en:
     title: Hi! I'm Sergio
     subTitle: Senior Frontend Developer, with more than 8 years working in technology.
@@ -107,4 +125,5 @@
     contact: Contact
     experience: Experience
     work: I have worked on large-scale projects for leading companies in different industries, leading frontend development teams and mentoring team members.
-  </i18n>
+    tools: Tools I use
+</i18n>
