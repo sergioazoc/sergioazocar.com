@@ -1,6 +1,8 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-01-31',
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
   modules: [
@@ -9,9 +11,9 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/i18n',
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/seo',
     '@vueuse/nuxt',
-    'nuxt-gtag'
+    'nuxt-gtag',
   ],
 
   fonts: {
@@ -50,18 +52,30 @@ export default defineNuxtConfig({
   icon: {
     serverBundle: {
       collections: ['mdi']
-    }
+    },
+    customCollections: [
+      {
+        prefix: 'logos',
+        dir: './assets/logos'
+      },
+    ],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true, 
+      sizeLimitKb: 256,
+    },
   },
 
   image: {
     densities: [1, 2],
-    format: ['webp', 'jpg', 'jpeg', 'png']
+    format: ['webp']
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
+  css: ['~/assets/css/main.css'],
+  
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 })
