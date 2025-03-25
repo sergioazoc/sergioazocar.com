@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --color-vue-green: #42d392;
+  --color-vue-purple: #647eff;
+}
+
+@layer components {
+  p {
+    @apply text-xl;
+  }
+}

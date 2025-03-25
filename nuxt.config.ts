@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -10,7 +12,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
-    '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-gtag',
   ],
@@ -70,10 +71,11 @@ export default defineNuxtConfig({
     format: ['webp']
   },
 
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
+  css: ['~/assets/css/main.css'],
+  
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 })

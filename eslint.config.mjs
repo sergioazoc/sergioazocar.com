@@ -4,6 +4,13 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 export default withNuxt(
   // Your custom configs here
   {
+    files: ['**/*.{ts,vue,js,mjs}'],
+    rules: {
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'never'],
+    }
+  },
+  {
     files: ['**/*.vue'],
     rules: {
       'vue/block-order': ['error', {

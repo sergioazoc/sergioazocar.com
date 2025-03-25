@@ -17,5 +17,7 @@
     "typescript",
     "vue",
   ],
-  "eslint.experimental.useFlatConfig": true
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
 }
