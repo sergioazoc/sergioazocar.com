@@ -15,11 +15,9 @@
   <header class="grid gap-4 py-16 md:py-24 text-center">
     <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
       {{ t('title') }}
+      <p class="text-slate-300 text-3xl">{{ t('subTitle') }}</p>
     </h1>
 
-    <p class="text-slate-400">
-      {{ t('subTitle') }}
-    </p>
     <p class="text-slate-400 mb-5">
       {{ t('about') }}
     </p>
@@ -35,29 +33,28 @@
     </div>
   </header>
 
-  <div class="">
+  <BaseCard class="my-20 flex justify-center items-center gap-16">
+    <div>
+      <BaseTitle
+        tag="h2"
+        class=""
+      >
+        {{ t('experience') }}
+      </BaseTitle>
+      <p class="max-w-2xl block mx-auto mb-5">
+        {{ t('work') }}
+      </p>
+    </div>
     <NuxtImg
-      class="object-cover mx-auto"
-      src="/images/index/jsconf.jpg"
-      alt="Sergio Azócar"
-      placeholder
-      loading="lazy"
-    />
-  </div>
+        class="object-cover transition duration-500 sm:max-w-[500px] w-full"
+        src="/images/index/techs-talk01.jpg"
+        alt="Sergio Azócar"
+        placeholder
+        loading="lazy"
+      />
+  </BaseCard>
 
-  <section class="my-16">
-    <BaseTitle
-      tag="h2"
-      class="text-center"
-    >
-      {{ t('experience') }}
-    </BaseTitle>
-    <p class="text-center max-w-2xl block mx-auto mb-5">
-      {{ t('work') }}
-    </p>
-  </section>
-
-  <section class="mb-16">
+  <section class="mb-20">
     <div class="grid grid-cols-2 sm:grid-cols-4 items-stretch gap-5">
       <NuxtImg
         class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
@@ -68,14 +65,14 @@
       />
       <NuxtImg
         class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/techs-talk01.jpg"
+        src="/images/index/techs-talk02.jpeg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
       />
       <NuxtImg
         class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/techs-talk02.jpeg"
+        src="/images/index/jsconf.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
@@ -90,14 +87,14 @@
     </div>
   </section>
 
-  <section>
+  <section class="mb-8">
     <BaseTitle
       tag="h3"
       class="text-center"
     >
       {{ t('tools') }}
     </BaseTitle>
-    <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mt-8">
       <BaseLogo
         v-for="logo in logos"
         :key="logo.name" 
@@ -110,8 +107,8 @@
 <i18n lang="yaml">
   es:
     title: ¡Hola! soy Sergio
-    subTitle: Senior Frontend Developer, con más de 8 años trabajando en tecnología.
-    about: Líder de comunidades, speaker y mentor.
+    subTitle: Vue Frontend Developer Senior
+    about: "Líder de Comunidades, Speaker y Mentor"
     scheduleMentoring: Agendar Mentoría
     contact: Contactar
     experience: Experiencia
@@ -119,8 +116,8 @@
     tools: Herramientas que utilizo
   en:
     title: Hi! I'm Sergio
-    subTitle: Senior Frontend Developer, with more than 8 years working in technology.
-    about: Community leader, speaker and mentor.
+    subTitle: Senior Vue Frontend Developer
+    about: Community Leader, Speaker and Mentor
     scheduleMentoring: Schedule a Mentoring
     contact: Contact
     experience: Experience
