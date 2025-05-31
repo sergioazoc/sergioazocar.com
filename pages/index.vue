@@ -33,25 +33,27 @@
     </div>
   </header>
 
-  <BaseCard class="my-20 flex flex-wrap justify-center items-center gap-16">
-    <div>
+  <BaseCard class="my-20 flex flex-col md:flex-row items-center gap-16">
+    <div class="max-w-xl">
       <BaseTitle
         tag="h2"
         class=""
       >
         {{ t('experience') }}
       </BaseTitle>
-      <p class="max-w-2xl block mx-auto mb-5">
+      <p class="max-w-2xl mb-5">
         {{ t('work') }}
       </p>
     </div>
-    <NuxtImg
-        class="object-cover transition duration-500 sm:max-w-[500px] w-full"
+    <div class="md:max-w-[500px]">
+      <NuxtImg
+        class="max-w-full h-auto"
         src="/images/index/techs-talk01.jpg"
         alt="Sergio Azócar"
         placeholder
         loading="lazy"
       />
+    </div>
   </BaseCard>
 
   <section class="mb-20">
