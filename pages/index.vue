@@ -33,7 +33,7 @@
     </div>
   </header>
 
-  <BaseCard class="my-20 flex justify-center items-center gap-16">
+  <BaseCard class="my-20 flex flex-wrap justify-center items-center gap-16">
     <div>
       <BaseTitle
         tag="h2"
