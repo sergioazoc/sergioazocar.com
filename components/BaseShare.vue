@@ -1,13 +1,17 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const { share, isSupported } = useShare()
+const route = useRoute()
 
 const props = defineProps<{
   title: string
 }>()
 
-const url = window.location.href
-const trackedUrl = `${url}?utm_source=x&utm_medium=social&utm_campaign=blog`
+console.log(route)
+
+const baseUrl = 'https://www.sergioazocar.com'
+const url = computed(() => `${baseUrl}${route.fullPath}`)
+const trackedUrl = `${url.value}?utm_source=x&utm_medium=social&utm_campaign=blog`
 
 const message = t('articleMessage', {
   title: props.title,
@@ -19,7 +23,7 @@ const sharePost = () => {
     share({
       title: props.title,
       text: trackedUrl,
-      url,
+      url: url.value,
     }).catch((err) => console.error('Error al compartir:', err))
   }
 }
