@@ -1,126 +1,124 @@
 <script lang="ts" setup>
-  const description = ref('Vue Frontend Developer')
-  const { t } = useI18n()
-  const { logos } = useLogos()
+const { t } = useI18n()
+const localePath = useLocalePath()
 
-  useHead({
-    meta: [{
-      name: 'description',
-      content: description.value
-    }]
-  })
+useSeoMeta({
+  title: 'Sergio Azócar - Frontend Developer Senior',
+  description: t('subtitle'),
+})
 </script>
 
 <template>
-  <header class="grid gap-4 py-16 md:py-24 text-center">
-    <h1 class="text-[clamp(3rem,5vw,4.5rem)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-vue-green to-vue-purple">
-      {{ t('title') }}
-      <p class="text-slate-300 text-3xl">{{ t('subTitle') }}</p>
-    </h1>
+  <div class="grid gap-16">
+    <section class="text-center">
+      <h1 class="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
+        <span class="from-vue-green to-vue-purple bg-gradient-to-r bg-clip-text text-transparent">{{
+          t('hello')
+        }}</span
+        ><br />
+        Frontend Developer Senior
+      </h1>
+      <p class="mx-auto mb-8 max-w-3xl">{{ t('subtitle') }}</p>
 
-    <p class="text-slate-400 mb-5">
-      {{ t('about') }}
-    </p>
+      <div class="flex items-center justify-center gap-4">
+        <UButton :to="localePath('about')" size="xl">{{ t('navigation.about') }}</UButton>
+        <UButton to="/cv-sergio-azocar.pdf" target="_blank" size="xl" variant="subtle">CV</UButton>
+      </div>
+    </section>
 
-    <div
-      v-if="false"
-      class="flex gap-4 mx-auto"
-    >
-      <BaseButton>{{ t('scheduleMentoring') }}</BaseButton>
-      <BaseButton variant="secondary">
-        {{ t('contact') }}
-      </BaseButton>
-    </div>
-  </header>
+    <section>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <UCard class="lg:col-span-2">
+          <template #header>
+            <div class="flex items-center gap-4 text-xl font-semibold">
+              <UIcon name="lucide-briefcase-business" class="text-success-500" />
+              <p>{{ t('experience-title') }}</p>
+            </div>
+          </template>
 
-  <BaseCard class="my-20 flex justify-center items-center gap-16">
-    <div>
-      <BaseTitle
-        tag="h2"
-        class=""
-      >
-        {{ t('experience') }}
-      </BaseTitle>
-      <p class="max-w-2xl block mx-auto mb-5">
-        {{ t('work') }}
-      </p>
-    </div>
-    <NuxtImg
-        class="object-cover transition duration-500 sm:max-w-[500px] w-full"
-        src="/images/index/techs-talk01.jpg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-  </BaseCard>
+          <p>{{ t('experience-description') }}</p>
 
-  <section class="mb-20">
-    <div class="grid grid-cols-2 sm:grid-cols-4 items-stretch gap-5">
-      <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/jschile.jpeg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-      <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/techs-talk02.jpeg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-      <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/jsconf.jpg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-      <NuxtImg
-        class="hover:scale-110 object-cover transition duration-500 sm:max-w-[300px] w-full"
-        src="/images/index/techschoolv2.jpg"
-        alt="Sergio Azócar"
-        placeholder
-        loading="lazy"
-      />
-    </div>
-  </section>
+          <template #footer>
+            <div class="flex flex-wrap gap-2">
+              <UBadge variant="subtle">Vue.js</UBadge>
+              <UBadge variant="subtle">TypeScript</UBadge>
+              <UBadge variant="subtle">Nuxt</UBadge>
+              <UBadge variant="subtle">Node.js</UBadge>
+            </div>
+          </template>
+        </UCard>
 
-  <section class="mb-8">
-    <BaseTitle
-      tag="h3"
-      class="text-center"
-    >
-      {{ t('tools') }}
-    </BaseTitle>
-    <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto mt-8">
-      <BaseLogo
-        v-for="logo in logos"
-        :key="logo.name" 
-        :icon="logo.img"
-      />
-    </div>
-  </section>
+        <UCard>
+          <template #header>
+            <div class="flex items-center gap-4 text-xl font-semibold">
+              <UIcon name="lucide-target" class="text-success-500" />
+              <p>{{ t('current-title') }}</p>
+            </div>
+          </template>
+
+          <p>{{ t('current-description') }}</p>
+        </UCard>
+
+        <UCard>
+          <template #header>
+            <div class="flex items-center gap-4 text-xl font-semibold">
+              <UIcon name="lucide-users" class="text-purple-500" />
+              <p>{{ t('mentoring-title') }}</p>
+            </div>
+          </template>
+
+          <p>{{ t('mentoring-description') }}</p>
+        </UCard>
+
+        <UCard class="lg:col-span-2">
+          <template #header>
+            <div class="flex items-center gap-4 text-xl font-semibold">
+              <UIcon name="lucide-mic" class="text-orange-500" />
+              <p>{{ t('speaking-title') }}</p>
+            </div>
+          </template>
+
+          <p>{{ t('speaking-description') }}</p>
+
+          <template #footer>
+            <ULink :to="localePath('talks')">
+              {{ t('speaking-footer') }}
+              <UIcon name="lucide-external-link" class="ml-1 inline-block" />
+            </ULink>
+          </template>
+        </UCard>
+      </div>
+    </section>
+  </div>
 </template>
 
-<i18n lang="yaml">
-  es:
-    title: ¡Hola! soy Sergio
-    subTitle: Vue Frontend Developer Senior
-    about: "Líder de Comunidades, Speaker y Mentor"
-    scheduleMentoring: Agendar Mentoría
-    contact: Contactar
-    experience: Experiencia
-    work: He trabajado en proyectos de gran escala para empresas líderes en diferentes industrias, liderando equipos de desarrollo frontend y mentoreando a los miembros del equipo.
-    tools: Herramientas que utilizo
-  en:
-    title: Hi! I'm Sergio
-    subTitle: Senior Vue Frontend Developer
-    about: Community Leader, Speaker and Mentor
-    scheduleMentoring: Schedule a Mentoring
-    contact: Contact
-    experience: Experience
-    work: I have worked on large-scale projects for leading companies in different industries, leading frontend development teams and mentoring team members.
-    tools: Tools I use
+<i18n lang="json">
+{
+  "es": {
+    "hello": "¡Hola! soy Sergio Azócar",
+    "subtitle": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos.",
+    "experience-title": "Experiencia",
+    "experience-description": "Más de 5 años construyendo soluciones modulares, reutilizables y de alto rendimiento con Vue.js para startups y empresas grandes.",
+    "current-title": "Enfoque Actual",
+    "current-description": "Optimización del rendimiento, Vue 3 Composition API y mejoras en la experiencia del desarrollador.",
+    "mentoring-title": "Mentoría",
+    "mentoring-description": "Ayudando a los desarrolladores a mejorar sus habilidades en prácticas modernas de frontend.",
+    "speaking-title": "Charlas y Talleres",
+    "speaking-description": "Ponente habitual en conferencias y meetups de Vue.js. He impartido talleres sobre patrones avanzados de Vue.js.",
+    "speaking-footer": "Ver las charlas"
+  },
+  "en": {
+    "hello": "Hello! I'm Sergio Azócar",
+    "subtitle": "I build exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge.",
+    "experience-title": "Experience",
+    "experience-description": "Over 5 years building modular, reusable, and high-performance solutions with Vue.js for startups and enterprise companies.",
+    "current-title": "Current Focus",
+    "current-description": "Performance optimization, Vue 3 Composition API, and developer experience improvements.",
+    "mentoring-title": "Mentoring",
+    "mentoring-description": "Helping developers level up their skills in modern frontend practices.",
+    "speaking-title": "Speaking & Workshops",
+    "speaking-description": "Regular speaker at Vue.js conferences and meetups. Conducted workshops on advanced Vue.js patterns.",
+    "speaking-footer": "View Talks"
+  }
+}
 </i18n>
