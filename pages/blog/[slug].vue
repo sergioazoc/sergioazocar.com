@@ -18,6 +18,18 @@ watch(
     router.push(localePath('/blog', newLocale))
   },
 )
+
+useSeoMeta({
+  title: post?.value?.title,
+  description: post?.value?.description,
+  ogTitle: post?.value?.title,
+  ogDescription: post?.value?.description,
+  ogImage: post?.value?.img,
+  twitterCard: 'summary_large_image',
+  twitterTitle: post?.value?.title,
+  twitterDescription: post?.value?.description,
+  twitterImage: post?.value?.img,
+})
 </script>
 
 <template>
