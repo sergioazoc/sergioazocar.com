@@ -113,7 +113,8 @@ const talks = computed(() => {
                 :href="'https://www.youtube.com/watch?v=' + talk.youtubeId"
                 target="_blank"
                 color="primary"
-                variant="subtle"
+                variant="solid"
+                icon="lucide-youtube"
               >
                 {{ t('watch-youtube') }}
               </UButton>

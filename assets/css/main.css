@@ -43,7 +43,7 @@
 .writing,
 .prose {
   p {
-    @apply mb-4 text-lg;
+    @apply mb-4;
   }
   h1,
   h2,

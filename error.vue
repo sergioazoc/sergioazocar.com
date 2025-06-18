@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-const { t } = useI18n()
+const { t } = useI18n({
+  useScope: 'global',
+})
 
 defineProps({
   error: {

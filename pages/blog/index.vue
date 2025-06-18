@@ -48,7 +48,13 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
             <template #footer>
               <div class="flex flex-wrap items-center gap-2 px-6 py-4">
                 <p>Tags:</p>
-                <UBadge v-for="tag in post.tags" :key="tag" variant="subtle">{{ tag }}</UBadge>
+                <UBadge
+                  v-for="tag in post.tags"
+                  :key="tag"
+                  variant="outline"
+                  class="rounded-full"
+                  >{{ tag }}</UBadge
+                >
               </div>
             </template>
           </UCard>
