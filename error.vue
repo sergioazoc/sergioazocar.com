@@ -22,14 +22,3 @@ defineProps({
     </div>
   </div>
 </template>
-
-<i18n lang="json">
-{
-  "es": {
-    "goBackHome": "Volver a Inicio"
-  },
-  "en": {
-    "goBackHome": "Go back home"
-  }
-}
-</i18n>

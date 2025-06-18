@@ -23,7 +23,25 @@ export default defineNuxtConfig({
     name: 'Sergio Azócar',
   },
 
-  sitemap: {},
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
+    xsl: false, // Opcional: deshabilitar XSL para mejor rendimiento
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.7,
+    },
+  },
+
+  robots: {
+    credits: false,
+    rules: [
+      {
+        UserAgent: '*',
+        Allow: '/',
+        Sitemap: 'https://www.sergioazocar.com/sitemap.xml',
+      },
+    ],
+  },
 
   fonts: {
     families: [
