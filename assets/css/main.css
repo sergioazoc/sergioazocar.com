@@ -1,13 +1,88 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 @theme {
-  --font-sans: "Inter", sans-serif;
+  --font-sans: 'Inter', sans-serif;
   --color-vue-green: #42d392;
   --color-vue-purple: #647eff;
 }
 
-@layer components {
+@layer base {
+  h2 {
+    @apply text-3xl font-bold;
+  }
+}
+
+:root {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+
+  --ui-text-dimmed: var(--ui-color-neutral-500);
+  --ui-text-muted: var(--ui-color-neutral-400);
+  --ui-text-toned: var(--ui-color-neutral-300);
+  --ui-text: var(--ui-color-neutral-200);
+  --ui-text-highlighted: var(--color-white);
+  --ui-text-inverted: var(--ui-color-neutral-900);
+
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-800);
+  --ui-bg-elevated: var(--ui-color-neutral-800);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--color-white);
+
+  --ui-border: var(--ui-color-neutral-800);
+  --ui-border-muted: var(--ui-color-neutral-700);
+  --ui-border-accented: var(--ui-color-neutral-700);
+  --ui-border-inverted: var(--color-white);
+}
+
+.writing,
+.prose {
   p {
-    @apply text-xl;
+    @apply mb-4 text-lg;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-4;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h2:nth-of-type(n + 2) {
+    @apply mt-12;
+  }
+  h3 {
+    @apply mt-8 text-2xl font-semibold;
+  }
+  ul {
+    @apply list-disc pl-6;
+  }
+  li {
+    @apply mb-1;
+  }
+  li:last-child {
+    @apply mb-4;
+  }
+
+  pre {
+    @apply mb-4 block max-w-full overflow-x-auto rounded-lg bg-neutral-800;
+  }
+  pre code {
+    @apply inline-block max-w-0 p-4;
+  }
+
+  blockquote {
+    @apply my-8 border-l-4 border-neutral-300 pl-4 italic text-neutral-300;
+    & p {
+      @apply text-xl;
+    }
   }
 }

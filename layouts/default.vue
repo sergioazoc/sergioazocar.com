@@ -1,18 +1,15 @@
-<script lang="ts" setup>
-  const title = ref('Sergio Azócar | @sergioazoc')
-
-  useHead({
-    title: title.value
-  })
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <NuxtLoadingIndicator />
-  <main class="grid gap-4 text-slate-300 bg-slate-950 px-4">
-    <TheNavbar />
-    <div class="max-w-[1248px] mx-auto h-full min-h-[calc(100vh-9.5rem)] py-5">
+  <div class="grid h-dvh grid-rows-[auto_1fr_auto]">
+    <NuxtLoadingIndicator />
+
+    <TheHeader />
+
+    <main class="mx-auto mb-16 mt-20 w-full max-w-7xl px-4 py-4">
       <slot />
-    </div>
+    </main>
+
     <TheFooter />
-  </main>
+  </div>
 </template>

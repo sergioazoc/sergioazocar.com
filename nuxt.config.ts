@@ -2,80 +2,201 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
 
   modules: [
+    '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
     '@vueuse/nuxt',
-    'nuxt-gtag',
   ],
+
+  site: {
+    url: 'https://www.sergioazocar.com',
+    name: 'Sergio Azócar',
+  },
+
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
+    xsl: false, // Opcional: deshabilitar XSL para mejor rendimiento
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.7,
+    },
+  },
+
+  robots: {
+    credits: false,
+    rules: [
+      {
+        UserAgent: '*',
+        Allow: '/',
+        Sitemap: 'https://www.sergioazocar.com/sitemap.xml',
+      },
+    ],
+  },
 
   fonts: {
     families: [
       {
         name: 'Inter',
-        provider: 'google'
+        provider: 'google',
+        styles: ['normal', 'italic'],
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       },
-    ]
+    ],
   },
 
-  gtag: {
-    enabled: import.meta.env.NODE_ENV === 'production',
-    id: import.meta.env.GTAG_ID
+  scripts: {
+    registry: {
+      googleAnalytics: true,
+    },
   },
 
   i18n: {
-    strategy: 'no_prefix',
+    strategy: 'prefix',
     defaultLocale: 'es',
     locales: [
       {
         code: 'es',
-        name: 'Español'
+        name: 'Español',
+        language: 'es-ES',
+        file: 'es.json',
       },
       {
         code: 'en',
-        name: 'English'
-      }
+        name: 'English',
+        language: 'en-US',
+        file: 'en.json',
+      },
     ],
     detectBrowserLanguage: {
       useCookie: true,
-      fallbackLocale: 'en'
-    }
+      cookieKey: 'i18n_redirected',
+      fallbackLocale: 'en',
+    },
+    customRoutes: 'config',
+    pages: {
+      about: {
+        es: '/sobre-mi',
+        en: '/about',
+      },
+      blog: {
+        es: '/blog',
+        en: '/blog',
+      },
+      'blog/[slug]': {
+        es: '/blog/[slug]',
+        en: '/blog/[slug]',
+      },
+      talks: {
+        es: '/charlas',
+        en: '/talks',
+      },
+    },
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 
   icon: {
     serverBundle: {
-      collections: ['mdi']
+      collections: ['lucide'],
     },
     customCollections: [
       {
         prefix: 'logos',
-        dir: './assets/logos'
+        dir: './assets/logos',
       },
     ],
     clientBundle: {
       scan: true,
-      includeCustomCollections: true, 
+      includeCustomCollections: true,
       sizeLimitKb: 256,
+    },
+  },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'material-theme-ocean',
+          langs: [
+            'angular-html',
+            'angular-ts',
+            'apache',
+            'astro',
+            'css',
+            'diff',
+            'dockerfile',
+            'go',
+            'graphql',
+            'html',
+            'http',
+            'java',
+            'javascript',
+            'json',
+            'jsx',
+            'markdown',
+            'mdc',
+            'mdx',
+            'nginx',
+            'php',
+            'postcss',
+            'powershell',
+            'python',
+            'regexp',
+            'ruby',
+            'scss',
+            'shellscript',
+            'sql',
+            'svelte',
+            'ts-tags',
+            'tsx',
+            'typescript',
+            'vue-html',
+            'vue',
+            'xml',
+            'yaml',
+          ],
+        },
+      },
     },
   },
 
   image: {
     densities: [1, 2],
-    format: ['webp']
+    format: ['webp'],
   },
 
   css: ['~/assets/css/main.css'],
-  
+
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
+  },
+
+  runtimeConfig: {
+    public: {
+      scripts: {
+        googleAnalytics: {
+          id: process.env.NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID,
+        },
+      },
+    },
+  },
+
+  ui: {
+    colorMode: false,
+  },
+
+  future: {
+    compatibilityVersion: 4,
   },
 })
