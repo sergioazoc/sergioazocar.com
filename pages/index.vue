@@ -22,7 +22,6 @@ useSeoMeta({
 
       <div class="flex items-center justify-center gap-4">
         <UButton :to="localePath('about')" size="xl">{{ t('navigation.about') }}</UButton>
-        <UButton to="/cv-sergio-azocar.pdf" target="_blank" size="xl" variant="subtle">CV</UButton>
       </div>
     </section>
 
@@ -40,10 +39,10 @@ useSeoMeta({
 
           <template #footer>
             <div class="flex flex-wrap gap-2">
-              <UBadge variant="subtle">Vue.js</UBadge>
-              <UBadge variant="subtle">TypeScript</UBadge>
-              <UBadge variant="subtle">Nuxt</UBadge>
-              <UBadge variant="subtle">Node.js</UBadge>
+              <UBadge variant="outline" class="rounded-full">Vue.js</UBadge>
+              <UBadge variant="outline" class="rounded-full">TypeScript</UBadge>
+              <UBadge variant="outline" class="rounded-full">Nuxt</UBadge>
+              <UBadge variant="outline" class="rounded-full">Node.js</UBadge>
             </div>
           </template>
         </UCard>

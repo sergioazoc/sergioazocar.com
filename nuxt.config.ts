@@ -34,13 +34,8 @@ export default defineNuxtConfig({
 
   robots: {
     credits: false,
-    rules: [
-      {
-        UserAgent: '*',
-        Allow: '/',
-        Sitemap: 'https://www.sergioazocar.com/sitemap.xml',
-      },
-    ],
+    allow: '/',
+    sitemap: 'https://www.sergioazocar.com/sitemap.xml',
   },
 
   fonts: {

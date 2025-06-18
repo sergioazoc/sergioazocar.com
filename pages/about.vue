@@ -96,13 +96,22 @@ const journeyDescriptions = computed(() => [
 
         <template #footer>
           <div class="flex flex-wrap gap-4">
-            <UButton color="primary" variant="outline" external to="mailto:sergioazoc@gmail.com">
+            <UButton color="primary" variant="solid" external to="mailto:sergioazoc@gmail.com">
               <Icon name="lucide:mail" class="mr-2 h-4 w-4" />
               Email
             </UButton>
             <UButton
-              color="neutral"
-              variant="outline"
+              color="primary"
+              to="/cv-sergio-azocar.pdf"
+              target="_blank"
+              size="xl"
+              variant="subtle"
+              icon="lucide-file-text"
+              >CV</UButton
+            >
+            <UButton
+              color="primary"
+              variant="subtle"
               external
               to="https://www.linkedin.com/in/sergio-azocar"
             >
@@ -154,9 +163,9 @@ const journeyDescriptions = computed(() => [
             <UBadge
               v-for="(tech, techIndex) in job.technologies"
               :key="techIndex"
-              class="mt-2"
-              color="neutral"
-              variant="subtle"
+              class="mt-2 rounded-full"
+              color="primary"
+              variant="outline"
             >
               {{ tech }}
             </UBadge>
