@@ -1,4 +1,5 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 const commonSchema = z.object({
   author: z.string(),
@@ -12,15 +13,19 @@ const commonSchema = z.object({
 
 export default defineContentConfig({
   collections: {
-    blog_en: defineCollection({
-      type: 'page',
-      source: 'en/**',
-      schema: commonSchema,
-    }),
-    blog_es: defineCollection({
-      type: 'page',
-      source: 'es/**',
-      schema: commonSchema,
-    }),
+    blog_en: defineCollection(
+      asSitemapCollection({
+        type: 'page',
+        source: 'en/**',
+        schema: commonSchema,
+      }),
+    ),
+    blog_es: defineCollection(
+      asSitemapCollection({
+        type: 'page',
+        source: 'es/**',
+        schema: commonSchema,
+      }),
+    ),
   },
 })
