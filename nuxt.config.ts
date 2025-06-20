@@ -119,6 +119,14 @@ export default defineNuxtConfig({
   },
 
   content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'sergioazocar.com',
+        owner: 'sergioazoc', // Tu usuario de GitHub
+        url: 'https://github.com/sergioazoc/sergioazocar.com',
+      },
+    },
     build: {
       markdown: {
         highlight: {

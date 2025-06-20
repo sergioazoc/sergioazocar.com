@@ -1,62 +1,52 @@
+import type { SitemapUrlInput } from '#sitemap/types'
+
 export default defineSitemapEventHandler(async (e) => {
-  // URLs estáticas con prioridades
-  const staticUrls = [
-    // Páginas principales
+  const staticUrls: SitemapUrlInput[] = [
     { loc: '/es', priority: 1.0, changefreq: 'daily' },
     { loc: '/en', priority: 1.0, changefreq: 'daily' },
 
-    // Páginas sobre mí
     { loc: '/es/sobre-mi', priority: 0.9, changefreq: 'monthly' },
     { loc: '/en/about', priority: 0.9, changefreq: 'monthly' },
 
-    // Páginas de charlas
     { loc: '/es/charlas', priority: 0.8, changefreq: 'monthly' },
     { loc: '/en/talks', priority: 0.8, changefreq: 'monthly' },
 
-    // Blog principal
     { loc: '/es/blog', priority: 0.9, changefreq: 'weekly' },
     { loc: '/en/blog', priority: 0.9, changefreq: 'weekly' },
   ]
 
-  // Obtener posts del blog dinámicamente
-  type BlogUrl = {
-    loc: string
-    lastmod: string
-    priority: number
-    changefreq: string
-  }
-  const blogUrls: BlogUrl[] = []
+  const blogUrls: SitemapUrlInput[] = []
 
   try {
-    // Posts en español
-    const esBlogs = await serverQueryContent(e, '/es/blog').find()
-    esBlogs.forEach((post) => {
-      if (post._path) {
-        blogUrls.push({
-          loc: post._path,
-          lastmod: post.date
-            ? new Date(post.date.split('/').reverse().join('-')).toISOString()
-            : new Date().toISOString(),
-          priority: 0.7,
-          changefreq: 'monthly',
-        })
-      }
-    })
+    const blogPostsEs = await queryCollection(e, 'blog_es')
+      .order('date', 'DESC')
+      .select('date', 'path')
+      .all()
 
-    // Posts en inglés
-    const enBlogs = await serverQueryContent(e, '/en/blog').find()
-    enBlogs.forEach((post) => {
-      if (post._path) {
-        blogUrls.push({
-          loc: post._path,
-          lastmod: post.date
-            ? new Date(post.date.split('/').reverse().join('-')).toISOString()
-            : new Date().toISOString(),
-          priority: 0.7,
-          changefreq: 'monthly',
-        })
-      }
-    })
+    const blogPostsEn = await queryCollection(e, 'blog_en')
+      .order('date', 'DESC')
+      .select('date', 'path')
+      .all()
+
+    for (const post of blogPostsEs) {
+      const loc = post.path
+      blogUrls.push({
+        loc,
+        lastmod: post.date,
+        priority: 0.7,
+        changefreq: 'weekly',
+      })
+    }
+
+    for (const post of blogPostsEn) {
+      const loc = post.path
+      blogUrls.push({
+        loc,
+        lastmod: post.date,
+        priority: 0.7,
+        changefreq: 'weekly',
+      })
+    }
   } catch (error) {
     console.error('Error fetching blog posts for sitemap:', error)
   }

@@ -21,7 +21,7 @@ useSeoMeta({
       <p class="mx-auto mb-8 max-w-3xl">{{ t('subtitle') }}</p>
 
       <div class="flex items-center justify-center gap-4">
-        <UButton :to="localePath('about')" size="xl">{{ t('navigation.about') }}</UButton>
+        <UButton :to="localePath('about')" size="xl">{{ $t('navigation.about') }}</UButton>
       </div>
     </section>
 
