@@ -1,11 +1,19 @@
 ---
-title: 'Screaming Architecture: La Clave para un Frontend Escalable'
-description: 'Aprende cómo estructurar tu proyecto frontend para que grite lo que hace, no con qué está hecho. Una guía práctica para mejorar la claridad, escalabilidad y mantenibilidad de tus apps con Screaming Architecture.'
-author: 'Sergio Azócar'
-tags: ['arquitectura', 'frontend', 'vue', 'nuxt', 'escalabilidad', 'buenas prácticas']
-union: 'screaming-architecture-the-key-to-scalable-frontend'
-date: '11/06/2025'
-img: '/images/blog/screaming-architecture-the-key-to-scalable-frontend.png'
+title: "Screaming Architecture: La Clave para un Frontend Escalable"
+description: Aprende cómo estructurar tu proyecto frontend para que grite lo que
+  hace, no con qué está hecho. Una guía práctica para mejorar la claridad,
+  escalabilidad y mantenibilidad de tus apps con Screaming Architecture.
+author: Sergio Azócar
+tags:
+  - arquitectura
+  - frontend
+  - vue
+  - nuxt
+  - escalabilidad
+  - buenas prácticas
+union: screaming-architecture-the-key-to-scalable-frontend
+date: 11/06/2025
+img: /images/blog/screaming-architecture-the-key-to-scalable-frontend.png
 ---
 
 ## ¿Qué es Screaming Architecture?
@@ -26,7 +34,7 @@ Te voy a contar sobre Screaming Architecture, un enfoque de organización de có
 
 La mayoría de los proyectos frontend, especialmente al inicio, usan una estructura de carpetas basada en tipos técnicos: components/, views/, services/, utils/, store/, etc.
 
-```
+```text
 src/
 ├── components/
 ├── views/
@@ -39,11 +47,8 @@ src/
 Si bien es un punto de partida, esta estructura tiene sus problemas, especialmente a medida que tu aplicación crece:
 
 - **Dispersión de la lógica**: Para una sola funcionalidad (ej. "Gestión de Usuarios"), sus partes (componentes de UI, lógica del store, llamadas a la API) están esparcidas por todo el proyecto.
-
 - **Dificultad de navegación**: Tienes que saltar entre muchas carpetas para entender cómo funciona una característica completa.
-
 - **Mantenimiento doloroso**: Un cambio en una función puede requerir modificar archivos en varias carpetas, aumentando el riesgo de introducir errores.
-
 - **Acoplamiento a la infraestructura**: La estructura te dice cómo está hecho (con servicios, componentes), no qué hace tu negocio.
 
 Imagina el plano de una casa. No ves una sección de "ladrillos", otra de "cemento" y otra de "ventanas". Ves "cocina", "dormitorio", "baño". Los planos "gritan" el propósito y las funciones de cada espacio.
@@ -55,23 +60,14 @@ La Screaming Architecture busca lo mismo para tu código. Tu estructura de carpe
 Implementar este enfoque no es solo por estética, trae beneficios tangibles que te permiten escalar tu aplicación y tu equipo.
 
 - **Entendimiento instantáneo**: Abres el proyecto y de un vistazo sabes que hace el negocio.
-
 - **Onboarding veloz**: Nuevos desarrolladores entienden la estructura del negocio mucho más rápido.
-
 - **Mantenimiento simplificado**: Los cambios en una funcionalidad se mantienen localizados en su propio módulo.
-
 - **Cambios aislados, menos errores**: Reduces el riesgo de romper otras partes del sistema al modificar una feature.
-
 - **Código más escalable**: Puedes añadir nuevas funcionalidades (features) sin afectar el código de las existentes.
-
 - **Navegación intuitiva**: Buscas funcionalidades de negocio, no tipos de archivos genéricos.
-
 - **Menos acoplamiento**: La lógica de negocio central es más independiente de los detalles técnicos.
-
 - **Refactorización más segura**: Mover o refactorizar una feature entera es menos arriesgado.
-
 - **Facilita el testing**: Las funcionalidades son más fáciles de aislar y testear.
-
 - **Tu proyecto se vuelve predecible**: El crecimiento es organizado y controlado.
 
 ## Aplicando Screaming Architecture
@@ -82,7 +78,7 @@ La clave es agrupar el código por features o dominios de negocio. Cada carpeta 
 
 Aquí tienes un ejemplo práctico de cómo podría verse la estructura en tú proyecto:
 
-```
+```text
 src/
 ├── modules/              # También podría llamarse "Features" o "Domain", algo que agrupe
 │   │                       las funcionalidades
