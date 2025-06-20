@@ -1,11 +1,19 @@
 ---
-title: 'Screaming Architecture: The Key to a Scalable Frontend'
-description: "Learn how to structure your frontend project so it screams what it does, not what it's made of. A practical guide to improving the clarity, scalability, and maintainability of your apps with Screaming Architecture."
-author: 'Sergio Azócar'
-tags: ['architecture', 'frontend', 'vue', 'nuxt', 'scalability', 'best practices']
-slug: 'screaming-architecture-the-key-to-scalable-frontend'
-date: '11/06/2025'
-img: '/images/blog/screaming-architecture-the-key-to-scalable-frontend.png'
+title: "Screaming Architecture: The Key to a Scalable Frontend"
+description: Learn how to structure your frontend project so it screams what it
+  does, not what it's made of. A practical guide to improving the clarity,
+  scalability, and maintainability of your apps with Screaming Architecture.
+author: Sergio Azócar
+tags:
+  - architecture
+  - frontend
+  - vue
+  - nuxt
+  - scalability
+  - best practices
+slug: screaming-architecture-the-key-to-scalable-frontend
+date: 11/06/2025
+img: /images/blog/screaming-architecture-the-key-to-scalable-frontend.png
 ---
 
 ## What is Screaming Architecture?
@@ -26,7 +34,7 @@ I'm going to tell you about **Screaming Architecture**, a code organization appr
 
 Most frontend projects, especially at the beginning, use a folder structure based on technical types: `components/`, `views/`, `services/`, `utils/`, `store/`, etc.
 
-```
+```text
 src/
 ├── components/
 ├── views/
@@ -39,12 +47,9 @@ src/
 While it's a starting point, this structure has its problems, especially as your application grows:
 
 - **Logic dispersion**: For a single functionality (e.g., "User Management"), its parts (UI components, store logic, API calls) are scattered throughout the entire project.
-
 - **Navigation difficulty**: You have to jump between many folders to understand how a complete feature works.
-
 - **Painful maintenance**: A change in one function might require modifying files in several folders, increasing the risk of introducing errors.
-
-- **Infrastructure coupling**: The structure tells you _how_ it's built (with services, components), not _what_ your business does.
+- **Infrastructure coupling**: The structure tells you *how* it's built (with services, components), not *what* your business does.
 
 Imagine a house blueprint. You don't see a "bricks" section, another for "cement," and another for "windows." You see "kitchen," "bedroom," "bathroom." The blueprints "scream" the purpose and functions of each space.
 
@@ -55,23 +60,14 @@ Screaming Architecture seeks the same for your code. Your high-level folder stru
 Implementing this approach isn't just about aesthetics; it brings tangible benefits that allow you to scale your application and your team.
 
 - **Instant understanding**: You open the project and, at a glance, you know what the business does.
-
 - **Fast onboarding**: New developers understand the business structure much faster.
-
 - **Simplified maintenance**: Changes to a functionality are kept localized within its own module.
-
 - **Isolated changes, fewer errors**: You reduce the risk of breaking other parts of the system when modifying a feature.
-
 - **More scalable code**: You can add new functionalities (features) without affecting existing code.
-
 - **Intuitive navigation**: You look for business functionalities, not generic file types.
-
 - **Less coupling**: The core business logic is more independent of technical details.
-
 - **Safer refactorings**: Moving or refactoring an entire feature is less risky.
-
 - **Facilitates testing**: Functionalities are easier to isolate and test.
-
 - **Your project becomes predictable**: Growth is organized and controlled.
 
 ## Applying Screaming Architecture
@@ -82,7 +78,7 @@ The key is to group code by **features** or **business domains**. Each feature f
 
 Here's a practical example of what the structure might look like in your project:
 
-```
+```text
 src/
 ├── modules/            # Could also be called "Features" or "Domain," something that groups
 │   │                   # functionalities
