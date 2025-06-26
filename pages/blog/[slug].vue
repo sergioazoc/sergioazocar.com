@@ -42,11 +42,24 @@ useSeoMeta({
 
       <BaseShare :title="post.title" />
 
-      <UCard class="mx-auto max-w-5xl">
-        <div class="writing">
-          <ContentRenderer :value="post" class="" />
-        </div>
-      </UCard>
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <article class="lg:col-span-2">
+          <UCard>
+            <template #header>
+              <NuxtImg :src="post.img" class="w-full rounded-lg" :alt="post.title" />
+            </template>
+            <div class="writing">
+              <ContentRenderer :value="post" class="" />
+            </div>
+          </UCard>
+        </article>
+
+        <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
+          <UCard>
+            <BaseToc v-if="post.body?.toc" :toc="post.body.toc" />
+          </UCard>
+        </aside>
+      </div>
 
       <BaseShare :title="post.title" />
     </template>

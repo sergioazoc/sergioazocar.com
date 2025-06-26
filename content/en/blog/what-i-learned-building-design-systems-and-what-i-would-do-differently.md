@@ -104,8 +104,6 @@ Tailwind helps, but without shared design decisions, tokens, and a clear structu
 **📆 Reality:**
 A Design System is never finished. It’s a living system that grows, adapts, and needs to evolve alongside your product.
 
-To understand it better, let’s break down the needs of each team:
-
 ## Design and Development Needs
 
 When you set out to build a Design System—whether from scratch or based on an existing foundation—there are always two sides of the same coin: what **Design** and **Development** want and need. That’s where all the ~~problems~~ challenges begin.

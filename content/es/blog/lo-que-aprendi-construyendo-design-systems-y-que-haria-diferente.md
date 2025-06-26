@@ -97,8 +97,6 @@ Tailwind ayuda, pero sin decisiones de diseño compartidas, tokens y una estruct
 **📆 Realidad:**  
 Un Design System no se termina. Es un sistema vivo que crece, se adapta y necesita evolucionar junto a tu producto.
 
-Para entenderlo mejor, analicemos las necesidades de cada uno:
-
 ## Necesidades de Diseño y Desarrollo
 
 Cuando te enfrentas a crear un Design System —ya sea desde cero o a partir de una base existente— siempre aparecen dos caras de la misma moneda: lo que quiere y necesita tanto **Diseño** cómo **Desarrollo**. Es ahí donde empiezan todos los ~~problemas~~ desafíos.

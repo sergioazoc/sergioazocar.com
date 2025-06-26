@@ -168,6 +168,9 @@ export default defineNuxtConfig({
             'yaml',
           ],
         },
+        toc: {
+          depth: 3,
+        },
       },
     },
   },
@@ -202,6 +205,6 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    viewTransition: true
-  }
+    viewTransition: true,
+  },
 })
