@@ -91,6 +91,10 @@ export default defineNuxtConfig({
         es: '/blog/[slug]',
         en: '/blog/[slug]',
       },
+      mentorship: {
+        es: '/mentoria',
+        en: '/mentorship',
+      },
       talks: {
         es: '/charlas',
         en: '/talks',
@@ -105,12 +109,6 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ['lucide'],
     },
-    customCollections: [
-      {
-        prefix: 'logos',
-        dir: './assets/logos',
-      },
-    ],
     clientBundle: {
       scan: true,
       includeCustomCollections: true,
@@ -202,4 +200,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
+  experimental: {
+    viewTransition: true
+  }
 })

@@ -148,7 +148,7 @@ const journeyDescriptions = computed(() => [
               <h3 class="text-primary text-xl">{{ job.position }}</h3>
               <p class="text-lg">{{ job.company }}</p>
             </div>
-            <p class="text-sm text-gray-500">{{ job.duration }}</p>
+            <p class="text-sm text-neutral-400">{{ job.duration }}</p>
           </div>
         </template>
 

@@ -9,7 +9,10 @@ const router = useRouter()
 const slug = computed(() => withLeadingSlash(`blog-${String(route.params.slug)}-${locale.value}`))
 
 const { data: post } = await useAsyncData(slug.value, async () => {
-  return queryCollection(`blog_${locale.value}`).where('path', '=', route.path).first()
+  return queryCollection(`blog_${locale.value}`)
+    .where('path', '=', route.path)
+    .where('published', '=', true)
+    .first()
 })
 
 watch(
@@ -39,7 +42,7 @@ useSeoMeta({
 
       <BaseShare :title="post.title" />
 
-      <UCard>
+      <UCard class="mx-auto max-w-5xl">
         <div class="writing">
           <ContentRenderer :value="post" class="" />
         </div>

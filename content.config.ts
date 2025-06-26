@@ -9,6 +9,8 @@ const commonSchema = z.object({
   slug: z.string(),
   tags: z.array(z.string()),
   title: z.string(),
+  published: z.boolean().default(false),
+  union: z.string().optional(),
 })
 
 export default defineContentConfig({
