@@ -64,9 +64,9 @@ const talks = computed(() => {
     <BaseHero :title="t('title')" :description="t('description')" />
 
     <section>
-      <h2 class="mb-8">{{ t('talks-title') }}</h2>
+      <h2 class="mb-8 hidden">{{ t('talks-title') }}</h2>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
         <UCard
           v-for="talk in talks"
           :key="talk.name"
@@ -104,7 +104,7 @@ const talks = computed(() => {
             <p class="mb-2 text-sm text-neutral-400">{{ formatDate(talk.date) }}</p>
             <h3 class="text-xl font-bold">{{ talk.name }}</h3>
             <p class="text-primary text-lg">{{ talk.event }}</p>
-            <p class="mt-2 text-sm text-neutral-500">{{ talk.description }}</p>
+            <p class="mt-2 text-neutral-400">{{ talk.description }}</p>
           </div>
 
           <template #footer>

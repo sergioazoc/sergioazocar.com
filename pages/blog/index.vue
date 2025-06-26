@@ -19,6 +19,7 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
   return queryCollection(`blog_${locale.value}`)
     .order('date', 'DESC')
     .select('title', 'description', 'date', 'path', 'tags', 'img')
+    .where('published', '=', true)
     .all()
 })
 </script>
@@ -27,39 +28,35 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
   <div>
     <BaseHero title="Blog" :description="t('description')" />
 
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <NuxtLink v-for="post in posts" :key="post.path" :to="post.path">
-        <ClientOnly>
-          <UCard
-            :ui="{
-              root: 'p-0 sm:p-0 grid-rows-[auto_1fr_auto]',
-            }"
-          >
-            <template #header>
-              <NuxtImg :src="post.img" class="rounded-t-lg" :alt="post.title" />
-            </template>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      
+        <UCard
+          v-for="post in posts" :key="post.path"
+          :ui="{
+            root: 'relative p-0 sm:p-0 grid-rows-[auto_1fr_auto]',
+          }"
+        >
+          <template #header>
+            <NuxtImg :src="post.img" class="rounded-t-lg" :alt="post.title" />
+          </template>
 
-            <div class="grid h-full gap-2 px-6">
-              <p class="mb-2 text-sm text-neutral-400">{{ formatDate(post.date) }}</p>
-              <h2 class="text-xl font-bold">{{ post.title }}</h2>
-              <p class="ttext-lg">{{ post.description }}</p>
+          <div class="grid h-full gap-2 px-6">
+            <p class="mb-2 text-sm text-neutral-400">{{ formatDate(post.date) }}</p>
+            <h2 class="text-2xl font-bold">{{ post.title }}</h2>
+            <p class="text-lg text-neutral-400">{{ post.description }}</p>
+          </div>
+
+          <NuxtLink class="absolute inset-0 z-10" :to="post.path"></NuxtLink>
+
+          <template #footer>
+            <div class="flex flex-wrap items-center gap-2 px-6 py-4">
+              <p>Tags:</p>
+              <UBadge v-for="tag in post.tags" :key="tag" variant="outline" class="rounded-full">{{
+                tag
+              }}</UBadge>
             </div>
-
-            <template #footer>
-              <div class="flex flex-wrap items-center gap-2 px-6 py-4">
-                <p>Tags:</p>
-                <UBadge
-                  v-for="tag in post.tags"
-                  :key="tag"
-                  variant="outline"
-                  class="rounded-full"
-                  >{{ tag }}</UBadge
-                >
-              </div>
-            </template>
-          </UCard>
-        </ClientOnly>
-      </NuxtLink>
+          </template>
+        </UCard>
     </div>
   </div>
 </template>

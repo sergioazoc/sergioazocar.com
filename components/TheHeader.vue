@@ -13,7 +13,9 @@ const closeMenu = () => {
     <div
       class="mx-auto flex h-14 w-full items-center justify-between gap-12 rounded-full px-4 py-1 sm:max-w-fit sm:bg-neutral-900"
     >
-      <UAvatar src="/images/about/sergio-azocar.jpeg" />
+      <NuxtLink to="/">
+        <UAvatar src="/images/about/sergio-azocar.jpeg" />
+      </NuxtLink>
       <UNavigationMenu
         orientation="horizontal"
         color="neutral"

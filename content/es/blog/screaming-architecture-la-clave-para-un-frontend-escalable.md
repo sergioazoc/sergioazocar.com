@@ -1,5 +1,5 @@
 ---
-title: "Screaming Architecture: La Clave para un Frontend Escalable"
+title: 'Screaming Architecture: La Clave para un Frontend Escalable'
 description: Aprende cómo estructurar tu proyecto frontend para que grite lo que
   hace, no con qué está hecho. Una guía práctica para mejorar la claridad,
   escalabilidad y mantenibilidad de tus apps con Screaming Architecture.
@@ -14,6 +14,7 @@ tags:
 union: screaming-architecture-the-key-to-scalable-frontend
 date: 11/06/2025
 img: /images/blog/screaming-architecture-the-key-to-scalable-frontend.png
+published: true
 ---
 
 ## ¿Qué es Screaming Architecture?

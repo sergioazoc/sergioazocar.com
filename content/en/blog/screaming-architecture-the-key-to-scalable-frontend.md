@@ -1,5 +1,5 @@
 ---
-title: "Screaming Architecture: The Key to a Scalable Frontend"
+title: 'Screaming Architecture: The Key to a Scalable Frontend'
 description: Learn how to structure your frontend project so it screams what it
   does, not what it's made of. A practical guide to improving the clarity,
   scalability, and maintainability of your apps with Screaming Architecture.
@@ -11,9 +11,10 @@ tags:
   - nuxt
   - scalability
   - best practices
-slug: screaming-architecture-the-key-to-scalable-frontend
+union: screaming-architecture-the-key-to-scalable-frontend
 date: 11/06/2025
 img: /images/blog/screaming-architecture-the-key-to-scalable-frontend.png
+published: true
 ---
 
 ## What is Screaming Architecture?
@@ -49,7 +50,7 @@ While it's a starting point, this structure has its problems, especially as your
 - **Logic dispersion**: For a single functionality (e.g., "User Management"), its parts (UI components, store logic, API calls) are scattered throughout the entire project.
 - **Navigation difficulty**: You have to jump between many folders to understand how a complete feature works.
 - **Painful maintenance**: A change in one function might require modifying files in several folders, increasing the risk of introducing errors.
-- **Infrastructure coupling**: The structure tells you *how* it's built (with services, components), not *what* your business does.
+- **Infrastructure coupling**: The structure tells you _how_ it's built (with services, components), not _what_ your business does.
 
 Imagine a house blueprint. You don't see a "bricks" section, another for "cement," and another for "windows." You see "kitchen," "bedroom," "bathroom." The blueprints "scream" the purpose and functions of each space.
 

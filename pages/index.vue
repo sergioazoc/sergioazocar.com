@@ -11,14 +11,11 @@ useSeoMeta({
 <template>
   <div class="grid gap-16">
     <section class="text-center">
-      <h1 class="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
-        <span class="from-vue-green to-vue-purple bg-gradient-to-r bg-clip-text text-transparent">{{
-          t('hello')
-        }}</span
-        ><br />
-        Frontend Developer Senior
-      </h1>
-      <p class="mx-auto mb-8 max-w-3xl">{{ t('subtitle') }}</p>
+      <BaseHero
+        :title="t('hello.title')"
+        :description="t('hello.description')"
+        :highlight="t('hello.highlight')"
+      />
 
       <div class="flex items-center justify-center gap-4">
         <UButton :to="localePath('about')" size="xl">{{ $t('navigation.about') }}</UButton>
@@ -94,8 +91,11 @@ useSeoMeta({
 <i18n lang="json">
 {
   "es": {
-    "hello": "¡Hola! soy Sergio Azócar",
-    "subtitle": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos.",
+    "hello": {
+      "title": "¡Hola! Soy Sergio Azócar",
+      "highlight": "Desarrollador Frontend Senior",
+      "description": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
+    },
     "experience-title": "Experiencia",
     "experience-description": "Más de 5 años construyendo soluciones modulares, reutilizables y de alto rendimiento con Vue.js para startups y empresas grandes.",
     "current-title": "Enfoque Actual",
@@ -107,8 +107,11 @@ useSeoMeta({
     "speaking-footer": "Ver las charlas"
   },
   "en": {
-    "hello": "Hello! I'm Sergio Azócar",
-    "subtitle": "I build exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge.",
+    "hello": {
+      "title": "Hello! I'm Sergio Azócar",
+      "highlight": "Senior Frontend Developer",
+      "description": "Building exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
+    },
     "experience-title": "Experience",
     "experience-description": "Over 5 years building modular, reusable, and high-performance solutions with Vue.js for startups and enterprise companies.",
     "current-title": "Current Focus",

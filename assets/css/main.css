@@ -8,6 +8,9 @@
 }
 
 @layer base {
+  body {
+    @apply text-neutral-200;
+  }
   h2 {
     @apply text-3xl font-bold;
   }

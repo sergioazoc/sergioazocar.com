@@ -2,7 +2,8 @@
   "goBackHome": "Go back home",
   "navigation": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
+    "mentorship": "Mentorship",
     "talks": "Talks"
   }
 }

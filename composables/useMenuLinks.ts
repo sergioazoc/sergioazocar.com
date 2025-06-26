@@ -19,6 +19,11 @@ const useMenuLinks = () => {
         to: localePath('about'),
       },
       {
+        label: t('navigation.mentorship'),
+        icon: '',
+        to: localePath('mentorship'),
+      },
+      {
         label: 'Blog',
         icon: '',
         to: localePath('blog'),
