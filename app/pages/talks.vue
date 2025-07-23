@@ -97,7 +97,12 @@ const talks = computed(() => {
                 </div>
               </template>
             </ScriptYouTubePlayer>
-            <NuxtImg v-else-if="talk.img" class="rounded-t-lg" :alt="talk.name" :src="talk.img" />
+            <NuxtImg
+              v-else-if="talk.img"
+              class="aspect-video rounded-t-lg object-cover"
+              :alt="talk.name"
+              :src="talk.img"
+            />
           </template>
 
           <div class="h-full px-6">
