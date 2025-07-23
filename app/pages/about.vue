@@ -200,7 +200,7 @@ const journeyDescriptions = computed(() => [
       },
       "2": {
         "position": "Frontend Developer",
-        "duration": "Mayo 2021 - Marzo 2022",
+        "duration": "Abril 2022 - Julio 2022",
         "description": [
           "En mi rol como Frontend Developer Senior, lideré la migración del frontend a Vue 3 con TypeScript y participé en la adopción de microservicios. Fui responsable de la creación de una librería de componentes reutilizables en Vue 3 y TypeScript, lo que facilitó la estandarización del código y mejoró la eficiencia del equipo.",
           "Además, trabajé en el mantenimiento de la parte frontend del sistema legacy en Rails durante la transición. Este cambio a microservicios mejoró significativamente la escalabilidad y la eficiencia del sistema, permitiendo una experiencia más fluida tanto para los usuarios como para el equipo de desarrollo."
@@ -208,7 +208,7 @@ const journeyDescriptions = computed(() => [
       },
       "3": {
         "position": "Frontend Developer Senior",
-        "duration": "Abril 2022 - Julio 2022",
+        "duration": "Mayo 2021 - Marzo 2022",
         "description": [
           "En POLIGLOTA, participé en la migración de un sistema monolítico en Ruby on Rails a una arquitectura basada en microservicios. Desarrollé un nuevo login y dashboard para estudiantes utilizando Vue 3 y TypeScript, lo que mejoró la accesibilidad y la experiencia de usuario.",
           "Mi principal objetivo fue mejorar la escalabilidad y rendimiento del proyecto mediante la migración de Vue 2 a Vue 3, implementando una arquitectura moderna basada en microservicios que optimizó la experiencia del usuario y facilitó el mantenimiento a largo plazo. Además, trabajé en la mejora de los procesos internos del equipo, estableciendo buenas prácticas y estándares de desarrollo."
@@ -269,7 +269,7 @@ const journeyDescriptions = computed(() => [
       },
       "2": {
         "position": "Frontend Developer",
-        "duration": "May 2021 - March 2022",
+        "duration": "April 2022 - July 2022",
         "description": [
           "In my role as Senior Frontend Developer, I led the migration of the frontend to Vue 3 with TypeScript and participated in adopting microservices. I was responsible for creating a reusable component library in Vue 3 and TypeScript, which facilitated code standardization and improved team efficiency.",
           "Additionally, I worked on maintaining the frontend of the legacy system in Rails during the transition. This shift to microservices significantly improved scalability and system efficiency, allowing for a smoother experience for both users and the development team."
@@ -277,7 +277,7 @@ const journeyDescriptions = computed(() => [
       },
       "3": {
         "position": "Senior Frontend Developer",
-        "duration": "April 2022 - July 2022",
+        "duration": "May 2021 - March 2022",
         "description": [
           "At POLIGLOTA, I participated in migrating a monolithic system in Ruby on Rails to a microservices-based architecture. I developed a new login and dashboard for students using Vue 3 and TypeScript, improving accessibility and user experience.",
           "My main goal was to enhance the scalability and performance of the project by migrating from Vue 2 to Vue 3, implementing a modern microservices-based architecture that optimized user experience and facilitated long-term maintenance. Additionally, I worked on improving internal team processes by establishing best practices and development standards."
