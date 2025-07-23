@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div class="mb-16 text-center">
     <p v-if="highlight" class="text-primary mb-4 text-lg">{{ highlight }}</p>
-    <h1 class="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
+    <h1 class="mx-auto mb-6 max-w-5xl text-4xl font-bold lg:text-5xl">
       {{ title }}
     </h1>
     <p class="mx-auto max-w-3xl text-xl text-neutral-400">

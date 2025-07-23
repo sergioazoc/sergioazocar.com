@@ -72,9 +72,9 @@ const jobs = computed(() => {
 })
 
 const journeyDescriptions = computed(() => [
-  t('journey-description.0'),
-  t('journey-description.1'),
-  t('journey-description.2'),
+  t('journey.description.0'),
+  t('journey.description.1'),
+  t('journey.description.2'),
 ])
 </script>
 
@@ -85,7 +85,7 @@ const journeyDescriptions = computed(() => [
     <section class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <UCard class="order-2 md:order-1 lg:col-span-2">
         <template #header>
-          <h2 class="text-2xl">{{ t('journey-title') }}</h2>
+          <h2 class="text-2xl">{{ t('journey.title') }}</h2>
         </template>
 
         <div class="grid gap-4">
@@ -107,6 +107,7 @@ const journeyDescriptions = computed(() => [
               size="xl"
               variant="subtle"
               icon="lucide-file-text"
+              external
               >CV</UButton
             >
             <UButton
@@ -181,12 +182,14 @@ const journeyDescriptions = computed(() => [
   "es": {
     "title": "Sobre mí",
     "description": "Apasionado por crear experiencias de usuario excepcionales y construir aplicaciones web escalables que marquen la diferencia.",
-    "journey-title": "Mi Trayectoria",
-    "journey-description": [
-      "Soy Sergio Azócar, un Desarrollador Frontend Senior con más de 7 años de experiencia construyendo aplicaciones web modernas. Mi trayectoria comenzó con una curiosidad por cómo funcionan los sitios web, y ha evolucionado hacia una pasión por crear experiencias de usuario excepcionales.",
-      "Actualmente, me especializo en el ecosistema de Vue.js, TypeScript y arquitectura frontend moderna. He tenido el privilegio de trabajar con startups para escalar sus productos desde MVP hasta millones de usuarios, así como ayudar a empresas grandes a modernizar su pila frontend.",
-      "Más allá del código, me apasiona compartir conocimientos a través de mentoría, charlas en conferencias y escritura de artículos técnicos. Creo en el poder de la comunidad y el aprendizaje continuo."
-    ],
+    "journey": {
+      "title": "Mi Trayectoria",
+      "description": [
+        "Soy Sergio Azócar, un Desarrollador Frontend Senior con más de 7 años de experiencia construyendo aplicaciones web modernas. Mi trayectoria comenzó con una curiosidad por cómo funcionan los sitios web, y ha evolucionado hacia una pasión por crear experiencias de usuario excepcionales.",
+        "Actualmente, me especializo en el ecosistema de Vue.js, TypeScript y arquitectura frontend moderna. He tenido el privilegio de trabajar con startups para escalar sus productos desde MVP hasta millones de usuarios, así como ayudar a empresas grandes a modernizar su pila frontend.",
+        "Más allá del código, me apasiona compartir conocimientos a través de mentoría, charlas en conferencias y escritura de artículos técnicos. Creo en el poder de la comunidad y el aprendizaje continuo."
+      ]
+    },
     "professional-title": "Experiencia Profesional",
     "jobs": {
       "1": {
@@ -199,7 +202,7 @@ const journeyDescriptions = computed(() => [
       },
       "2": {
         "position": "Frontend Developer",
-        "duration": "Mayo 2021 - Marzo 2022",
+        "duration": "Abril 2022 - Julio 2022",
         "description": [
           "En mi rol como Frontend Developer Senior, lideré la migración del frontend a Vue 3 con TypeScript y participé en la adopción de microservicios. Fui responsable de la creación de una librería de componentes reutilizables en Vue 3 y TypeScript, lo que facilitó la estandarización del código y mejoró la eficiencia del equipo.",
           "Además, trabajé en el mantenimiento de la parte frontend del sistema legacy en Rails durante la transición. Este cambio a microservicios mejoró significativamente la escalabilidad y la eficiencia del sistema, permitiendo una experiencia más fluida tanto para los usuarios como para el equipo de desarrollo."
@@ -207,7 +210,7 @@ const journeyDescriptions = computed(() => [
       },
       "3": {
         "position": "Frontend Developer Senior",
-        "duration": "Abril 2022 - Julio 2022",
+        "duration": "Mayo 2021 - Marzo 2022",
         "description": [
           "En POLIGLOTA, participé en la migración de un sistema monolítico en Ruby on Rails a una arquitectura basada en microservicios. Desarrollé un nuevo login y dashboard para estudiantes utilizando Vue 3 y TypeScript, lo que mejoró la accesibilidad y la experiencia de usuario.",
           "Mi principal objetivo fue mejorar la escalabilidad y rendimiento del proyecto mediante la migración de Vue 2 a Vue 3, implementando una arquitectura moderna basada en microservicios que optimizó la experiencia del usuario y facilitó el mantenimiento a largo plazo. Además, trabajé en la mejora de los procesos internos del equipo, estableciendo buenas prácticas y estándares de desarrollo."
@@ -250,12 +253,14 @@ const journeyDescriptions = computed(() => [
   "en": {
     "title": "About Me",
     "description": "Passionate about creating exceptional user experiences and building scalable web applications that make a difference.",
-    "journey-title": "My Journey",
-    "journey-description": [
-      "I'm Sergio Azócar, a Senior Frontend Developer with over 7 years of experience building modern web applications. My journey started with a curiosity about how websites work, and it has evolved into a passion for creating exceptional user experiences.",
-      "Currently, I specialize in Vue.js ecosystem, TypeScript, and modern frontend architecture. I've had the privilege of working with startups to scale their products from MVP to millions of users, as well as helping enterprise companies modernize their frontend stack.",
-      "Beyond coding, I'm passionate about sharing knowledge through mentoring, speaking at conferences, and writing technical articles. I believe in the power of community and continuous learning."
-    ],
+    "journey": {
+      "title": "My Journey",
+      "description": [
+        "I'm Sergio Azócar, a Senior Frontend Developer with over 7 years of experience building modern web applications. My journey started with a curiosity about how websites work, and it has evolved into a passion for creating exceptional user experiences.",
+        "Currently, I specialize in Vue.js ecosystem, TypeScript, and modern frontend architecture. I've had the privilege of working with startups to scale their products from MVP to millions of users, as well as helping enterprise companies modernize their frontend stack.",
+        "Beyond coding, I'm passionate about sharing knowledge through mentoring, speaking at conferences, and writing technical articles. I believe in the power of community and continuous learning."
+      ]
+    },
     "professional-title": "Professional Experience",
     "jobs": {
       "1": {
@@ -268,7 +273,7 @@ const journeyDescriptions = computed(() => [
       },
       "2": {
         "position": "Frontend Developer",
-        "duration": "May 2021 - March 2022",
+        "duration": "April 2022 - July 2022",
         "description": [
           "In my role as Senior Frontend Developer, I led the migration of the frontend to Vue 3 with TypeScript and participated in adopting microservices. I was responsible for creating a reusable component library in Vue 3 and TypeScript, which facilitated code standardization and improved team efficiency.",
           "Additionally, I worked on maintaining the frontend of the legacy system in Rails during the transition. This shift to microservices significantly improved scalability and system efficiency, allowing for a smoother experience for both users and the development team."
@@ -276,7 +281,7 @@ const journeyDescriptions = computed(() => [
       },
       "3": {
         "position": "Senior Frontend Developer",
-        "duration": "April 2022 - July 2022",
+        "duration": "May 2021 - March 2022",
         "description": [
           "At POLIGLOTA, I participated in migrating a monolithic system in Ruby on Rails to a microservices-based architecture. I developed a new login and dashboard for students using Vue 3 and TypeScript, improving accessibility and user experience.",
           "My main goal was to enhance the scalability and performance of the project by migrating from Vue 2 to Vue 3, implementing a modern microservices-based architecture that optimized user experience and facilitated long-term maintenance. Additionally, I worked on improving internal team processes by establishing best practices and development standards."
