@@ -107,6 +107,7 @@ const journeyDescriptions = computed(() => [
               size="xl"
               variant="subtle"
               icon="lucide-file-text"
+              external
               >CV</UButton
             >
             <UButton

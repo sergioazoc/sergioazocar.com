@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { menuLinks } = useMenuLinks()
+const localePath = useLocalePath()
 
 const isOpen = ref(false)
 
@@ -13,7 +14,7 @@ const closeMenu = () => {
     <div
       class="mx-auto flex h-14 w-full items-center justify-between gap-12 rounded-full px-4 py-1 sm:max-w-fit sm:bg-neutral-900"
     >
-      <NuxtLink to="/">
+      <NuxtLink :to="localePath('index')">
         <UAvatar src="/images/about/sergio-azocar.jpeg" />
       </NuxtLink>
       <UNavigationMenu

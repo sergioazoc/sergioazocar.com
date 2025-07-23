@@ -4,7 +4,7 @@ const localePath = useLocalePath()
 
 useSeoMeta({
   title: 'Sergio Azócar - Frontend Developer Senior',
-  description: t('subtitle'),
+  description: t('seo.description'),
 })
 </script>
 
@@ -91,6 +91,10 @@ useSeoMeta({
 <i18n lang="json">
 {
   "es": {
+    "seo": {
+      "title": "Sergio Azócar - Desarrollador Frontend Senior",
+      "description": "Desarrollador frontend senior especializado en Vue.js y TypeScript. Construyo aplicaciones web excepcionales con un enfoque en el rendimiento y la experiencia de usuario."
+    },
     "hello": {
       "title": "¡Hola! Soy Sergio Azócar",
       "highlight": "Desarrollador Frontend Senior",
@@ -107,6 +111,10 @@ useSeoMeta({
     "speaking-footer": "Ver las charlas"
   },
   "en": {
+    "seo": {
+      "title": "Sergio Azócar - Senior Frontend Developer",
+      "description": "Senior frontend developer specializing in Vue.js and TypeScript. I build exceptional web applications with a focus on performance and user experience."
+    },
     "hello": {
       "title": "Hello! I'm Sergio Azócar",
       "highlight": "Senior Frontend Developer",
