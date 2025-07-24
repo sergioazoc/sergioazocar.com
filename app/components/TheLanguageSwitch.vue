@@ -10,6 +10,7 @@ const switchLocalePath = useSwitchLocalePath()
       v-for="{ code } in locales"
       :key="code"
       class="uppercase"
+      :aria-label="`${code} switch`"
       :class="[code === currentLocale ? 'text-neutral-300' : 'text-neutral-500']"
       :to="switchLocalePath(code)"
     >

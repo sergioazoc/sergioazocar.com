@@ -18,7 +18,10 @@ useSeoMeta({
       />
 
       <div class="flex items-center justify-center gap-4">
-        <LazyUButton :to="localePath('about')" size="xl">{{ $t('navigation.about') }}</LazyUButton>
+        <LazyUButton :to="localePath('mentorship')" size="xl">{{ t('cta.mentoring') }}</LazyUButton>
+        <LazyUButton :to="localePath('about')" size="xl" variant="subtle">{{
+          t('cta.about')
+        }}</LazyUButton>
       </div>
     </section>
 
@@ -100,6 +103,10 @@ useSeoMeta({
       "highlight": "Desarrollador Frontend Senior",
       "description": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
     },
+    "cta": {
+      "mentoring": "Agendar Mentoría",
+      "about": "Sobre mí"
+    },
     "experience": {
       "title": "Experiencia",
       "description": "Más de 5 años construyendo soluciones modulares, reutilizables y de alto rendimiento con Vue.js para startups y empresas grandes."
@@ -127,6 +134,10 @@ useSeoMeta({
       "title": "Hello! I'm Sergio Azócar",
       "highlight": "Senior Frontend Developer",
       "description": "Building exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
+    },
+    "cta": {
+      "mentoring": "Schedule Mentoring",
+      "about": "About Me"
     },
     "experience": {
       "title": "Experience",

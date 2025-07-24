@@ -58,7 +58,11 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
           <p class="text-lg text-neutral-400">{{ post.description }}</p>
         </div>
 
-        <NuxtLink class="absolute inset-0 z-10" :to="post.path"></NuxtLink>
+        <NuxtLink
+          class="absolute inset-0 z-10"
+          :to="post.path"
+          :aria-label="`${post.title} link`"
+        ></NuxtLink>
 
         <template #footer>
           <div class="flex flex-wrap items-center gap-2 px-6 py-4">

@@ -104,7 +104,7 @@ const tocLinks = computed(() => props.toc?.links || [])
                 'hover:translate-x-1 hover:bg-neutral-950',
                 activeId === child.id
                   ? 'bg-primary/5 text-primary font-medium'
-                  : 'text-neutral-400',
+                  : 'text-neutral-300',
               ]"
               @click.prevent="scrollToHeading(child.id)"
             >
