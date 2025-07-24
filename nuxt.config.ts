@@ -23,8 +23,18 @@ export default defineNuxtConfig({
     name: 'Sergio Azócar',
   },
 
+  seo: {
+    linkChecker: {
+      ignore: ['#*'],
+      rules: {
+        'no-baseless': false,
+        'no-non-ascii-chars': false,
+        'no-uppercase-chars': false,
+      },
+    },
+  },
+
   sitemap: {
-    sources: ['/api/__sitemap__/urls'],
     xsl: false,
     defaults: {
       changefreq: 'monthly',
@@ -130,7 +140,7 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: 'material-theme-ocean',
-          langs: [
+          preload: [
             'angular-html',
             'angular-ts',
             'apache',
@@ -195,6 +205,12 @@ export default defineNuxtConfig({
           })
         }
       }
+    },
+  },
+
+  nitro: {
+    prerender: {
+      failOnError: false,
     },
   },
 

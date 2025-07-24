@@ -45,7 +45,7 @@ const talksData = [
   {
     date: '26/10/2022',
     event: 'Dev&Ops is back',
-    img: '/images/talks/dev&ops.jpg',
+    img: '/images/talks/dev-and-ops.jpg',
     tags: ['Vue', 'JavaScript'],
   },
 ]

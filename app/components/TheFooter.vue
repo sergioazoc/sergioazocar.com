@@ -35,13 +35,13 @@ const socialLinks = [
       <div class="md:col-span-2">
         <div class="mb-4 flex items-center gap-4">
           <UAvatar src="/images/about/sergio-azocar.jpeg" />
-          <h3 class="text-xl font-bold">Sergio Azócar</h3>
+          <p class="text-xl font-bold">Sergio Azócar</p>
         </div>
         <p class="lg:max-w-md">{{ t('description') }}</p>
       </div>
 
       <div>
-        <h3 class="mb-4 font-semibold">{{ t('quick-links') }}</h3>
+        <p class="mb-4 font-semibold">{{ t('quick-links') }}</p>
         <nav class="flex flex-col gap-2">
           <NuxtLink
             v-for="item in menuLinks[0]"
