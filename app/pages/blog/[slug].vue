@@ -44,7 +44,7 @@ useSeoMeta({
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <article class="lg:col-span-2">
-          <UCard>
+          <LazyUCard>
             <template #header>
               <NuxtImg
                 :alt="post.title"
@@ -58,19 +58,19 @@ useSeoMeta({
               />
             </template>
             <div class="writing">
-              <ContentRenderer :value="post" class="" />
+              <LazyContentRenderer :value="post" class="" />
             </div>
-          </UCard>
+          </LazyUCard>
         </article>
 
         <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
-          <UCard>
-            <BaseToc v-if="post.body?.toc" :toc="post.body.toc" />
-          </UCard>
+          <LazyUCard>
+            <LazyBaseToc v-if="post.body?.toc" :toc="post.body.toc" />
+          </LazyUCard>
         </aside>
       </div>
 
-      <BaseShare :title="post.title" />
+      <LazyBaseShare :title="post.title" />
     </template>
     <template v-else>
       <LazyBaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
