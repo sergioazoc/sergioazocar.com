@@ -73,7 +73,7 @@ const socialLinks = [
       </div>
     </div>
 
-    <p class="text-center text-sm text-slate-500">
+    <p class="text-center text-sm text-slate-300">
       {{ t('footer') }}
     </p>
   </footer>
