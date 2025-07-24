@@ -38,7 +38,7 @@ useSeoMeta({
 <template>
   <div>
     <template v-if="post">
-      <BaseHero :title="post.title" :description="post.description" />
+      <LazyBaseHero :title="post.title" :description="post.description" />
 
       <LazyBaseShare :title="post.title" />
 
@@ -73,11 +73,11 @@ useSeoMeta({
       <BaseShare :title="post.title" />
     </template>
     <template v-else>
-      <BaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
+      <LazyBaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
 
-      <UButton to="/" variant="subtle" class="mx-auto block w-fit">
+      <LazyUButton to="/" variant="subtle" class="mx-auto block w-fit">
         {{ t('goBackHome') }}
-      </UButton>
+      </LazyUButton>
     </template>
   </div>
 </template>
