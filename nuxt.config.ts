@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     sources: ['/api/__sitemap__/urls'],
-    xsl: false, // Opcional: deshabilitar XSL para mejor rendimiento
+    xsl: false,
     defaults: {
       changefreq: 'monthly',
       priority: 0.7,
@@ -44,14 +44,18 @@ export default defineNuxtConfig({
         name: 'Inter',
         provider: 'google',
         styles: ['normal', 'italic'],
-        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        weights: [400, 500, 600, 700],
+        display: 'swap',
+        preload: true,
       },
     ],
   },
 
   scripts: {
     registry: {
-      googleAnalytics: true,
+      googleAnalytics: {
+        strategy: 'post-hydration',
+      },
     },
   },
 
@@ -118,7 +122,7 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
       gitInfo: {
         name: 'sergioazocar.com',
-        owner: 'sergioazoc', // Tu usuario de GitHub
+        owner: 'sergioazoc',
         url: 'https://github.com/sergioazoc/sergioazocar.com',
       },
     },
@@ -174,10 +178,25 @@ export default defineNuxtConfig({
 
   image: {
     densities: [1, 2],
-    format: ['webp'],
+    format: ['webp', 'avif'],
   },
 
   css: ['~/assets/css/main.css'],
+
+  hooks: {
+    'build:manifest'(manifest) {
+      for (const file in manifest) {
+        if (manifest[file]?.isEntry && manifest[file]?.css) {
+          manifest[file].css.forEach((cssFile) => {
+            const asset = manifest[cssFile]
+            if (asset && typeof asset === 'object') {
+              ;(asset as { isLazy?: boolean }).isLazy = true
+            }
+          })
+        }
+      }
+    },
+  },
 
   vite: {
     plugins: [tailwindcss()],
