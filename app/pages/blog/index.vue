@@ -26,10 +26,10 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
 
 <template>
   <div>
-    <BaseHero title="Blog" :description="t('description')" />
+    <LazyBaseHero title="Blog" :description="t('description')" />
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <UCard
+      <LazyUCard
         v-for="post in posts"
         :key="post.path"
         :ui="{
@@ -37,7 +37,15 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
         }"
       >
         <template #header>
-          <NuxtImg :src="post.img" class="rounded-t-lg" :alt="post.title" />
+          <NuxtImg
+            :alt="post.title"
+            :src="post.img"
+            class="w-full rounded-t-lg"
+            decoding="async"
+            loading="lazy"
+            quality="80"
+            sizes="sm:100vw md:50vw lg:600px"
+          />
         </template>
 
         <div class="grid h-full gap-2 px-6">
@@ -60,7 +68,7 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
             }}</UBadge>
           </div>
         </template>
-      </UCard>
+      </LazyUCard>
     </div>
   </div>
 </template>

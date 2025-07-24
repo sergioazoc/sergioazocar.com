@@ -40,13 +40,22 @@ useSeoMeta({
     <template v-if="post">
       <BaseHero :title="post.title" :description="post.description" />
 
-      <BaseShare :title="post.title" />
+      <LazyBaseShare :title="post.title" />
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <article class="lg:col-span-2">
           <UCard>
             <template #header>
-              <NuxtImg :src="post.img" class="w-full rounded-lg" :alt="post.title" />
+              <NuxtImg
+                :alt="post.title"
+                :src="post.img"
+                class="w-full rounded-lg"
+                fetchpriority="high"
+                loading="eager"
+                preload
+                quality="85"
+                sizes="sm:100vw md:80vw lg:800px"
+              />
             </template>
             <div class="writing">
               <ContentRenderer :value="post" class="" />

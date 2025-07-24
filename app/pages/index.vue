@@ -11,20 +11,20 @@ useSeoMeta({
 <template>
   <div class="grid gap-16">
     <section class="text-center">
-      <BaseHero
+      <LazyBaseHero
         :title="t('hello.title')"
         :description="t('hello.description')"
         :highlight="t('hello.highlight')"
       />
 
       <div class="flex items-center justify-center gap-4">
-        <UButton :to="localePath('about')" size="xl">{{ $t('navigation.about') }}</UButton>
+        <LazyUButton :to="localePath('about')" size="xl">{{ $t('navigation.about') }}</LazyUButton>
       </div>
     </section>
 
     <section>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <UCard class="lg:col-span-2">
+        <LazyUCard class="lg:col-span-2">
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
               <UIcon name="lucide-briefcase-business" class="text-success-500" />
@@ -42,9 +42,9 @@ useSeoMeta({
               <UBadge variant="outline" class="rounded-full">Node.js</UBadge>
             </div>
           </template>
-        </UCard>
+        </LazyUCard>
 
-        <UCard>
+        <LazyUCard>
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
               <UIcon name="lucide-target" class="text-success-500" />
@@ -53,9 +53,9 @@ useSeoMeta({
           </template>
 
           <p>{{ t('current.description') }}</p>
-        </UCard>
+        </LazyUCard>
 
-        <UCard>
+        <LazyUCard>
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
               <UIcon name="lucide-users" class="text-purple-500" />
@@ -64,9 +64,9 @@ useSeoMeta({
           </template>
 
           <p>{{ t('mentoring.description') }}</p>
-        </UCard>
+        </LazyUCard>
 
-        <UCard class="lg:col-span-2">
+        <LazyUCard class="lg:col-span-2">
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
               <UIcon name="lucide-mic" class="text-orange-500" />
@@ -82,7 +82,7 @@ useSeoMeta({
               <UIcon name="lucide-external-link" class="ml-1 inline-block" />
             </ULink>
           </template>
-        </UCard>
+        </LazyUCard>
       </div>
     </section>
   </div>

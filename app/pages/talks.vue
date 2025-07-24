@@ -61,13 +61,13 @@ const talks = computed(() => {
 
 <template>
   <div>
-    <BaseHero :title="t('title')" :description="t('description')" />
+    <LazyBaseHero :title="t('title')" :description="t('description')" />
 
     <section>
       <h2 class="mb-8 hidden">{{ t('talks-title') }}</h2>
 
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <UCard
+        <LazyUCard
           v-for="talk in talks"
           :key="talk.name"
           :ui="{
@@ -99,9 +99,13 @@ const talks = computed(() => {
             </ScriptYouTubePlayer>
             <NuxtImg
               v-else-if="talk.img"
-              class="aspect-video rounded-t-lg object-cover"
               :alt="talk.name"
               :src="talk.img"
+              class="aspect-video w-full rounded-t-lg object-cover"
+              decoding="async"
+              loading="lazy"
+              quality="80"
+              sizes="sm:100vw md:50vw lg:600px"
             />
           </template>
 
@@ -125,7 +129,7 @@ const talks = computed(() => {
               </UButton>
             </div>
           </template>
-        </UCard>
+        </LazyUCard>
       </div>
     </section>
   </div>

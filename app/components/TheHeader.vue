@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const { t } = useI18n()
 const { menuLinks } = useMenuLinks()
 const localePath = useLocalePath()
 
@@ -12,7 +13,7 @@ const closeMenu = () => {
 <template>
   <header class="mt-4.5">
     <div
-      class="mx-auto flex h-14 w-full items-center justify-between gap-12 rounded-full px-4 py-1 sm:max-w-fit sm:bg-neutral-900"
+      class="mx-auto flex h-14 w-full items-center justify-between gap-12 rounded-full px-4 py-1 md:max-w-fit md:bg-neutral-900"
     >
       <NuxtLink :to="localePath('index')">
         <UAvatar src="/images/about/sergio-azocar.jpeg" />
@@ -22,7 +23,7 @@ const closeMenu = () => {
         color="neutral"
         variant="link"
         :items="menuLinks"
-        class="hidden w-full sm:flex"
+        class="hidden w-full md:flex"
         :ui="{
           root: 'gap-12',
           list: 'gap-4',
@@ -36,9 +37,13 @@ const closeMenu = () => {
 
       <USlideover
         v-model:open="isOpen"
-        class="sm:hidden"
-        title=""
+        class="md:hidden"
+        :title="t('title')"
+        :description="t('description')"
         :close="{ size: 'xl', color: 'neutral', variant: 'ghost' }"
+        :ui="{
+          title: 'text-2xl font-bold',
+        }"
       >
         <UButton icon="lucide-menu" color="neutral" variant="subtle" size="xl" />
 
@@ -67,3 +72,16 @@ const closeMenu = () => {
     </div>
   </header>
 </template>
+
+<i18n lang="json">
+{
+  "es": {
+    "title": "Menú",
+    "description": "Accede a las secciones del sitio web y cambia el idioma."
+  },
+  "en": {
+    "title": "Menu",
+    "description": "Access the sections of the website and change the language."
+  }
+}
+</i18n>

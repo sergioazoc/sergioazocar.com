@@ -51,15 +51,11 @@ const updateActiveHeading = () => {
   }
 }
 
-// Watch del scroll con debounce usando VueUse
 watchDebounced(scrollY, updateActiveHeading, { debounce: 100 })
 
-// Setup inicial
 onMounted(() => {
   nextTick(() => {
     updateActiveHeading()
-
-    // Detectar hash inicial en la URL
     const hash = window.location.hash.slice(1)
     if (hash) {
       activeId.value = hash
