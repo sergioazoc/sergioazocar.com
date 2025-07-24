@@ -15,8 +15,8 @@ const closeMenu = () => {
     <div
       class="mx-auto flex h-14 w-full items-center justify-between gap-12 rounded-full px-4 py-1 md:max-w-fit md:bg-neutral-900"
     >
-      <NuxtLink :to="localePath('index')">
-        <UAvatar src="/images/about/sergio-azocar.jpeg" />
+      <NuxtLink :to="localePath('index')" :aria-label="$t('goBackHome')">
+        <UAvatar src="/images/about/sergio-azocar.jpeg" alt="Sergio Azocar" />
       </NuxtLink>
       <UNavigationMenu
         orientation="horizontal"
@@ -31,7 +31,9 @@ const closeMenu = () => {
         }"
       >
         <template #language-switch>
-          <TheLanguageSwitch />
+          <ClientOnly>
+            <TheLanguageSwitch />
+          </ClientOnly>
         </template>
       </UNavigationMenu>
 
@@ -45,7 +47,13 @@ const closeMenu = () => {
           title: 'text-2xl font-bold',
         }"
       >
-        <UButton icon="lucide-menu" color="neutral" variant="subtle" size="xl" />
+        <UButton
+          icon="lucide-menu"
+          color="neutral"
+          variant="subtle"
+          size="xl"
+          :aria-label="t('openMenu')"
+        />
 
         <template #body>
           <div class="p-4">
@@ -57,6 +65,7 @@ const closeMenu = () => {
                 variant="link"
                 color="neutral"
                 class="text-lg"
+                :aria-label="`${item.label} link`"
                 @click="closeMenu"
               >
                 {{ item.label }}
@@ -64,7 +73,9 @@ const closeMenu = () => {
             </nav>
 
             <div class="mt-6 border-t border-neutral-600 pt-6">
-              <TheLanguageSwitch class="justify-center" />
+              <ClientOnly>
+                <TheLanguageSwitch class="justify-center" />
+              </ClientOnly>
             </div>
           </div>
         </template>
@@ -77,11 +88,13 @@ const closeMenu = () => {
 {
   "es": {
     "title": "Menú",
-    "description": "Accede a las secciones del sitio web y cambia el idioma."
+    "description": "Accede a las secciones del sitio web y cambia el idioma.",
+    "openMenu": "Abrir menú de navegación"
   },
   "en": {
     "title": "Menu",
-    "description": "Access the sections of the website and change the language."
+    "description": "Access the sections of the website and change the language.",
+    "openMenu": "Open navigation menu"
   }
 }
 </i18n>

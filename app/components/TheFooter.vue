@@ -7,18 +7,22 @@ const socialLinks = [
   {
     path: 'https://www.linkedin.com/in/sergio-azocar',
     icon: 'simple-icons-linkedin',
+    name: 'linkedin',
   },
   {
     path: 'https://www.instagram.com/sergioazoc',
     icon: 'simple-icons-instagram',
+    name: 'instagram',
   },
   {
     path: 'https://github.com/sergioazoc',
     icon: 'simple-icons-github',
+    name: 'github',
   },
   {
     path: 'https://x.com/sergioazoc',
     icon: 'simple-icons-x',
+    name: 'x',
   },
 ]
 </script>
@@ -43,8 +47,9 @@ const socialLinks = [
             v-for="item in menuLinks[0]"
             :key="item.label"
             :to="item.to"
-            class="text-md p-0 text-neutral-500"
-            exact-active-class="!text-neutral-300"
+            class="text-md p-0 text-neutral-400"
+            exact-active-class="!text-neutral-50"
+            :aria-label="`${item.label} link`"
           >
             {{ item.label }}
           </NuxtLink>
@@ -52,7 +57,7 @@ const socialLinks = [
       </div>
 
       <div>
-        <h3 class="mb-4 font-semibold">{{ t('connect') }}</h3>
+        <p class="mb-4 font-semibold">{{ t('connect') }}</p>
         <div class="flex items-center gap-4">
           <NuxtLink
             v-for="link in socialLinks"
@@ -60,6 +65,7 @@ const socialLinks = [
             :to="link.path"
             target="_blank"
             class="text-2xl text-slate-200 hover:text-slate-400"
+            :aria-label="`${link.path} link`"
           >
             <UIcon :name="link.icon" />
           </NuxtLink>
