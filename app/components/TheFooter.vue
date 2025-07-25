@@ -34,7 +34,7 @@ const socialLinks = [
     >
       <div class="md:col-span-2">
         <div class="mb-4 flex items-center gap-4">
-          <LazyUAvatar src="/images/about/sergio-azocar.jpeg" alt="Sergio Azócar" />
+          <UAvatar src="/images/about/sergio-azocar.jpeg" alt="Sergio Azócar" />
           <p class="text-xl font-bold">Sergio Azócar</p>
         </div>
         <p class="lg:max-w-md">{{ t('description') }}</p>

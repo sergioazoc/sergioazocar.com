@@ -29,7 +29,7 @@ const items = computed<AccordionItem[]>(() => [
 
 <template>
   <div>
-    <LazyBaseHero :title="t('title')" :description="t('description')" />
+    <BaseHero :title="t('title')" :description="t('description')" />
 
     <section class="mb-16 grid grid-cols-1 md:grid-cols-3">
       <div class="col-span-2">
@@ -39,12 +39,12 @@ const items = computed<AccordionItem[]>(() => [
           alt="Sergio Azócar"
           placeholder
           sizes="sm:100vw md:50vw lg:700px"
-          loading="lazy"
+          loading="eager"
           decoding="async"
         />
       </div>
 
-      <LazyUCard class="rounded-t-none md:rounded-l-none md:rounded-t-lg">
+      <UCard class="rounded-t-none md:rounded-l-none md:rounded-t-lg">
         <template #header>
           <h2>{{ t('schedule.title') }}</h2>
         </template>
@@ -70,11 +70,11 @@ const items = computed<AccordionItem[]>(() => [
             {{ t('schedule.button') }}
           </UButton>
         </template>
-      </LazyUCard>
+      </UCard>
     </section>
 
     <section class="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
-      <LazyUCard>
+      <UCard>
         <template #header>
           <h2>{{ t('target.title') }}</h2>
         </template>
@@ -89,9 +89,9 @@ const items = computed<AccordionItem[]>(() => [
             </p>
           </div>
         </div>
-      </LazyUCard>
+      </UCard>
 
-      <LazyUCard>
+      <UCard>
         <template #header>
           <h2>{{ t('commitment.title') }}</h2>
         </template>
@@ -106,13 +106,13 @@ const items = computed<AccordionItem[]>(() => [
             </p>
           </div>
         </div>
-      </LazyUCard>
+      </UCard>
     </section>
 
     <section>
       <h2 class="mb-8 text-center">FAQ</h2>
 
-      <LazyUCard>
+      <UCard>
         <UAccordion
           :items="items"
           :ui="{
@@ -120,7 +120,7 @@ const items = computed<AccordionItem[]>(() => [
             content: 'text-neutral-400',
           }"
         />
-      </LazyUCard>
+      </UCard>
     </section>
   </div>
 </template>

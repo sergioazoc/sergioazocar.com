@@ -61,13 +61,13 @@ const talks = computed(() => {
 
 <template>
   <div>
-    <LazyBaseHero :title="t('title')" :description="t('description')" />
+    <BaseHero :title="t('title')" :description="t('description')" />
 
     <section>
       <h2 class="mb-8 hidden">{{ t('talks-title') }}</h2>
 
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <LazyUCard
+        <UCard
           v-for="talk in talks"
           :key="talk.name"
           :ui="{
@@ -129,7 +129,7 @@ const talks = computed(() => {
               </UButton>
             </div>
           </template>
-        </LazyUCard>
+        </UCard>
       </div>
     </section>
   </div>

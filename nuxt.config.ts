@@ -23,17 +23,6 @@ export default defineNuxtConfig({
     name: 'Sergio Azócar',
   },
 
-  seo: {
-    linkChecker: {
-      ignore: ['#*'],
-      rules: {
-        'no-baseless': false,
-        'no-non-ascii-chars': false,
-        'no-uppercase-chars': false,
-      },
-    },
-  },
-
   sitemap: {
     xsl: false,
     defaults: {
@@ -140,44 +129,6 @@ export default defineNuxtConfig({
       markdown: {
         highlight: {
           theme: 'material-theme-ocean',
-          preload: [
-            'angular-html',
-            'angular-ts',
-            'apache',
-            'astro',
-            'css',
-            'diff',
-            'dockerfile',
-            'go',
-            'graphql',
-            'html',
-            'http',
-            'java',
-            'javascript',
-            'json',
-            'jsx',
-            'markdown',
-            'mdc',
-            'mdx',
-            'nginx',
-            'php',
-            'postcss',
-            'powershell',
-            'python',
-            'regexp',
-            'ruby',
-            'scss',
-            'shellscript',
-            'sql',
-            'svelte',
-            'ts-tags',
-            'tsx',
-            'typescript',
-            'vue-html',
-            'vue',
-            'xml',
-            'yaml',
-          ],
         },
         toc: {
           depth: 3,
@@ -192,21 +143,6 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
-
-  hooks: {
-    'build:manifest'(manifest) {
-      for (const file in manifest) {
-        if (manifest[file]?.isEntry && manifest[file]?.css) {
-          manifest[file].css.forEach((cssFile) => {
-            const asset = manifest[cssFile]
-            if (asset && typeof asset === 'object') {
-              ;(asset as { isLazy?: boolean }).isLazy = true
-            }
-          })
-        }
-      }
-    },
-  },
 
   nitro: {
     prerender: {
@@ -238,6 +174,5 @@ export default defineNuxtConfig({
 
   experimental: {
     viewTransition: true,
-    inlineSSRStyles: true,
   },
 })
