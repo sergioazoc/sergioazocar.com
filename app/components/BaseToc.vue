@@ -8,59 +8,65 @@ const props = defineProps<{
 }>()
 
 const activeId = ref('')
-const { y: scrollY } = useWindowScroll()
+const observer = ref<IntersectionObserver | null>(null)
+const isScrollingProgrammatically = ref(false)
+let scrollTimeout: NodeJS.Timeout | null = null
 
 const scrollToHeading = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
-    activeId.value = id
-
-    window.history.replaceState(null, '', `#${id}`)
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout)
   }
-}
 
-const updateActiveHeading = () => {
-  if (!import.meta.client) return
+  isScrollingProgrammatically.value = true
+  activeId.value = id
 
-  const headings = Array.from(
-    document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]'),
-  ) as HTMLElement[]
-
-  let closestHeading: HTMLElement | null = null
-  let closestDistance = Infinity
-
-  headings.forEach((heading) => {
-    const rect = heading.getBoundingClientRect()
-    const distanceFromTop = Math.abs(rect.top - 100)
-
-    if (rect.top <= 150 && distanceFromTop < closestDistance) {
-      closestDistance = distanceFromTop
-      closestHeading = heading as HTMLElement
-    }
+  document.getElementById(id)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
   })
+  window.history.replaceState(null, '', `#${id}`)
 
-  if (closestHeading) {
-    const headingId = (closestHeading as HTMLElement).id
-    if (headingId) {
-      activeId.value = headingId
-    }
-  }
+  scrollTimeout = setTimeout(() => {
+    isScrollingProgrammatically.value = false
+  }, 700)
 }
-
-watchDebounced(scrollY, updateActiveHeading, { debounce: 100 })
 
 onMounted(() => {
-  nextTick(() => {
-    updateActiveHeading()
-    const hash = window.location.hash.slice(1)
-    if (hash) {
-      activeId.value = hash
-    }
-  })
+  const headings = document.querySelectorAll('h2[id], h3[id], h4[id], h5[id], h6[id]')
+  if (headings.length === 0) return
+
+  observer.value = new IntersectionObserver(
+    (entries) => {
+      if (isScrollingProgrammatically.value) {
+        return
+      }
+
+      const intersectingEntry = entries.find((entry) => entry.isIntersecting)
+      if (intersectingEntry) {
+        activeId.value = intersectingEntry.target.id
+      }
+    },
+    {
+      rootMargin: '-100px 0px -85% 0px',
+      threshold: 0,
+    },
+  )
+
+  headings.forEach((heading) => observer.value!.observe(heading))
+
+  const hash = window.location.hash.slice(1)
+  if (hash) {
+    activeId.value = hash
+  }
+})
+
+onBeforeUnmount(() => {
+  if (observer.value) {
+    observer.value.disconnect()
+  }
+  if (scrollTimeout) {
+    clearTimeout(scrollTimeout)
+  }
 })
 
 const tocLinks = computed(() => props.toc?.links || [])

@@ -26,10 +26,10 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
 
 <template>
   <div>
-    <LazyBaseHero title="Blog" :description="t('description')" />
+    <BaseHero title="Blog" :description="t('description')" />
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <LazyUCard
+      <UCard
         v-for="post in posts"
         :key="post.path"
         :ui="{
@@ -72,7 +72,7 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
             }}</UBadge>
           </div>
         </template>
-      </LazyUCard>
+      </UCard>
     </div>
   </div>
 </template>

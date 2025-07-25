@@ -38,13 +38,15 @@ useSeoMeta({
 <template>
   <div>
     <template v-if="post">
-      <LazyBaseHero :title="post.title" :description="post.description" />
+      <BaseHero :title="post.title" :description="post.description" />
 
-      <LazyBaseShare :title="post.title" />
+      <ClientOnly>
+        <BaseShare :title="post.title" />
+      </ClientOnly>
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <article class="lg:col-span-2">
-          <LazyUCard>
+          <UCard>
             <template #header>
               <NuxtImg
                 :alt="post.title"
@@ -58,26 +60,30 @@ useSeoMeta({
               />
             </template>
             <div class="writing">
-              <LazyContentRenderer :value="post" class="" />
+              <ContentRenderer :value="post" class="" />
             </div>
-          </LazyUCard>
+          </UCard>
         </article>
 
-        <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
-          <LazyUCard>
-            <LazyBaseToc v-if="post.body?.toc" :toc="post.body.toc" />
-          </LazyUCard>
-        </aside>
+        <ClientOnly>
+          <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
+            <UCard>
+              <BaseToc v-if="post.body?.toc" :toc="post.body.toc" />
+            </UCard>
+          </aside>
+        </ClientOnly>
       </div>
 
-      <LazyBaseShare :title="post.title" />
+      <ClientOnly>
+        <BaseShare :title="post.title" />
+      </ClientOnly>
     </template>
     <template v-else>
-      <LazyBaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
+      <BaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
 
-      <LazyUButton to="/" variant="subtle" class="mx-auto block w-fit">
+      <UButton to="/" variant="subtle" class="mx-auto block w-fit">
         {{ t('goBackHome') }}
-      </LazyUButton>
+      </UButton>
     </template>
   </div>
 </template>

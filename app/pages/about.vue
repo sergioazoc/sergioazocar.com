@@ -80,10 +80,10 @@ const journeyDescriptions = computed(() => [
 
 <template>
   <div>
-    <LazyBaseHero :title="t('title')" :description="t('description')" />
+    <BaseHero :title="t('title')" :description="t('description')" />
 
     <section class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <LazyUCard class="order-2 md:order-1 lg:col-span-2">
+      <UCard class="order-2 md:order-1 lg:col-span-2">
         <template #header>
           <h2 class="text-2xl">{{ t('journey.title') }}</h2>
         </template>
@@ -121,9 +121,9 @@ const journeyDescriptions = computed(() => [
             </UButton>
           </div>
         </template>
-      </LazyUCard>
+      </UCard>
 
-      <LazyUCard
+      <UCard
         :ui="{
           root: 'p-0',
         }"
@@ -133,19 +133,19 @@ const journeyDescriptions = computed(() => [
           alt="Sergio Azócar"
           class="h-full w-full rounded-lg object-cover"
           decoding="async"
-          loading="lazy"
+          loading="eager"
           placeholder
           quality="85"
           sizes="sm:100vw md:50vw lg:400px"
           src="/images/about/sergio-azocar.jpeg"
         />
-      </LazyUCard>
+      </UCard>
     </section>
 
     <section class="grid gap-8">
       <h2 class="text-center">{{ t('professional-title') }}</h2>
 
-      <LazyUCard v-for="(job, index) in jobs" :key="index" class="gap-4">
+      <UCard v-for="(job, index) in jobs" :key="index" class="gap-4">
         <template #header>
           <div class="flex items-center justify-between gap-4">
             <div>
@@ -175,7 +175,7 @@ const journeyDescriptions = computed(() => [
             </UBadge>
           </div>
         </template>
-      </LazyUCard>
+      </UCard>
     </section>
   </div>
 </template>
