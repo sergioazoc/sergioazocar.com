@@ -14,5 +14,8 @@ export default defineAppConfig({
         variant: 'subtle',
       },
     },
+    pageHero: {
+      container: 'lg:py-20',
+    },
   },
 })

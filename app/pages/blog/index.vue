@@ -26,53 +26,28 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
 
 <template>
   <div>
-    <BaseHero title="Blog" :description="t('description')" />
+    <UPageHero title="Blog" :description="t('description')" />
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <UCard
+      <UBlogPost
         v-for="post in posts"
         :key="post.path"
-        :ui="{
-          root: 'relative p-0 sm:p-0 grid-rows-[auto_1fr_auto]',
-        }"
+        :title="post.title"
+        :image="post.img"
+        :description="post.description"
+        :date="formatDate(post.date)"
+        :to="post.path"
+        variant="soft"
       >
-        <template #header>
-          <NuxtImg
-            :alt="post.title"
-            :src="post.img"
-            class="w-full rounded-t-lg"
-            decoding="async"
-            loading="lazy"
-            quality="80"
-            sizes="sm:100vw md:50vw lg:600px"
-          />
-        </template>
-
-        <div class="grid h-full gap-2 px-6">
-          <p class="mb-2 text-sm text-neutral-400">
-            {{ formatDate(post.date) }}
-          </p>
-          <h2 class="text-2xl font-bold">
-            {{ post.title }}
-          </h2>
-          <p class="text-lg text-neutral-400">{{ post.description }}</p>
-        </div>
-
-        <NuxtLink
-          class="absolute inset-0 z-10"
-          :to="post.path"
-          :aria-label="`${post.title} link`"
-        ></NuxtLink>
-
         <template #footer>
-          <div class="flex flex-wrap items-center gap-2 px-6 py-4">
+          <div class="flex flex-wrap items-center gap-2 px-6 pb-6">
             <p>Tags:</p>
             <UBadge v-for="tag in post.tags" :key="tag" variant="outline" class="rounded-full">{{
               tag
             }}</UBadge>
           </div>
         </template>
-      </UCard>
+      </UBlogPost>
     </div>
   </div>
 </template>

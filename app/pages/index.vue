@@ -1,6 +1,23 @@
 <script lang="ts" setup>
+import type { ButtonProps } from '#ui/types'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+const links = ref<ButtonProps[]>([
+  {
+    label: t('cta.mentoring'),
+    to: localePath('mentorship'),
+    color: 'primary',
+    variant: 'solid',
+  },
+  {
+    label: t('cta.about'),
+    to: localePath('about'),
+    color: 'primary',
+    variant: 'subtle',
+  },
+])
 
 useSeoMeta({
   title: 'Sergio Azócar - Frontend Developer Senior',
@@ -10,18 +27,12 @@ useSeoMeta({
 
 <template>
   <div class="grid gap-16">
-    <section class="text-center">
-      <BaseHero
-        :title="t('hello.title')"
-        :description="t('hello.description')"
-        :highlight="t('hello.highlight')"
-      />
-
-      <div class="flex items-center justify-center gap-4">
-        <UButton :to="localePath('mentorship')" size="xl">{{ t('cta.mentoring') }}</UButton>
-        <UButton :to="localePath('about')" size="xl" variant="subtle">{{ t('cta.about') }}</UButton>
-      </div>
-    </section>
+    <UPageHero
+      :title="t('hello.title')"
+      :description="t('hello.description')"
+      :headline="t('hello.headline')"
+      :links="links"
+    />
 
     <section>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -98,7 +109,7 @@ useSeoMeta({
     },
     "hello": {
       "title": "¡Hola! Soy Sergio Azócar",
-      "highlight": "Desarrollador Frontend Senior",
+      "headline": "Desarrollador Frontend Senior",
       "description": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
     },
     "cta": {
@@ -130,7 +141,7 @@ useSeoMeta({
     },
     "hello": {
       "title": "Hello! I'm Sergio Azócar",
-      "highlight": "Senior Frontend Developer",
+      "headline": "Senior Frontend Developer",
       "description": "Building exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
     },
     "cta": {

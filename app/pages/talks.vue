@@ -61,7 +61,7 @@ const talks = computed(() => {
 
 <template>
   <div>
-    <BaseHero :title="t('title')" :description="t('description')" />
+    <UPageHero :title="t('title')" :description="t('description')" />
 
     <section>
       <h2 class="mb-8 hidden">{{ t('talks-title') }}</h2>

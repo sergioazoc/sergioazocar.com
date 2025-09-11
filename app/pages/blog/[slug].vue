@@ -38,7 +38,7 @@ useSeoMeta({
 <template>
   <div>
     <template v-if="post">
-      <BaseHero :title="post.title" :description="post.description" />
+      <UPageHero :title="post.title" :description="post.description" />
 
       <ClientOnly>
         <BaseShare :title="post.title" />
@@ -65,19 +65,23 @@ useSeoMeta({
           </UCard>
         </article>
 
-        <ClientOnly>
-          <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
-            <UCard>
-              <BaseToc v-if="post.body?.toc" :toc="post.body.toc" />
-            </UCard>
-          </aside>
-        </ClientOnly>
+        <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
+          <UCard>
+            <UContentToc
+              :links="post?.body?.toc?.links"
+              :ui="{
+                container: 'lg:py-0',
+              }"
+            />
+          </UCard>
+        </aside>
       </div>
 
       <ClientOnly>
         <BaseShare :title="post.title" />
       </ClientOnly>
     </template>
+
     <template v-else>
       <BaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
 

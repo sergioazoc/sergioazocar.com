@@ -29,7 +29,7 @@ const items = computed<AccordionItem[]>(() => [
 
 <template>
   <div>
-    <BaseHero :title="t('title')" :description="t('description')" />
+    <UPageHero :title="t('title')" :description="t('description')" />
 
     <section class="mb-16 grid grid-cols-1 md:grid-cols-3">
       <div class="col-span-2">

@@ -6,9 +6,9 @@
 
     <TheHeader />
 
-    <main class="mx-auto mb-16 mt-20 w-full max-w-7xl px-4 py-4">
+    <UContainer as="main" class="py-12">
       <slot />
-    </main>
+    </UContainer>
 
     <TheFooter />
   </div>

@@ -80,7 +80,7 @@ const journeyDescriptions = computed(() => [
 
 <template>
   <div>
-    <BaseHero :title="t('title')" :description="t('description')" />
+    <UPageHero :title="t('title')" :description="t('description')" />
 
     <section class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <UCard class="order-2 md:order-1 lg:col-span-2">
