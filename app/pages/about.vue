@@ -3,7 +3,21 @@ const { t } = useI18n()
 
 const jobsData = [
   {
-    id: 1,
+    id: 8,
+    company: 'Stealth IA Startup',
+    technologies: [
+      'React',
+      'TypeScript',
+      'React Router',
+      'Vite',
+      'TailwindCSS',
+      'Shadcn',
+      'Zod',
+      'Zero',
+    ],
+  },
+  {
+    id: 7,
     company: 'Talana',
     technologies: [
       'Vue 2',
@@ -22,7 +36,7 @@ const jobsData = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     company: 'Hackmetrix',
     technologies: [
       'Vue 2',
@@ -36,7 +50,7 @@ const jobsData = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     company: 'Poliglota',
     technologies: ['Vue 3', 'TypeScript', 'Pinia', 'Vite', 'Bootstrap', 'Sass'],
   },
@@ -46,17 +60,17 @@ const jobsData = [
     technologies: ['PHP', 'React', 'JavaScript', 'HTML', 'CSS'],
   },
   {
-    id: 5,
+    id: 3,
     company: 'Proyectando Ideas',
     technologies: ['Vue 2', 'JavaScript', 'HTML', 'CSS', 'Wordpress'],
   },
   {
-    id: 6,
+    id: 2,
     company: 'Reactivo',
     technologies: ['JavaScript', 'Ruby on Rails', 'HTML', 'CSS', 'Wordpress', 'PostgreSQL'],
   },
   {
-    id: 7,
+    id: 1,
     company: 'Dr. Marketing',
     technologies: ['PHP', 'JavasScript', 'Jquery', 'Ruby on Rails', 'Wordpress', 'MySQL'],
   },
@@ -195,7 +209,15 @@ const journeyDescriptions = computed(() => [
     },
     "professional-title": "Experiencia Profesional",
     "jobs": {
-      "1": {
+      "8": {
+        "position": "Founding Software Engineer",
+        "duration": "Agosto 2025 - Actualidad",
+        "description": [
+          "Como parte del equipo fundador de ingeniería participo en la construcción y evolución tecnológica de la plataforma, desde la definición de la arquitectura hasta el desarrollo de nuevas funcionalidades.",
+          "Mi rol combina la ejecución técnica en la creación y refactorización de componentes, la integración de servicios externos y la escalabilidad de sistemas, con la visión estratégica para establecer estándares y tomar decisiones clave que impulsan el crecimiento sostenible del producto."
+        ]
+      },
+      "7": {
         "position": "Frontend Lead",
         "duration": "Agosto 2022 - Mayo 2025",
         "description": [
@@ -203,7 +225,7 @@ const journeyDescriptions = computed(() => [
           "Lideré la creación de una librería de componentes en Vue 3 y TypeScript, retrocompatible con Vue 2, optimizando la reutilización de código en todo el equipo. También implementé Storybook para mejorar la documentación y colaboración en el proceso de desarrollo. Trabajo transversalmente con los Squads y Stakeholders para garantizar la alineación entre los equipos y las necesidades del negocio."
         ]
       },
-      "2": {
+      "6": {
         "position": "Frontend Developer",
         "duration": "Abril 2022 - Julio 2022",
         "description": [
@@ -211,7 +233,7 @@ const journeyDescriptions = computed(() => [
           "Además, trabajé en el mantenimiento de la parte frontend del sistema legacy en Rails durante la transición. Este cambio a microservicios mejoró significativamente la escalabilidad y la eficiencia del sistema, permitiendo una experiencia más fluida tanto para los usuarios como para el equipo de desarrollo."
         ]
       },
-      "3": {
+      "5": {
         "position": "Frontend Developer Senior",
         "duration": "Mayo 2021 - Marzo 2022",
         "description": [
@@ -227,7 +249,7 @@ const journeyDescriptions = computed(() => [
           "Desarrollé integraciones personalizadas y soluciones en frontend y backend, colaborando estrechamente con otros equipos para garantizar que las soluciones fueran alineadas con las necesidades de negocio. Mi trabajo ayudó a mejorar el tiempo de respuesta de la plataforma y la eficiencia operativa."
         ]
       },
-      "5": {
+      "3": {
         "position": "FullStack Developer",
         "duration": "Julio 2018 - Octubre 2020",
         "description": [
@@ -235,7 +257,7 @@ const journeyDescriptions = computed(() => [
           "Desarrollé landing pages personalizadas que ayudaron a mejorar la conversión y la experiencia del usuario. Además, lideré la formación de clientes, enseñándoles cómo gestionar y aprovechar al máximo sus plataformas digitales."
         ]
       },
-      "6": {
+      "2": {
         "position": "FullStack Developer",
         "duration": "Marzo 2016 - Junio 2018",
         "description": [
@@ -243,7 +265,7 @@ const journeyDescriptions = computed(() => [
           "Mi trabajo se centró en desarrollar soluciones eficientes que permitieran una mayor escalabilidad y optimización de los procesos internos. También proporcioné formación y asesoría técnica a los clientes sobre cómo optimizar sus aplicaciones y mejorar la experiencia de usuario."
         ]
       },
-      "7": {
+      "1": {
         "position": "FullStack Developer",
         "duration": "Enero 2015 - Febrero 2016",
         "description": [
@@ -266,7 +288,15 @@ const journeyDescriptions = computed(() => [
     },
     "professional-title": "Professional Experience",
     "jobs": {
-      "1": {
+      "8": {
+        "position": "Founding Software Engineer",
+        "duration": "August 2025 - Present",
+        "description": [
+          "As part of the founding engineering team, I participate in building and evolving the platform's technology, from defining the architecture to developing new features.",
+          "My role combines technical execution in creating and refactoring components, integrating external services, and scaling systems, with strategic vision to establish standards and make key decisions that drive sustainable product growth."
+        ]
+      },
+      "7": {
         "position": "Frontend Lead",
         "duration": "August 2022 - May 2025",
         "description": [
@@ -274,7 +304,7 @@ const journeyDescriptions = computed(() => [
           "Led the creation of a component library in Vue 3 and TypeScript, backward compatible with Vue 2, optimizing code reuse across the team. I also implemented Storybook to improve documentation and collaboration in the development process. I work cross-functionally with Squads and Stakeholders to ensure alignment between teams and business needs."
         ]
       },
-      "2": {
+      "6": {
         "position": "Frontend Developer",
         "duration": "April 2022 - July 2022",
         "description": [
@@ -282,7 +312,7 @@ const journeyDescriptions = computed(() => [
           "Additionally, I worked on maintaining the frontend of the legacy system in Rails during the transition. This shift to microservices significantly improved scalability and system efficiency, allowing for a smoother experience for both users and the development team."
         ]
       },
-      "3": {
+      "5": {
         "position": "Senior Frontend Developer",
         "duration": "May 2021 - March 2022",
         "description": [
@@ -298,7 +328,7 @@ const journeyDescriptions = computed(() => [
           "I developed custom integrations and solutions in both frontend and backend, closely collaborating with other teams to ensure that the solutions were aligned with business needs. My work helped improve platform response times and operational efficiency."
         ]
       },
-      "5": {
+      "3": {
         "position": "FullStack Developer",
         "duration": "July 2018 - October 2020",
         "description": [
@@ -306,7 +336,7 @@ const journeyDescriptions = computed(() => [
           "I developed custom landing pages that helped improve conversion rates and user experience. Additionally, I led client training, teaching them how to manage and make the most of their digital platforms."
         ]
       },
-      "6": {
+      "2": {
         "position": "FullStack Developer",
         "duration": "March 2016 - June 2018",
         "description": [
@@ -314,7 +344,7 @@ const journeyDescriptions = computed(() => [
           "My work focused on developing efficient solutions that allowed for greater scalability and optimization of internal processes. I also provided training and technical advice to clients on how to optimize their applications and improve user experience."
         ]
       },
-      "7": {
+      "1": {
         "position": "FullStack Developer",
         "duration": "January 2015 - February 2016",
         "description": [
