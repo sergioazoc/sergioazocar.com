@@ -5,10 +5,9 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: 'grid gap-8 p-6 sm:p-8 rounded-lg',
-        header: 'p-0 sm:p-0 border-0',
-        body: 'p-0 sm:p-0 border-0',
-        footer: 'p-0 sm:p-0',
+        header: 'border-0 px-6 pt-6 pb-0 sm:pt-8 sm:pb-0 sm:px-8',
+        body: 'border-0 p-6 sm:p-8',
+        footer: 'border-0 px-6 pt-0 pb-6 sm:pt-0 sm:pb-8 sm:px-8',
       },
       defaultVariants: {
         variant: 'subtle',
