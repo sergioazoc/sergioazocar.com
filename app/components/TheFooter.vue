@@ -26,7 +26,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <UFooter class="bg-slate-900 pt-8">
+  <UFooter class="pt-8">
     <template #left>
       <div class="md:col-span-2">
         <div class="mb-4 flex items-center gap-4">

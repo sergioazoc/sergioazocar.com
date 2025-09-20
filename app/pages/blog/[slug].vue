@@ -1,24 +1,21 @@
 <script setup lang="ts">
-import { withLeadingSlash } from 'ufo'
+import type { Collections } from '@nuxt/content'
 
-const { t, locale } = useI18n()
-const localePath = useLocalePath()
 const route = useRoute()
-const router = useRouter()
+const { locale, t } = useI18n()
 
-const slug = computed(() => withLeadingSlash(`blog-${String(route.params.slug)}-${locale.value}`))
+// Usar la ruta actual como clave y como path de búsqueda
+const dataKey = computed(() => `blog-post-${locale.value}-${route.path}`)
 
-const { data: post } = await useAsyncData(slug.value, async () => {
-  return queryCollection(`blog_${locale.value}`)
-    .where('path', '=', route.path)
-    .where('published', '=', true)
-    .first()
-})
-
-watch(
-  () => locale.value,
-  (newLocale) => {
-    router.push(localePath('/blog', newLocale))
+const { data: post } = await useAsyncData(
+  dataKey.value,
+  async () => {
+    const collection = ('blog_' + locale.value) as keyof Collections
+    // Buscar por el path público que ya viene de Content (ej: /es/blog/mi-post)
+    return await queryCollection(collection).path(route.path).first()
+  },
+  {
+    watch: [locale, () => route.path],
   },
 )
 
@@ -83,7 +80,7 @@ useSeoMeta({
     </template>
 
     <template v-else>
-      <BaseHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
+      <UPageHero :title="t('pageNotFound')" :description="t('oopsContentNotExist')" />
 
       <UButton to="/" variant="subtle" class="mx-auto block w-fit">
         {{ t('goBackHome') }}

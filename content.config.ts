@@ -1,5 +1,4 @@
-import { defineCollection, defineContentConfig } from '@nuxt/content'
-import { z } from 'zod'
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 const commonSchema = z.object({
@@ -7,7 +6,7 @@ const commonSchema = z.object({
   date: z.string(),
   description: z.string(),
   img: z.string(),
-  slug: z.string(),
+  slug: z.string().optional(),
   tags: z.array(z.string()),
   title: z.string(),
   published: z.boolean().default(false),
