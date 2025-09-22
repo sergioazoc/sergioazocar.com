@@ -19,6 +19,16 @@ const { data: post } = await useAsyncData(
   },
 )
 
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+  return queryCollectionItemSurroundings(
+    ('blog_' + locale.value) as keyof Collections,
+    route.path,
+    {
+      fields: ['description'],
+    },
+  )
+})
+
 useSeoMeta({
   title: post?.value?.title,
   description: post?.value?.description,
@@ -37,12 +47,12 @@ useSeoMeta({
     <template v-if="post">
       <UPageHero :title="post.title" :description="post.description" />
 
-      <ClientOnly>
-        <BaseShare :title="post.title" />
-      </ClientOnly>
+      <UPage :ui="{}">
+        <ClientOnly>
+          <BaseShare :title="post.title" />
+        </ClientOnly>
 
-      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <article class="lg:col-span-2">
+        <article>
           <UCard>
             <template #header>
               <NuxtImg
@@ -62,21 +72,18 @@ useSeoMeta({
           </UCard>
         </article>
 
-        <aside class="sticky top-4 hidden h-fit lg:col-span-1 lg:block">
-          <UCard>
-            <UContentToc
-              :links="post?.body?.toc?.links"
-              :ui="{
-                container: 'lg:py-0',
-              }"
-            />
-          </UCard>
-        </aside>
-      </div>
+        <template #right>
+          <UContentToc :title="t('toc-title')" :highlight="true" :links="post?.body?.toc?.links" />
+        </template>
 
-      <ClientOnly>
-        <BaseShare :title="post.title" />
-      </ClientOnly>
+        <ClientOnly>
+          <BaseShare :title="post.title" />
+        </ClientOnly>
+      </UPage>
+
+      <USeparator icon="lucide-chevrons-left-right-ellipsis" class="mb-8" />
+
+      <UContentSurround :surround="surround as any" />
     </template>
 
     <template v-else>
@@ -92,11 +99,13 @@ useSeoMeta({
 <i18n lang="json">
 {
   "es": {
+    "toc-title": "Tabla de contenidos",
     "pageNotFound": "Página No Encontrada",
     "oopsContentNotExist": "¡Vaya! El contenido que buscas no existe.",
     "goBackHome": "Volver a Inicio"
   },
   "en": {
+    "toc-title": "Table of Contents",
     "pageNotFound": "Page Not Found",
     "oopsContentNotExist": "Oops! The content you're looking for doesn't exist.",
     "goBackHome": "Go back home"

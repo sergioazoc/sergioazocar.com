@@ -30,8 +30,14 @@ const socialLinks = [
     <template #left>
       <div class="md:col-span-2">
         <div class="mb-4 flex items-center gap-4">
-          <UAvatar src="/images/about/sergio-azocar.jpeg" alt="Sergio Azócar" />
-          <p class="text-xl font-bold">Sergio Azócar</p>
+          <UUser
+            name="Sergio Azócar"
+            :description="t('user-description')"
+            :avatar="{
+              src: '/images/about/sergio-azocar.jpeg',
+              icon: 'i-lucide-image',
+            }"
+          />
         </div>
         <p class="lg:max-w-md">{{ t('description') }}</p>
       </div>
@@ -64,11 +70,13 @@ const socialLinks = [
 <i18n lang="json">
 {
   "es": {
-    "description": "Vue Frontend Developer Senior apasionado por crear experiencias de usuario excepcionales y compartir conocimientos con la comunidad.",
+    "user-description": "Frontend Developer Senior",
+    "description": "Apasionado por crear experiencias de usuario excepcionales y compartir conocimientos con la comunidad.",
     "footer": "Hecho con Vue · Nuxt & TailwindCSS"
   },
   "en": {
-    "description": "Vue Frontend Developer Senior passionate about creating exceptional user experiences and sharing knowledge with the community.",
+    "user-description": "Senior Frontend Developer",
+    "description": "Passionate about creating exceptional user experiences and sharing knowledge with the community.",
     "footer": "Powered by Vue · Nuxt & TailwindCSS"
   }
 }
