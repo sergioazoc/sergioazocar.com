@@ -38,13 +38,9 @@ const items = computed<AccordionItem[]>(() => [
         spotlight-color="primary"
         orientation="horizontal"
         :reverse="true"
-        class=""
-        :ui="{
-          container: 'p-0 sm:p-0',
-        }"
       >
         <NuxtImg
-          class="size-full max-h-[530px] rounded-lg rounded-b-none object-cover md:rounded-l-lg md:rounded-r-none"
+          class="size-full max-h-[530px] rounded-md object-cover"
           src="/images/mentorship/mentorship.jpeg"
           alt="Sergio Azócar"
           placeholder

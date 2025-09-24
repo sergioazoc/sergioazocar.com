@@ -1,55 +1,78 @@
 import type { SitemapUrlInput } from '#sitemap/types'
 
-export default defineSitemapEventHandler(async (e) => {
+export default defineSitemapEventHandler(async () => {
   const staticUrls: SitemapUrlInput[] = [
-    { loc: '/es', priority: 1.0, changefreq: 'daily' },
-    { loc: '/en', priority: 1.0, changefreq: 'daily' },
+    {
+      loc: '/es',
+      priority: 1.0,
+      changefreq: 'daily',
+      alternatives: [
+        { hreflang: 'en-US', href: '/en' },
+        { hreflang: 'x-default', href: '/' },
+      ],
+    },
+    {
+      loc: '/en',
+      priority: 1.0,
+      changefreq: 'daily',
+      alternatives: [
+        { hreflang: 'es-ES', href: '/es' },
+        { hreflang: 'x-default', href: '/' },
+      ],
+    },
 
-    { loc: '/es/sobre-mi', priority: 0.9, changefreq: 'monthly' },
-    { loc: '/en/about', priority: 0.9, changefreq: 'monthly' },
+    {
+      loc: '/es/sobre-mi',
+      priority: 0.9,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'en-US', href: '/en/about' }],
+    },
+    {
+      loc: '/en/about',
+      priority: 0.9,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'es-ES', href: '/es/sobre-mi' }],
+    },
 
-    { loc: '/es/charlas', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/en/talks', priority: 0.8, changefreq: 'monthly' },
+    {
+      loc: '/es/mentoria',
+      priority: 0.8,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'en-US', href: '/en/mentorship' }],
+    },
+    {
+      loc: '/en/mentorship',
+      priority: 0.8,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'es-ES', href: '/es/mentoria' }],
+    },
 
-    { loc: '/es/blog', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/en/blog', priority: 0.9, changefreq: 'weekly' },
+    {
+      loc: '/es/charlas',
+      priority: 0.8,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'en-US', href: '/en/talks' }],
+    },
+    {
+      loc: '/en/talks',
+      priority: 0.8,
+      changefreq: 'monthly',
+      alternatives: [{ hreflang: 'es-ES', href: '/es/charlas' }],
+    },
+
+    {
+      loc: '/es/blog',
+      priority: 0.9,
+      changefreq: 'weekly',
+      alternatives: [{ hreflang: 'en-US', href: '/en/blog' }],
+    },
+    {
+      loc: '/en/blog',
+      priority: 0.9,
+      changefreq: 'weekly',
+      alternatives: [{ hreflang: 'es-ES', href: '/es/blog' }],
+    },
   ]
 
-  const blogUrls: SitemapUrlInput[] = []
-
-  try {
-    const blogPostsEs = await queryCollection(e, 'blog_es')
-      .order('date', 'DESC')
-      .select('date', 'path')
-      .all()
-
-    const blogPostsEn = await queryCollection(e, 'blog_en')
-      .order('date', 'DESC')
-      .select('date', 'path')
-      .all()
-
-    for (const post of blogPostsEs) {
-      const loc = post.path
-      blogUrls.push({
-        loc,
-        lastmod: post.date,
-        priority: 0.7,
-        changefreq: 'weekly',
-      })
-    }
-
-    for (const post of blogPostsEn) {
-      const loc = post.path
-      blogUrls.push({
-        loc,
-        lastmod: post.date,
-        priority: 0.7,
-        changefreq: 'weekly',
-      })
-    }
-  } catch (error) {
-    console.error('Error fetching blog posts for sitemap:', error)
-  }
-
-  return [...staticUrls, ...blogUrls]
+  return staticUrls
 })

@@ -44,22 +44,37 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
   <div>
     <UPageHero :title="t('title')" :description="t('description')" />
 
-    <section class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section class="mb-16">
       <UPageCard
         variant="subtle"
         :spotlight="true"
         spotlight-color="primary"
+        orientation="horizontal"
+        :reverse="true"
         class="order-2 md:order-1 lg:col-span-2"
       >
+        <NuxtImg
+          alt="Sergio Azócar"
+          class="size-full rounded-lg object-cover"
+          decoding="async"
+          loading="eager"
+          placeholder
+          quality="85"
+          sizes="sm:100vw md:50vw lg:400px"
+          src="/images/about/sergio-azocar.jpeg"
+        />
+
         <template #header>
           <h2 class="text-2xl">{{ t('journey.title') }}</h2>
         </template>
 
-        <div class="grid gap-4">
-          <p v-for="(description, index) in journeyDescriptions" :key="index" class="text-lg">
-            {{ description }}
-          </p>
-        </div>
+        <template #description>
+          <div class="grid gap-4">
+            <p v-for="(description, index) in journeyDescriptions" :key="index" class="text-lg">
+              {{ description }}
+            </p>
+          </div>
+        </template>
 
         <template #footer>
           <div class="flex flex-wrap gap-4">
@@ -89,27 +104,6 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
           </div>
         </template>
       </UPageCard>
-
-      <UPageCard
-        variant="subtle"
-        :spotlight="true"
-        spotlight-color="primary"
-        :ui="{
-          container: 'p-0 sm:p-0',
-        }"
-        class="order-1 md:order-2"
-      >
-        <NuxtImg
-          alt="Sergio Azócar"
-          class="size-full rounded-lg object-cover"
-          decoding="async"
-          loading="eager"
-          placeholder
-          quality="85"
-          sizes="sm:100vw md:50vw lg:400px"
-          src="/images/about/sergio-azocar.jpeg"
-        />
-      </UPageCard>
     </section>
 
     <section class="grid gap-12">
@@ -126,9 +120,16 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
         <template #title><span /></template>
 
         <template #description="{ item }">
-          <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
+          <UPageCard
+            variant="subtle"
+            :spotlight="true"
+            spotlight-color="primary"
+            :ui="{
+              header: 'w-full',
+            }"
+          >
             <template #header>
-              <div class="flex items-center justify-between gap-4">
+              <div class="flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <h3 class="text-primary text-xl">{{ item.title }}</h3>
                   <p class="text-lg text-neutral-200">{{ item.company }}</p>
@@ -137,11 +138,13 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
               </div>
             </template>
 
-            <div class="grid gap-4">
-              <p v-for="(description, index) in item.descriptions" :key="index">
-                {{ description }}
-              </p>
-            </div>
+            <template #description>
+              <div class="grid gap-4">
+                <p v-for="(description, index) in item.descriptions" :key="index">
+                  {{ description }}
+                </p>
+              </div>
+            </template>
 
             <template #footer>
               <div class="flex flex-wrap gap-2">

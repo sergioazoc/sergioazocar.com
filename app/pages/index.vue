@@ -44,12 +44,14 @@ useSeoMeta({
         >
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
-              <UIcon name="lucide-briefcase-business" class="text-green-500" />
+              <UIcon name="lucide-briefcase-business" class="text-emerald-500" />
               <p>{{ t('experience.title') }}</p>
             </div>
           </template>
 
-          <p>{{ t('experience.description') }}</p>
+          <template #description>
+            <p>{{ t('experience.description') }}</p>
+          </template>
 
           <template #footer>
             <div class="flex flex-wrap gap-2">
@@ -64,12 +66,14 @@ useSeoMeta({
         <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
-              <UIcon name="lucide-target" class="text-teal-500" />
+              <UIcon name="lucide-target" class="text-cyan-500" />
               <p>{{ t('current.title') }}</p>
             </div>
           </template>
 
-          <p>{{ t('current.description') }}</p>
+          <template #description>
+            <p>{{ t('current.description') }}</p>
+          </template>
         </UPageCard>
 
         <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
@@ -80,7 +84,9 @@ useSeoMeta({
             </div>
           </template>
 
-          <p>{{ t('mentoring.description') }}</p>
+          <template #description>
+            <p>{{ t('mentoring.description') }}</p>
+          </template>
         </UPageCard>
 
         <UPageCard
@@ -91,12 +97,12 @@ useSeoMeta({
         >
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
-              <UIcon name="lucide-mic" class="text-orange-500" />
+              <UIcon name="lucide-mic" class="text-amber-500" />
               <p>{{ t('speaking.title') }}</p>
             </div>
           </template>
 
-          <template #body>
+          <template #description>
             <p>{{ t('speaking.description') }}</p>
           </template>
 
