@@ -34,11 +34,11 @@ useSeoMeta({
   description: post?.value?.description,
   ogTitle: post?.value?.title,
   ogDescription: post?.value?.description,
-  ogImage: `https://www.sergioazocar.com${post?.value?.img}`,
+  ogImage: `https://sergioazocar.com${post?.value?.img}`,
   twitterCard: 'summary_large_image',
   twitterTitle: post?.value?.title,
   twitterDescription: post?.value?.description,
-  twitterImage: `https://www.sergioazocar.com${post?.value?.img}`,
+  twitterImage: `https://sergioazocar.com${post?.value?.img}`,
 })
 </script>
 

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: 'https://www.sergioazocar.com',
+    url: 'https://sergioazocar.com',
     name: 'Sergio Azócar',
   },
 
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   robots: {
     credits: false,
     allow: '/',
-    sitemap: 'https://www.sergioazocar.com/sitemap.xml',
+    sitemap: 'https://sergioazocar.com/sitemap.xml',
   },
 
   fonts: {

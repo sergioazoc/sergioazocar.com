@@ -7,7 +7,7 @@ const props = defineProps<{
   title: string
 }>()
 
-const baseUrl = 'https://www.sergioazocar.com'
+const baseUrl = 'https://sergioazocar.com'
 const url = computed(() => `${baseUrl}${route.fullPath}`)
 const trackedUrl = `${url.value}?utm_source=x&utm_medium=social&utm_campaign=blog`
 
