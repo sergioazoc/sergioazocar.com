@@ -101,7 +101,7 @@ useSeoMeta({
           </template>
 
           <template #footer>
-            <UButton icon="lucide-external-link" :to="localePath('talks')">
+            <UButton variant="ghost" icon="lucide-external-link" :to="localePath('talks')">
               {{ t('speaking.footer') }}
             </UButton>
           </template>
