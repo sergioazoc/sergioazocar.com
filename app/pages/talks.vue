@@ -67,11 +67,14 @@ const talks = computed(() => {
       <h2 class="mb-8 hidden">{{ t('talks-title') }}</h2>
 
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <UCard
+        <UPageCard
           v-for="talk in talks"
           :key="talk.name"
+          variant="subtle"
+          :spotlight="true"
+          spotlight-color="primary"
           :ui="{
-            root: 'p-0 sm:p-0 grid-rows-[auto_1fr_auto]',
+            container: 'p-0 sm:p-0',
           }"
         >
           <template #header>
@@ -109,12 +112,14 @@ const talks = computed(() => {
             />
           </template>
 
-          <div class="h-full px-6">
-            <p class="mb-2 text-sm text-neutral-400">{{ formatDate(talk.date) }}</p>
-            <h3 class="text-xl font-bold">{{ talk.name }}</h3>
-            <p class="text-primary text-lg">{{ talk.event }}</p>
-            <p class="mt-2 text-neutral-400">{{ talk.description }}</p>
-          </div>
+          <template #body>
+            <div class="h-full px-6">
+              <p class="mb-2 text-sm text-neutral-400">{{ formatDate(talk.date) }}</p>
+              <h3 class="text-xl font-bold">{{ talk.name }}</h3>
+              <p class="text-primary text-lg">{{ talk.event }}</p>
+              <p class="mt-2 text-neutral-400">{{ talk.description }}</p>
+            </div>
+          </template>
 
           <template #footer>
             <div v-if="talk.youtubeId" class="sm-p6 p-6">
@@ -129,7 +134,7 @@ const talks = computed(() => {
               </UButton>
             </div>
           </template>
-        </UCard>
+        </UPageCard>
       </div>
     </section>
   </div>

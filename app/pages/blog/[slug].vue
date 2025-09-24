@@ -47,18 +47,25 @@ useSeoMeta({
     <template v-if="post">
       <UPageHero :title="post.title" :description="post.description" />
 
-      <UPage :ui="{}">
+      <UPage>
         <ClientOnly>
           <BaseShare :title="post.title" />
         </ClientOnly>
 
         <article>
-          <UCard>
+          <UPageCard
+            variant="subtle"
+            :spotlight="true"
+            spotlight-color="primary"
+            :ui="{
+              header: 'w-full',
+            }"
+          >
             <template #header>
               <NuxtImg
                 :alt="post.title"
                 :src="post.img"
-                class="w-full rounded-lg"
+                class="size-full rounded-lg object-cover"
                 fetchpriority="high"
                 loading="eager"
                 preload
@@ -66,10 +73,13 @@ useSeoMeta({
                 sizes="sm:100vw md:80vw lg:800px"
               />
             </template>
-            <div class="writing">
-              <ContentRenderer :value="post" class="" />
-            </div>
-          </UCard>
+
+            <template #body>
+              <div class="writing">
+                <ContentRenderer :value="post" class="" />
+              </div>
+            </template>
+          </UPageCard>
         </article>
 
         <template #right>

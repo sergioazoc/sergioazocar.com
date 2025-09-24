@@ -45,7 +45,12 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
     <UPageHero :title="t('title')" :description="t('description')" />
 
     <section class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <UCard class="order-2 md:order-1 lg:col-span-2">
+      <UPageCard
+        variant="subtle"
+        :spotlight="true"
+        spotlight-color="primary"
+        class="order-2 md:order-1 lg:col-span-2"
+      >
         <template #header>
           <h2 class="text-2xl">{{ t('journey.title') }}</h2>
         </template>
@@ -83,18 +88,20 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
             </UButton>
           </div>
         </template>
-      </UCard>
+      </UPageCard>
 
-      <UCard
+      <UPageCard
+        variant="subtle"
+        :spotlight="true"
+        spotlight-color="primary"
         :ui="{
-          root: 'p-0 sm:p-0',
-          body: 'p-0 sm:p-0 h-full',
+          container: 'p-0 sm:p-0',
         }"
         class="order-1 md:order-2"
       >
         <NuxtImg
           alt="Sergio Azócar"
-          class="h-full w-full rounded-lg object-cover"
+          class="size-full rounded-lg object-cover"
           decoding="async"
           loading="eager"
           placeholder
@@ -102,7 +109,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
           sizes="sm:100vw md:50vw lg:400px"
           src="/images/about/sergio-azocar.jpeg"
         />
-      </UCard>
+      </UPageCard>
     </section>
 
     <section class="grid gap-12">
@@ -119,7 +126,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
         <template #title><span /></template>
 
         <template #description="{ item }">
-          <UCard>
+          <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
             <template #header>
               <div class="flex items-center justify-between gap-4">
                 <div>
@@ -149,7 +156,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
                 </UBadge>
               </div>
             </template>
-          </UCard>
+          </UPageCard>
         </template>
       </UTimeline>
     </section>

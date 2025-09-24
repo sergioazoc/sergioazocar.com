@@ -31,10 +31,20 @@ const items = computed<AccordionItem[]>(() => [
   <div>
     <UPageHero :title="t('title')" :description="t('description')" />
 
-    <section class="mb-16 grid grid-cols-1 md:grid-cols-3">
-      <div class="col-span-2">
+    <section class="mb-16">
+      <UPageCard
+        variant="subtle"
+        :spotlight="true"
+        spotlight-color="primary"
+        orientation="horizontal"
+        :reverse="true"
+        class=""
+        :ui="{
+          container: 'p-0 sm:p-0',
+        }"
+      >
         <NuxtImg
-          class="h-full max-h-[530px] w-full rounded-lg rounded-b-none object-cover md:rounded-b-lg md:rounded-l-lg md:rounded-r-none"
+          class="size-full max-h-[530px] rounded-lg rounded-b-none object-cover md:rounded-l-lg md:rounded-r-none"
           src="/images/mentorship/mentorship.jpeg"
           alt="Sergio Azócar"
           placeholder
@@ -42,39 +52,39 @@ const items = computed<AccordionItem[]>(() => [
           loading="eager"
           decoding="async"
         />
-      </div>
 
-      <UCard class="rounded-t-none md:rounded-l-none md:rounded-t-lg">
         <template #header>
           <h2>{{ t('schedule.title') }}</h2>
         </template>
 
-        <div class="mb-4 grid gap-2">
-          <div v-for="item in 5" :key="item" class="flex items-center gap-2">
-            <div class="flex items-center">
-              <UIcon name="lucide-circle-check" size="20" class="text-primary" />
+        <template #description>
+          <div class="mb-4 grid gap-2">
+            <div v-for="item in 5" :key="item" class="flex items-center gap-2">
+              <div class="flex items-center">
+                <UIcon name="lucide-circle-check" size="20" class="text-primary" />
+              </div>
+              <p>
+                {{ t(`schedule.description.${item}`) }}
+              </p>
             </div>
-            <p>
-              {{ t(`schedule.description.${item}`) }}
-            </p>
           </div>
-        </div>
 
-        <p class="flex items-center text-neutral-400">
-          <UIcon name="lucide-asterisk" size="20" />
-          {{ t('schedule.footer') }}
-        </p>
+          <p class="flex items-center text-neutral-400">
+            <UIcon name="lucide-asterisk" size="20" />
+            {{ t('schedule.footer') }}
+          </p>
+        </template>
 
         <template #footer>
           <UButton size="xl" href="https://calendar.app.google/6KF6e1cbfhaVBWzz7" target="_blank">
             {{ t('schedule.button') }}
           </UButton>
         </template>
-      </UCard>
+      </UPageCard>
     </section>
 
     <section class="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
-      <UCard>
+      <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
         <template #header>
           <h2>{{ t('target.title') }}</h2>
         </template>
@@ -89,9 +99,9 @@ const items = computed<AccordionItem[]>(() => [
             </p>
           </div>
         </div>
-      </UCard>
+      </UPageCard>
 
-      <UCard>
+      <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
         <template #header>
           <h2>{{ t('commitment.title') }}</h2>
         </template>
@@ -106,13 +116,13 @@ const items = computed<AccordionItem[]>(() => [
             </p>
           </div>
         </div>
-      </UCard>
+      </UPageCard>
     </section>
 
     <section>
       <h2 class="mb-8 text-center">FAQ</h2>
 
-      <UCard>
+      <UPageCard variant="subtle" :spotlight="true" spotlight-color="primary">
         <UAccordion
           :items="items"
           :ui="{
@@ -120,7 +130,7 @@ const items = computed<AccordionItem[]>(() => [
             content: 'text-neutral-400',
           }"
         />
-      </UCard>
+      </UPageCard>
     </section>
   </div>
 </template>

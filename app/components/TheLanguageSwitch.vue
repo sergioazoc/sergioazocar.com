@@ -74,14 +74,13 @@ watch(
   <div class="flex items-center gap-2">
     <UIcon name="lucide-languages" />
     <NuxtLink
-      v-for="{ code } in locales"
+      v-for="code in codes"
       :key="code"
       class="uppercase"
       :aria-label="`${code} switch`"
-      :class="[code === currentLocale ? 'text-neutral-300' : 'text-neutral-500']"
-      :to="(linksByCode[code as any] || switchLocalePath(code as any)) as string"
+      :to="linksByCode[code] || switchLocalePath(code)"
     >
-      {{ code }}
+      <UBadge size="sm" :variant="code === currentLocale ? 'solid' : 'subtle'">{{ code }}</UBadge>
     </NuxtLink>
   </div>
 </template>
