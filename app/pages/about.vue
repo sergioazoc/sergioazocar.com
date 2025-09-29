@@ -245,7 +245,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
       },
       {
         "company": "Poliglota",
-        "position": "Frontend Developer Senior",
+        "position": "Frontend Developer",
         "duration": "Mayo 2021 - Marzo 2022",
         "description": [
           "En POLIGLOTA, participé en la migración de un sistema monolítico en Ruby on Rails a una arquitectura basada en microservicios. Desarrollé un nuevo login y dashboard para estudiantes utilizando Vue 3 y TypeScript, lo que mejoró la accesibilidad y la experiencia de usuario.",
@@ -372,7 +372,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
       },
       {
         "company": "Poliglota",
-        "position": "Senior Frontend Developer",
+        "position": "Frontend Developer",
         "duration": "May 2021 - March 2022",
         "description": [
           "At POLIGLOTA, I participated in migrating a monolithic system in Ruby on Rails to a microservices-based architecture. I developed a new login and dashboard for students using Vue 3 and TypeScript, improving accessibility and user experience.",
