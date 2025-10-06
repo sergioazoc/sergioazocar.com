@@ -182,7 +182,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
     "professional-title": "Experiencia Profesional",
     "jobs": [
       {
-        "company": "Stealth AI Startup",
+        "company": "Skyward",
         "position": "Founding Software Engineer",
         "duration": "Agosto 2025 - Actualidad",
         "description": [
@@ -309,7 +309,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
     "professional-title": "Professional Experience",
     "jobs": [
       {
-        "company": "Stealth AI Startup",
+        "company": "Skyward",
         "position": "Founding Software Engineer",
         "duration": "August 2025 - Present",
         "description": [

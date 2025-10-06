@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { AccordionItem } from '@nuxt/ui'
+const { t, locale } = useI18n()
 
-const { t } = useI18n()
-
-const items = computed<AccordionItem[]>(() => [
+const items = computed(() => [
   {
     label: t('faq.0.question'),
     content: t('faq.0.answer'),
@@ -69,10 +67,20 @@ const items = computed<AccordionItem[]>(() => [
             <UIcon name="lucide-asterisk" size="20" />
             {{ t('schedule.footer') }}
           </p>
+
+          <p v-if="locale === 'en'" class="flex items-center text-neutral-400">
+            <UIcon name="lucide-asterisk" size="20" />
+            Only available in spanish
+          </p>
         </template>
 
         <template #footer>
-          <UButton size="xl" href="https://calendar.app.google/6KF6e1cbfhaVBWzz7" target="_blank">
+          <UButton
+            size="xl"
+            href="https://calendar.app.google/6KF6e1cbfhaVBWzz7"
+            target="_blank"
+            :disabled="locale === 'en'"
+          >
             {{ t('schedule.button') }}
           </UButton>
         </template>
