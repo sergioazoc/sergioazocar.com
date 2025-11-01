@@ -29,10 +29,10 @@ Más adelante voy a entrar en detalle sobre cómo lo construí y qué aprendí, 
 
 Después de trabajar en distintos proyectos y equipos, empecé a notar patrones que se repiten constantemente:
 
-- El mismo botón diseñado de tres formas distintas  
-- Comportamientos inconsistentes en componentes similares  
-- Código duplicado o difícil de mantener  
-- Malentendidos entre diseño y desarrollo  
+- El mismo botón diseñado de tres formas distintas
+- Comportamientos inconsistentes en componentes similares
+- Código duplicado o difícil de mantener
+- Malentendidos entre diseño y desarrollo
 - Interfaces que se veían bien en Figma, pero no en producción
 
 Cada vez que un producto crecía, también lo hacía el caos visual y técnico. Y con él, el tiempo que perdíamos resolviendo los mismos problemas una y otra vez.
@@ -51,13 +51,15 @@ Al principio crees que va a ordenar todo, que unirá diseño y desarrollo como p
 Estas fueron algunas de las diferencias más marcadas que viví entre lo que imaginaba… y lo que realmente pasó:
 
 ### 🧠 Expectativa:
+
 > “Voy a crear una librería de componentes reutilizables y el equipo la va a usar feliz.”
 
 **🧱 Realidad:**  
 Algunos devs la ignoran, otros la rompen, otros no saben cómo usarla.  
-Sin documentación, onboarding y soporte interno, nadie la adopta como esperás.
+Sin documentación, onboarding y soporte interno, nadie la adopta como esperas.
 
 ### 🎨 Expectativa:
+
 > “El diseño está en Figma, así que solo tengo que replicarlo.”
 
 **⚠️ Realidad:**  
@@ -65,6 +67,7 @@ El diseño no contempla estados, errores, focus, interacción, loading...
 Terminé tomando muchas decisiones técnicas que no estaban definidas.
 
 ### 🧪 Expectativa:
+
 > “Una vez que los componentes están hechos, no hay que tocarlos más.”
 
 **🔄 Realidad:**  
@@ -72,6 +75,7 @@ El diseño evoluciona, aparecen nuevos requerimientos, y cada cambio afecta múl
 Un Design System necesita mantenimiento constante.
 
 ### 🧩 Expectativa:
+
 > “Voy a crear componentes genéricos y reutilizables para todo.”
 
 **🧨 Realidad:**  
@@ -79,6 +83,7 @@ Componentes ultra flexibles terminan siendo difíciles de mantener, testear o en
 A veces es mejor tener variantes claras que un solo componente con 15 props.
 
 ### 👥 Expectativa:
+
 > “Diseño y desarrollo van a trabajar como un solo equipo.”
 
 **📉 Realidad:**  
@@ -86,12 +91,14 @@ Sin procesos claros y un lenguaje común, aparecen malentendidos todo el tiempo.
 Colaborar no es automático: hay que construir puentes intencionalmente.
 
 ### 📦 Expectativa:
+
 > “Con Tailwind puedo hacer todo sin un Design System.”
 
 **🔍 Realidad:**  
 Tailwind ayuda, pero sin decisiones de diseño compartidas, tokens y una estructura clara, tu proyecto igual se vuelve inconsistente.
 
 ### ⏳ Expectativa:
+
 > “En unas semanas tengo el sistema listo.”
 
 **📆 Realidad:**  
@@ -139,7 +146,7 @@ Cada equipo tiene sus propias necesidades y prioridades, pero para que un Design
 
 - **Adopción transversal del sistema**: Que no se quede en un equipo. Tiene que ser fácil de usar y entender por todos.
 
-> En resumen, un Design System necesita ser lo suficientemente **cerrado** como para respetar las definiciones de diseño sin permitir cambios visuales arbitrarios, pero también lo suficientemente **flexible** como para extenderse y adaptarse sin romper nada.  
+> En resumen, un Design System necesita ser lo suficientemente **cerrado** como para respetar las definiciones de diseño sin permitir cambios visuales arbitrarios, pero también lo suficientemente **flexible** como para extenderse y adaptarse sin romper nada.
 
 ## Cómo lograr la adopción del sistema
 

@@ -121,13 +121,13 @@ useSeoMeta({
 {
   "es": {
     "seo": {
-      "title": "Sergio Azócar - Desarrollador Frontend Senior",
-      "description": "Desarrollador frontend senior especializado en Vue.js y TypeScript. Construyo aplicaciones web excepcionales con un enfoque en el rendimiento y la experiencia de usuario."
+      "title": "Sergio Azócar - Software Engineer",
+      "description": "Software Engineer especializado en Vue, React y TypeScript. Construyo aplicaciones web excepcionales con un enfoque en el rendimiento y la experiencia de usuario."
     },
     "hello": {
       "title": "¡Hola! Soy Sergio Azócar",
-      "headline": "Desarrollador Frontend Senior",
-      "description": "Construyo aplicaciones web excepcionales con Vue.js, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
+      "headline": "Software Engineer",
+      "description": "Construyo aplicaciones web excepcionales con Vue, React, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
     },
     "cta": {
       "mentoring": "Agendar Mentoría",
@@ -153,13 +153,13 @@ useSeoMeta({
   },
   "en": {
     "seo": {
-      "title": "Sergio Azócar - Senior Frontend Developer",
-      "description": "Senior frontend developer specializing in Vue.js and TypeScript. I build exceptional web applications with a focus on performance and user experience."
+      "title": "Sergio Azócar - Software Engineer",
+      "description": "Software Engineer specializing in Vue, React and TypeScript. I build exceptional web applications with a focus on performance and user experience."
     },
     "hello": {
       "title": "Hello! I'm Sergio Azócar",
-      "headline": "Senior Frontend Developer",
-      "description": "Building exceptional web applications with Vue.js, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
+      "headline": "Software Engineer",
+      "description": "Building exceptional web applications with Vue, React, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
     },
     "cta": {
       "mentoring": "Schedule Mentoring",
