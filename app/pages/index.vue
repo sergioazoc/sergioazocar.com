@@ -35,12 +35,11 @@ useSeoMeta({
     />
 
     <section>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-8 sm:grid-cols-2">
         <UPageCard
           variant="subtle"
           :spotlight="true"
           spotlight-color="primary"
-          class="lg:col-span-2"
         >
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
@@ -93,7 +92,6 @@ useSeoMeta({
           variant="subtle"
           :spotlight="true"
           spotlight-color="primary"
-          class="lg:col-span-2"
         >
           <template #header>
             <div class="flex items-center gap-4 text-xl font-semibold">
@@ -122,12 +120,12 @@ useSeoMeta({
   "es": {
     "seo": {
       "title": "Sergio Azócar - Software Engineer",
-      "description": "Software Engineer especializado en Vue, React y TypeScript. Construyo aplicaciones web excepcionales con un enfoque en el rendimiento y la experiencia de usuario."
+      "description": "Software Engineer especializado en Vue, React y TypeScript. Construyo aplicaciones escalables para humanos y modelos de IA."
     },
     "hello": {
       "title": "¡Hola! Soy Sergio Azócar",
       "headline": "Software Engineer",
-      "description": "Construyo aplicaciones web excepcionales con Vue, React, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
+      "description": "Construyo aplicaciones escalables con Vue, React, TypeScript y tecnologías frontend modernas. Apasionado por el código limpio, la optimización del rendimiento y compartir conocimientos."
     },
     "cta": {
       "mentoring": "Agendar Mentoría",
@@ -135,31 +133,31 @@ useSeoMeta({
     },
     "experience": {
       "title": "Experiencia",
-      "description": "Más de 5 años construyendo soluciones modulares, reutilizables y de alto rendimiento con Vue.js para startups y empresas grandes."
+      "description": "Más de 10 años construyendo soluciones modulares, reutilizables y de alto rendimiento con Vue, React y TypeScript para startups y empresas consolidadas."
     },
     "current": {
       "title": "Enfoque Actual",
-      "description": "Optimización del rendimiento, Vue 3 Composition API y mejoras en la experiencia del desarrollador."
+      "description": "Diseño arquitecturas y herramientas que promueven la colaboración, el contexto y la escalabilidad en proyectos modernos tanto para humanos como para modelos de IA."
     },
     "mentoring": {
       "title": "Mentoría",
-      "description": "Ayudando a los desarrolladores a mejorar sus habilidades en prácticas modernas de frontend."
+      "description": "Acompaño a desarrolladores/as en el fortalecimiento de sus habilidades técnicas y comunicacionales, ayudándolos a avanzar hacia roles de mayor impacto y liderazgo dentro de sus equipos."
     },
     "speaking": {
       "title": "Charlas y Talleres",
-      "description": "Ponente habitual en conferencias y meetups de Vue.js. He impartido talleres sobre patrones avanzados de Vue.js.",
+      "description": "Relator en conferencias, meetups y talleres sobre arquitectura, experiencia de desarrollo y nuevas tendencias tecnológicas.",
       "footer": "Ver las charlas"
     }
   },
   "en": {
     "seo": {
       "title": "Sergio Azócar - Software Engineer",
-      "description": "Software Engineer specializing in Vue, React and TypeScript. I build exceptional web applications with a focus on performance and user experience."
+      "description": "Software Engineer specializing in Vue, React, and TypeScript. I build scalable applications for humans and AI models."
     },
     "hello": {
       "title": "Hello! I'm Sergio Azócar",
       "headline": "Software Engineer",
-      "description": "Building exceptional web applications with Vue, React, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and sharing knowledge."
+      "description": "I build scalable applications with Vue, React, TypeScript, and modern frontend technologies. Passionate about clean code, performance optimization, and knowledge sharing."
     },
     "cta": {
       "mentoring": "Schedule Mentoring",
@@ -167,19 +165,19 @@ useSeoMeta({
     },
     "experience": {
       "title": "Experience",
-      "description": "Over 5 years building modular, reusable, and high-performance solutions with Vue.js for startups and enterprise companies."
+      "description": "Over 10 years of building modular, reusable, and high-performance solutions with Vue, React, and TypeScript for startups and established companies."
     },
     "current": {
       "title": "Current Focus",
-      "description": "Performance optimization, Vue 3 Composition API, and developer experience improvements."
+      "description": "I design architectures and tools that promote collaboration, context, and scalability in modern projects for both humans and AI models."
     },
     "mentoring": {
       "title": "Mentoring",
-      "description": "Helping developers level up their skills in modern frontend practices."
+      "description": "I mentor developers to strengthen their technical and communication skills, helping them advance to higher-impact and leadership roles within their teams."
     },
     "speaking": {
       "title": "Speaking & Workshops",
-      "description": "Regular speaker at Vue.js conferences and meetups. Conducted workshops on advanced Vue.js patterns.",
+      "description": "Speaker at conferences, meetups, and workshops on architecture, developer experience, and new technology trends.",
       "footer": "View Talks"
     }
   }

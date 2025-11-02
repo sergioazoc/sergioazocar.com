@@ -4,22 +4,20 @@ import type { Collections } from '@nuxt/content'
 const route = useRoute()
 const { locale, t } = useI18n()
 
-// Usar la ruta actual como clave y como path de búsqueda
-const dataKey = computed(() => `blog-post-${locale.value}-${route.path}`)
+const dataKey = `blog-post-${route.params.slug}-${locale.value}`
 
 const { data: post } = await useAsyncData(
-  dataKey.value,
+  dataKey,
   async () => {
     const collection = ('blog_' + locale.value) as keyof Collections
-    // Buscar por el path público que ya viene de Content (ej: /es/blog/mi-post)
     return await queryCollection(collection).path(route.path).first()
   },
   {
-    watch: [locale, () => route.path],
+    server: true
   },
 )
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+const { data: surround } = await useAsyncData(`${route.params.slug}-surround-${locale.value}`, async () => {
   return queryCollectionItemSurroundings(
     ('blog_' + locale.value) as keyof Collections,
     route.path,

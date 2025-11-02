@@ -174,9 +174,9 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
     "journey": {
       "title": "Mi Trayectoria",
       "description": [
-        "Soy Sergio Azócar, un Desarrollador Frontend Senior con más de 7 años de experiencia construyendo aplicaciones web modernas. Mi trayectoria comenzó con una curiosidad por cómo funcionan los sitios web, y ha evolucionado hacia una pasión por crear experiencias de usuario excepcionales.",
-        "Actualmente, me especializo en el ecosistema de Vue.js, TypeScript y arquitectura frontend moderna. He tenido el privilegio de trabajar con startups para escalar sus productos desde MVP hasta millones de usuarios, así como ayudar a empresas grandes a modernizar su pila frontend.",
-        "Más allá del código, me apasiona compartir conocimientos a través de mentoría, charlas en conferencias y escritura de artículos técnicos. Creo en el poder de la comunidad y el aprendizaje continuo."
+        "Soy Sergio Azócar, un Desarrollador Frontend Senior con más de 10 años de experiencia construyendo aplicaciones web modernas. Mi trayectoria comenzó con una curiosidad por cómo funcionan los sitios web, y ha evolucionado hacia una pasión por crear experiencias de usuario excepcionales.",
+        "Actualmente, me especializo en el ecosistema de Vue, React, TypeScript y arquitecturas modernas. He tenido el privilegio de trabajar con startups para escalar sus productos desde MVP hasta millones de usuarios, así como ayudar a empresas consolidadas a modernizar su stack frontend.",
+        "Más allá del código, me apasiona compartir conocimientos a través de mentoría, charlas en conferencias y escribiendo artículos técnicos. Creo en el poder de las comunidades y el aprendizaje continuo."
       ]
     },
     "professional-title": "Experiencia Profesional",
@@ -301,9 +301,9 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
     "journey": {
       "title": "My Journey",
       "description": [
-        "I'm Sergio Azócar, a Senior Frontend Developer with over 7 years of experience building modern web applications. My journey started with a curiosity about how websites work, and it has evolved into a passion for creating exceptional user experiences.",
-        "Currently, I specialize in Vue.js ecosystem, TypeScript, and modern frontend architecture. I've had the privilege of working with startups to scale their products from MVP to millions of users, as well as helping enterprise companies modernize their frontend stack.",
-        "Beyond coding, I'm passionate about sharing knowledge through mentoring, speaking at conferences, and writing technical articles. I believe in the power of community and continuous learning."
+        "I'm Sergio Azócar, a Senior Frontend Developer with over 10 years of experience building modern web applications. My journey began with a curiosity about how websites work, and has evolved into a passion for creating exceptional user experiences.",
+        "Currently, I specialize in the Vue, React, TypeScript ecosystem and modern architectures. I've had the privilege of working with startups to scale their products from MVP to millions of users, as well as helping established companies modernize their frontend stack.",
+        "Beyond code, I'm passionate about sharing knowledge through mentoring, speaking at conferences, and writing technical articles. I believe in the power of communities and continuous learning."
       ]
     },
     "professional-title": "Professional Experience",
