@@ -175,7 +175,7 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
       "title": "Mi Trayectoria",
       "description": [
         "Soy Sergio Azócar, un Software Engineer con más de 10 años de experiencia construyendo aplicaciones web.",
-        "He podido trabajar en diversas industrias y proyectos, desde startups que buscan escalar un MVP para transformarse en un producto consolidado, hasta ayudar a empresas establecidas a modernizar su stack y potenciar equipos de desarrolladores.",
+        "He trabajado en diversas industrias y proyectos, desde startups que buscan escalar un MVP para transformarse en un producto consolidado, hasta ayudar a empresas establecidas a modernizar su stack y potenciar equipos de desarrolladores.",
         "Actualmente, me especializo en el ecosistema de Vue, React, TypeScript y arquitecturas para humanos y modelos de IA.",
         "Más allá del código, me apasiona compartir mis conocimientos a través de mentorías, charlas, talleres y conferencias, además de escribir artículos técnicos en mi blog."
       ]
@@ -303,8 +303,8 @@ const journeyDescriptions = computed(() => tArray('journey.description'))
       "title": "My Journey",
       "description": [
         "I am Sergio Azócar, a Software Engineer with over 10 years of experience building web applications.",
-        "I have had the opportunity to work across various industries and projects, from startups looking to scale an MVP into a consolidated product, to helping established companies modernize their stack and empower developer teams.",
-        "Currently, I specialize in the Vue, React, TypeScript ecosystem, human-centric architectures, and AI models.",
+        "I have worked across various industries and projects, from startups looking to scale an MVP into a consolidated product, to helping established companies modernize their stack and empower developer teams.",
+        "Currently, I specialize in the Vue, React, TypeScript ecosystem and human-centric architectures and AI models.",
         "Beyond code, I am passionate about sharing my knowledge through mentoring, talks, workshops, and conferences, as well as writing technical articles on my blog."
       ]
     },
