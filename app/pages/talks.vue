@@ -88,7 +88,7 @@ const talks = computed(() => {
             >
               <template #awaitingLoad>
                 <div
-                  class="absolute left-1/2 top-1/2 h-[48px] w-[68px] -translate-x-1/2 -translate-y-1/2 transform"
+                  class="absolute left-1/2 top-1/2 h-12 w-[68px] -translate-x-1/2 -translate-y-1/2 transform"
                 >
                   <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
                     <path
@@ -144,7 +144,7 @@ const talks = computed(() => {
 {
   "es": {
     "title": "Charlas y Talleres",
-    "description": "Compartiendo conocimientos a través de charlas en conferencias, talleres y sesiones de mentoría. Apasionado por ayudar a la comunidad a crecer y aprender juntos.",
+    "description": "Acá puedes encontrar algunas de las charlas, talleres y conferencias que he realizado en distintos eventos. Me apasiona compartir mis conocimientos y ayudar a subir el nivel de la comunidad tech.",
     "talks-title": "Charlas",
     "talks": [
       {
@@ -168,7 +168,7 @@ const talks = computed(() => {
   },
   "en": {
     "title": "Talks & Workshops",
-    "description": "Sharing knowledge through conference talks, workshops, and mentoring sessions. Passionate about helping the community grow and learn together.",
+    "description": "Here you can find some of the talks, workshops, and conferences I have given at various events. I am passionate about sharing my knowledge and helping to raise the level of the tech community.",
     "talks-title": "Talks",
     "talks": [
       {

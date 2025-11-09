@@ -20,7 +20,7 @@ const links = ref<ButtonProps[]>([
 ])
 
 useSeoMeta({
-  title: 'Sergio Azócar - Frontend Developer Senior',
+  title: 'Sergio Azócar - Software Engineer',
   description: t('seo.description'),
 })
 </script>

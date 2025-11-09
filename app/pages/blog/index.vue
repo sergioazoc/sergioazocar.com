@@ -55,10 +55,10 @@ const { data: posts } = await useAsyncData(`blog-posts-${locale.value}`, () => {
 <i18n lang="json">
 {
   "es": {
-    "description": "Compartiendo conocimientos sobre Vue.js, desarrollo frontend moderno y lecciones aprendidas al construir aplicaciones web escalables."
+    "description": "Aquí comparto mis conocimientos sobre desarrollo frontend, arquitectura de software y lecciones aprendidas al construir aplicaciones web en estos años."
   },
   "en": {
-    "description": "Sharing insights about Vue.js, modern frontend development, and lessons learned from building scalable web applications."
+    "description": "Here I share my knowledge about frontend development, software architecture, and lessons learned while building web applications over the years."
   }
 }
 </i18n>
