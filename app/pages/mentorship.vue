@@ -77,7 +77,7 @@ const items = computed(() => [
         <template #footer>
           <UButton
             size="xl"
-            href="https://cal.com/sergio-azocar/30min"
+            href="https://cal.com/sergio-azocar/mentoria"
             target="_blank"
             :disabled="locale === 'en'"
           >
